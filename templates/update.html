@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="header" id="header">
+    <div class="container">
+        <div class="col-md-3 col-sm-5">
+            <a href="#">
+                <h2>Update</h2>
+                <h2>{{ hello }}</h2>
+                <h2>Object here: {{ obj }}</h2>
+            </a>
+        </div>
+        <div class="col-md-6 col-md-push-3 col-sm-7">
+            <div class="hold-img">
+                <img src="{% static 'img/Group 10.svg' %}" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="notes" class="notes">
+    <div class="container">
+        <!--Search bar-->
+        <div class="searchBar">
+            <form>
+                <div class="col-xs-11 nopadding"><input type="text" name="search" placeholder="Search"></div>
+                <div class="col-xs-1 nopadding">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+        </div>
+
+
+        <!--Create new note-->
+        <div class="col-md-4 col-sm-6">
+            <div id="bg" class="single-note add-note {{ u_form.background_color }}">
+                <div>
+
+                    <input name="title" type="text" maxlength="20" placeholder="Type a title ..."
+                           value="{{ up_form.title }}">
+                    <small>Today: {% now "jS F, Y" %}</small>
+
+                    <input style="display: none !important;" name="background_color" value="white"
+                    >
+                    <hr>
+                    <textarea name="description"
+                              placeholder="Type a description ...">{{ up_form.description }}</textarea>
+                    <div class="meta">
+                        <span id="palette"><i class="fas fa-palette"></i></span>
+                        <span>
+                                <button class="mark btn btn-lg" type="submit">
+                                    <i class="fas fa-check"></i>
+                                </button>
+                            </span>
+                    </div>
+
+
+                    <div id="allColor" class="colors">
+                        <div id="circle_blue" class="circle blue">
+                        </div>
+                        <div id="circle_yellow" class="circle yellow">
+                        </div>
+                        <div id="circle_red" class="circle red">
+                        </div>
+                        <div id="circle_purple" class="circle purple">
+                        </div>
+                        <div id="circle_green" class="circle green">
+                        </div>
+                        <div id="circle_white" class="circle whiteCircle selected">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<form method="post">
+    {% csrf_token %}
+    <p><label for="id_title">Title:</label>
+        <input type="text" name="title" maxlength="20" required="" id="id_title" value="{{ obj.title }}">
+        <span class="helptext">coming from form 2 update</span>
+    </p>
+
+    <p>
+        <label for="id_description">Description:</label>
+        <input type="text" name="description" id="id_description" value="{{ obj.description }}">
+        <span class="helptext">coming from form 2 update</span>
+    </p>
+    <p>
+        <label for="id_background_color">Background color:</label>
+        <input type="text" name="background_color" maxlength="10" required="" id="id_background_color"
+               value="{{ obj.background_color }}">
+    </p>
+
+    <input type="submit" value="update">
+</form>
+
+
+<form method="POST">
+    {% csrf_token %}
+
+    {{ up_form.as_p }}
+    {{hello}}
+    <input type="submit" value="Update">
+</form>
+{% endblock %}

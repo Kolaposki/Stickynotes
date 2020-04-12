@@ -1,0 +1,185 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+    <div class="header" id="header">
+        <div class="container">
+            <div class="col-md-3 col-sm-5">
+                <a href="{% url 'home' %}">
+                    <h2>Sticky Notes</h2>
+                </a>
+            </div>
+            <div class="col-md-6 col-md-push-3 col-sm-7">
+                <div class="hold-img">
+                    <img src="{% static 'img/Group 10.svg' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="notes" class="notes">
+        <div class="container">
+            <!--Search bar-->
+            <div class="searchBar">
+                <form>
+                    <div class="col-xs-11 nopadding">
+                        <input type="text" name="search" placeholder="Search">
+                    </div>
+                    <div class="col-xs-1 nopadding">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </div>
+                </form>
+            </div>
+
+
+            <!--Create new note-->
+            <div class="col-md-4 col-sm-6">
+
+                <div id="bg" class="single-note add-note white">
+                    <form method="POST" class="myNoteForm" data-url="/home/" action="/home/">
+                        <span class="no-display">{{ form.new_dummy }}</span>
+                        {% csrf_token %}
+                        <input name="title" type="text" maxlength="20" placeholder="Type a title ...">
+                        <small>Today: {% now "jS F, Y" %}</small>
+
+                        <input style="display: none !important;" name="background_color" value="white"
+                               id="id_background_color">
+                        <input class="no-display" type="checkbox" value="False" name="is_done" id="id_is_done">
+
+                        <hr>
+                        <textarea name="description" placeholder="Type a description ..."></textarea>
+                        <div class="meta">
+                            <span id="palette"><i class="fas fa-palette"></i></span>
+                            <span>
+                                <button class="mark btn btn-lg" type="submit" name="create_btn">
+                                    <i class="fas fa-check"></i>
+                                </button>
+                            </span>
+                        </div>
+
+
+                        <div id="allColor" class="colors">
+                            <div id="circle_blue" class="circle blue">
+                            </div>
+                            <div id="circle_yellow" class="circle yellow">
+                            </div>
+                            <div id="circle_red" class="circle red">
+                            </div>
+                            <div id="circle_purple" class="circle purple">
+                            </div>
+                            <div id="circle_green" class="circle green">
+                            </div>
+                            <div id="circle_white" class="circle whiteCircle selected">
+                            </div>
+                        </div>
+                        {# <input type="text" name="note_id" value="{{ notes.pk }}"/>#}
+                    </form>
+                </div>
+            </div>
+
+            <!--Show all saved notes-->
+            <section>
+             <div class="all-notes">
+                {% for note in notes %}
+                    <div class="col-md-4 col-sm-6">
+                            <form method="post" id="form-{{ forloop.counter0 }}">
+                                {% csrf_token %}
+
+                                <input id="id_background_color-{{ note.pk }}" type="hidden" name="background_color"
+                                       value="{{ note.background_color }}">
+                                <input type="hidden" name="note_id" value="{{ note.pk }}">
+
+
+                                <div id="bg-{{ note.pk }}" class="single-note {{ note.background_color }}">
+
+                                    {% if note.is_done %}
+                                        <span id="doneMarker-{{ note.pk }}" class="notDone">
+                                        <i class="checked fa-check-square fas"></i>
+                                    </span>
+
+                                        <span id="2doneMarker-{{ note.pk }}" class="no-display notDone">
+                                        <label class="my-checkbox">
+                                            <input type="checkbox" value="note.is_done" name="is_done"
+                                                   id="id_is_done-{{ note.pk }}">
+                                            <i class="checked fa-check-square fas"></i>
+                                            <i class="unchecked fa-check-square far"></i>
+                                        </label>
+                                    </span>
+
+                                    {% else %}
+
+                                        <span class="notDone">
+                                        <label class="my-checkbox">
+                                            <input type="checkbox" value="note.is_done" name="is_done"
+                                                   id="id_is_done-{{ note.pk }}">
+                                            <i class="checked fa-check-square fas"></i>
+                                            <i class="unchecked fa-check-square far"></i>
+                                        </label>
+                                    </span>
+                                    {% endif %}
+
+
+
+
+                                    {% if note.is_done %}
+                                        <h2 id="title-head-{{ note.pk }}" class="isDone">{{ note.title }} </h2>
+                                    {% else %}
+                                        <h2 id="title-head-{{ note.pk }}" class="">{{ note.title }} </h2>
+                                    {% endif %}
+
+                                    <input id="new_title-{{ note.pk }}" class="no-display" name="title" type="text"
+                                           maxlength="20" placeholder="Type a title ..." value="{{ note.title }}">
+
+                                    <small>Last update: {{ note.date_added }}</small>
+
+                                    <hr>
+
+                                    {% if note.is_done %}
+                                        <p class="isDone" id="desc_p-{{ note.pk }}">{{ note.description }}</p>
+                                    {% else %}
+                                        <p class="" id="desc_p-{{ note.pk }}">{{ note.description }}</p>
+                                    {% endif %}
+
+                                    <textarea class="no-display" id="desc-{{ note.pk }}"
+                                              name="description">{{ note.description }}</textarea>
+
+
+                                    <div class="meta">
+                                        <button id="update_btn-{{ note.pk }}" class="no-display" type="submit"
+                                                name="update_btn">
+                                            <i class="fas fa-check"></i>
+                                        </button>
+
+                                        <span id="pencil-{{ note.pk }}"><i class="fas fa-pencil-alt"></i></span>
+                                        <span id="palette-{{ note.pk }}" class="no-display"><i
+                                                class="fas fa-palette"></i></span>
+                                        <span><i class="far fa-trash-alt"></i></span>
+                                        <span><i class="fas fa-expand"></i></span>
+                                        <span><i class="fas fa-link"></i></span>
+                                    </div>
+
+                                    <div id="allColor-{{ note.pk }}" class="colors">
+                                        <div id="circle_blue-{{ note.pk }}" class="circle blue"></div>
+                                        <div id="circle_yellow-{{ note.pk }}" class="circle yellow"></div>
+                                        <div id="circle_red-{{ note.pk }}" class="circle red"></div>
+                                        <div id="circle_purple-{{ note.pk }}" class="circle purple"></div>
+                                        <div id="circle_green-{{ note.pk }}" class="circle green"></div>
+                                        <div id="circle_white-{{ note.pk }}" class="circle whiteCircle"></div>
+                                    </div>
+                                    <div class="copied">
+                                        link is copied !
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                {% endfor %}
+             </div>
+            </section>
+
+        </div>
+    </div>
+
+{% endblock %}
+

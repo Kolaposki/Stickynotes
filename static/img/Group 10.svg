@@ -1,0 +1,76 @@
+<svg id="Group_10" data-name="Group 10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="741 72 936 294">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #f1f1f1;
+      }
+
+      .cls-3, .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-5 {
+        stroke: #8a7cc5;
+        stroke-width: 6px;
+      }
+
+      .cls-6 {
+        fill: #484848;
+      }
+
+      .cls-7 {
+        fill: #c8c8c8;
+      }
+
+      .cls-8 {
+        fill: #393939;
+      }
+
+      .cls-9 {
+        fill: #dbdbdb;
+      }
+
+      .cls-10 {
+        stroke: none;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect class="cls-1" width="746" height="163"/>
+    </clipPath>
+  </defs>
+  <path id="Rectangle_4" data-name="Rectangle 4" class="cls-2" d="M18,0H918a18,18,0,0,1,18,18V257a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V18A18,18,0,0,1,18,0Z" transform="translate(741 109)"/>
+  <path id="Rectangle_5" data-name="Rectangle 5" class="cls-3" d="M18,0H830a18,18,0,0,1,18,18V208a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V18A18,18,0,0,1,18,0Z" transform="translate(785 158)"/>
+  <g id="Repeat_Grid_1" data-name="Repeat Grid 1" class="cls-4" transform="translate(836 189)">
+    <g transform="translate(-836 -194)">
+      <g id="Rectangle_6" data-name="Rectangle 6" class="cls-5" transform="translate(836 194)">
+        <rect class="cls-10" width="68" height="68" rx="8"/>
+        <rect class="cls-1" x="3" y="3" width="62" height="62" rx="5"/>
+      </g>
+      <path id="checked" class="cls-6" d="M.7,28.765a2.264,2.264,0,0,1,0-3.279l3.279-3.279a2.264,2.264,0,0,1,3.279,0l.234.234L20.378,36.26a1.132,1.132,0,0,0,1.64,0L53.4,3.7h.234a2.264,2.264,0,0,1,3.279,0L60.2,6.982a2.264,2.264,0,0,1,0,3.279h0L22.72,49.143a2.264,2.264,0,0,1-3.279,0L1.171,29.468l-.468-.7Z" transform="translate(848.853 199.806)"/>
+      <rect id="Rectangle_7" data-name="Rectangle 7" class="cls-7" width="649" height="10.062" transform="translate(933 205)"/>
+      <rect id="Rectangle_8" data-name="Rectangle 8" class="cls-7" width="649" height="10.062" transform="translate(933 223.295)"/>
+      <rect id="Rectangle_9" data-name="Rectangle 9" class="cls-7" width="423" height="10.062" transform="translate(933 241.59)"/>
+    </g>
+    <g transform="translate(-836 -106)">
+      <g id="Rectangle_6-2" data-name="Rectangle 6" class="cls-5" transform="translate(836 194)">
+        <rect class="cls-10" width="68" height="68" rx="8"/>
+        <rect class="cls-1" x="3" y="3" width="62" height="62" rx="5"/>
+      </g>
+      <path id="checked-2" data-name="checked" class="cls-6" d="M.7,28.765a2.264,2.264,0,0,1,0-3.279l3.279-3.279a2.264,2.264,0,0,1,3.279,0l.234.234L20.378,36.26a1.132,1.132,0,0,0,1.64,0L53.4,3.7h.234a2.264,2.264,0,0,1,3.279,0L60.2,6.982a2.264,2.264,0,0,1,0,3.279h0L22.72,49.143a2.264,2.264,0,0,1-3.279,0L1.171,29.468l-.468-.7Z" transform="translate(848.853 199.806)"/>
+      <rect id="Rectangle_7-2" data-name="Rectangle 7" class="cls-7" width="649" height="10.062" transform="translate(933 205)"/>
+      <rect id="Rectangle_8-2" data-name="Rectangle 8" class="cls-7" width="649" height="10.062" transform="translate(933 223.295)"/>
+      <rect id="Rectangle_9-2" data-name="Rectangle 9" class="cls-7" width="423" height="10.062" transform="translate(933 241.59)"/>
+    </g>
+  </g>
+  <path id="Rectangle_10" data-name="Rectangle 10" class="cls-8" d="M0,0H202a0,0,0,0,1,0,0V19a18,18,0,0,1-18,18H18A18,18,0,0,1,0,19V0A0,0,0,0,1,0,0Z" transform="translate(1118 99)"/>
+  <circle id="Ellipse_1" data-name="Ellipse 1" class="cls-8" cx="27" cy="27" r="27" transform="translate(1192 72)"/>
+  <circle id="Ellipse_2" data-name="Ellipse 2" class="cls-9" cx="10" cy="10" r="10" transform="translate(1209 89)"/>
+</svg>

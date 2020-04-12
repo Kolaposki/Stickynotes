@@ -1,0 +1,291 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}Sticky Notes{% endblock title %}
+    </title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta property="og:image" content="{% static 'images/logo.png' %}"/>
+    <meta property="og:title" content="{% block head_title %}Sticky Notes{% endblock head_title %}"/>
+    <meta property="og:description" content="{% block head_desc %}Sticky Notes{% endblock head_desc %}"/>
+    <meta property="og:image:width" content="265">
+    <meta property="og:image:height" content="265">
+    <meta property="og:site_name" content="Sticky Notes">
+    <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/png">
+
+
+    <!-- Stylesheets -->
+    <link href="{% static 'css/reset.css' %}" type="text/css" rel="stylesheet">
+    <link href="{% static 'css/all.css' %}" type="text/css" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.css' %}" type="text/css" rel="stylesheet">
+    <link href="{% static 'css/stickyNotes.css' %}" type="text/css" rel="stylesheet">
+    <link href="{% static 'css/fontawesome.css' %}" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+
+{% block content %}
+    <!-- content -->
+
+{% endblock %}
+
+
+<footer>
+    <div class="container">
+        <span>Made With <i class="fas fa-heart"></i> by <a href="#">Kolaposki</a></span>
+    </div>
+</footer>
+
+
+<!-- Javascript files -->
+<script src="{% static 'js/jquery.min.js' %}" charset="utf-8"></script>
+<script src="{% static 'js/stickyNotes.js' %}" charset="utf-8"></script>
+<script src="{% static 'js/main.js' %}" charset="utf-8"></script>
+
+<script>
+    $("#palette").click(function () {
+        // assumes element with id='button'
+        $("#allColor").toggleClass('colors').toggleClass("colors openDivs");
+    });
+
+    {% for note in notes %}
+
+        $("#pencil-{{ note.pk }}").click(function () {
+            // PENCIL WORK
+            // when the pencil is clicked. Enable editing of the note and show the mark button
+            $(this).removeAttr('class').addClass("no-display");
+            $("#update_btn-{{ note.pk }}").removeAttr('class').addClass("marker btn btn-lg");
+
+            $("#desc-{{ note.pk }}").removeAttr('class').addClass("");
+            $("#desc_p-{{ note.pk }}").addClass("no-display");
+
+            $("#new_title-{{ note.pk }}").removeAttr('class').addClass("");
+            $("#title-head-{{ note.pk }}").addClass("no-display");
+
+            $("#palette-{{ note.pk }}").removeAttr('class').addClass("");
+        });
+
+        $("#palette-{{ note.pk }}").click(function () {
+            $("#allColor-{{ note.pk }}").toggleClass('colors').toggleClass("colors openDivs");
+        });
+
+        $('#id_is_done-{{ note.pk }}').click(function () {
+            if ($(this).prop('checked')) {
+                $(this).val("True");
+                $("#title-head-{{ note.pk }}").removeAttr('class').addClass("isDone");
+                $("#desc_p-{{ note.pk }}").removeAttr('class').addClass("isDone")
+            } else {
+                $(this).val("False");
+                $("#title-head-{{ note.pk }}").removeAttr('class').addClass("");
+                $("#desc_p-{{ note.pk }}").removeAttr('class').addClass("")
+            }
+        });
+
+        $('#doneMarker-{{ note.pk }}').click(function () {
+            $(this).removeAttr('class').addClass("no-display");
+            $("#title-head-{{ note.pk }}").removeAttr('class').addClass("");
+            $("#desc_p-{{ note.pk }}").removeAttr('class').addClass("")
+            $("#2doneMarker-{{ note.pk }}").removeAttr('class').addClass("notDone");
+        });
+
+
+        // Color Togglers
+        $("#circle_yellow-{{ note.pk }}").click(function () {
+            // assumes element with id='button'
+            $(this).removeAttr('class').addClass("circle yellow selected");
+
+            $("#circle_blue-{{ note.pk }}").removeAttr('class').addClass("circle blue");
+            $("#circle_red-{{ note.pk }}").removeAttr('class').addClass("circle red");
+            $("#circle_green-{{ note.pk }}").removeAttr('class').addClass("circle green");
+            $("#circle_purple-{{ note.pk }}").removeAttr('class').addClass("circle purple");
+            $("#circle_white-{{ note.pk }}").removeAttr('class').addClass("circle whiteCircle");
+
+
+            $("#bg-{{ note.pk }}").removeAttr('class').addClass("single-note add-note yellow");
+            $("#id_background_color-{{ note.pk }}").val("yellow");
+
+        });
+
+        $("#circle_blue-{{ note.pk }}").click(function () {
+            // assumes element with id='button'
+            $(this).removeAttr('class').addClass("circle blue selected");
+
+            $("#circle_yellow-{{ note.pk }}").removeAttr('class').addClass("circle yellow");
+            $("#circle_red-{{ note.pk }}").removeAttr('class').addClass("circle red");
+            $("#circle_green-{{ note.pk }}").removeAttr('class').addClass("circle green");
+            $("#circle_purple-{{ note.pk }}").removeAttr('class').addClass("circle purple");
+            $("#circle_white-{{ note.pk }}").removeAttr('class').addClass("circle whiteCircle");
+
+
+            $("#bg-{{ note.pk }}").removeAttr('class').addClass("single-note add-note blue");
+            $("#id_background_color-{{ note.pk }}").val("blue");
+        });
+
+        $("#circle_red-{{ note.pk }}").click(function () {
+            // assumes element with id='button'
+            $(this).removeAttr('class').addClass("circle red selected");
+
+            $("#circle_blue-{{ note.pk }}").removeAttr('class').addClass("circle blue");
+            $("#circle_yellow-{{ note.pk }}").removeAttr('class').addClass("circle yellow");
+            $("#circle_green-{{ note.pk }}").removeAttr('class').addClass("circle green");
+            $("#circle_purple-{{ note.pk }}").removeAttr('class').addClass("circle purple");
+            $("#circle_white-{{ note.pk }}").removeAttr('class').addClass("circle whiteCircle");
+
+
+            $("#bg-{{ note.pk }}").removeAttr('class').addClass("single-note add-note red");
+            $("#id_background_color-{{ note.pk }}").val("red");
+        });
+
+        $("#circle_green-{{ note.pk }}").click(function () {
+            // assumes element with id='button'
+            $(this).removeAttr('class').addClass("circle green selected");
+
+            $("#circle_blue-{{ note.pk }}").removeAttr('class').addClass("circle blue");
+            $("#circle_yellow-{{ note.pk }}").removeAttr('class').addClass("circle yellow");
+            $("#circle_red-{{ note.pk }}").removeAttr('class').addClass("circle red");
+            $("#circle_purple-{{ note.pk }}").removeAttr('class').addClass("circle purple");
+            $("#circle_white-{{ note.pk }}").removeAttr('class').addClass("circle whiteCircle");
+
+
+            $("#bg-{{ note.pk }}").removeAttr('class').addClass("single-note add-note green");
+            $("#id_background_color-{{ note.pk }}").val("green");
+
+        });
+
+        $("#circle_purple-{{ note.pk }}").click(function () {
+            // assumes element with id='button'
+            $(this).removeAttr('class').addClass("circle purple selected");
+
+            $("#circle_blue-{{ note.pk }}").removeAttr('class').addClass("circle blue");
+            $("#circle_yellow-{{ note.pk }}").removeAttr('class').addClass("circle yellow");
+            $("#circle_green-{{ note.pk }}").removeAttr('class').addClass("circle green");
+            $("#circle_red-{{ note.pk }}").removeAttr('class').addClass("circle red");
+            $("#circle_white-{{ note.pk }}").removeAttr('class').addClass("circle whiteCircle");
+
+
+            $("#bg-{{ note.pk }}").removeAttr('class').addClass("single-note add-note purple");
+            $("#id_background_color-{{ note.pk }}").val("purple");
+
+        });
+
+        $("#circle_white-{{ note.pk }}").click(function () {
+            // assumes element with id='button'
+            $(this).removeAttr('class').addClass("circle white selected");
+
+            $("#circle_blue-{{ note.pk }}").removeAttr('class').addClass("circle blue");
+            $("#circle_yellow-{{ note.pk }}").removeAttr('class').addClass("circle yellow");
+            $("#circle_green-{{ note.pk }}").removeAttr('class').addClass("circle green");
+            $("#circle_purple-{{ note.pk }}").removeAttr('class').addClass("circle purple");
+            $("#circle_red-{{ note.pk }}").removeAttr('class').addClass("circle red");
+
+
+            $("#bg-{{ note.pk }}").removeAttr('class').addClass("single-note add-note white");
+            $("#id_background_color-{{ note.pk }}").val("white");
+
+        });
+
+
+    {% endfor %}
+
+    $("#circle_yellow").click(function () {
+        // assumes element with id='button'
+        $(this).removeAttr('class').addClass("circle yellow selected");
+
+        $("#circle_blue").removeAttr('class').addClass("circle blue");
+        $("#circle_red").removeAttr('class').addClass("circle red");
+        $("#circle_green").removeAttr('class').addClass("circle green");
+        $("#circle_purple").removeAttr('class').addClass("circle purple");
+        $("#circle_white").removeAttr('class').addClass("circle whiteCircle");
+
+
+        $("#bg").removeAttr('class').addClass("single-note add-note yellow");
+        $("#id_background_color").val("yellow");
+
+    });
+
+    $("#circle_blue").click(function () {
+        // assumes element with id='button'
+        $(this).removeAttr('class').addClass("circle blue selected");
+
+        $("#circle_yellow").removeAttr('class').addClass("circle yellow");
+        $("#circle_red").removeAttr('class').addClass("circle red");
+        $("#circle_green").removeAttr('class').addClass("circle green");
+        $("#circle_purple").removeAttr('class').addClass("circle purple");
+        $("#circle_white").removeAttr('class').addClass("circle whiteCircle");
+
+
+        $("#bg").removeAttr('class').addClass("single-note add-note blue");
+        $("#id_background_color").val("blue");
+    });
+
+    $("#circle_red").click(function () {
+        // assumes element with id='button'
+        $(this).removeAttr('class').addClass("circle red selected");
+
+        $("#circle_blue").removeAttr('class').addClass("circle blue");
+        $("#circle_yellow").removeAttr('class').addClass("circle yellow");
+        $("#circle_green").removeAttr('class').addClass("circle green");
+        $("#circle_purple").removeAttr('class').addClass("circle purple");
+        $("#circle_white").removeAttr('class').addClass("circle whiteCircle");
+
+
+        $("#bg").removeAttr('class').addClass("single-note add-note red");
+        $("#id_background_color").val("red");
+    });
+
+    $("#circle_green").click(function () {
+        // assumes element with id='button'
+        $(this).removeAttr('class').addClass("circle green selected");
+
+        $("#circle_blue").removeAttr('class').addClass("circle blue");
+        $("#circle_yellow").removeAttr('class').addClass("circle yellow");
+        $("#circle_red").removeAttr('class').addClass("circle red");
+        $("#circle_purple").removeAttr('class').addClass("circle purple");
+        $("#circle_white").removeAttr('class').addClass("circle whiteCircle");
+
+
+        $("#bg").removeAttr('class').addClass("single-note add-note green");
+        $("#id_background_color").val("green");
+
+    });
+
+    $("#circle_purple").click(function () {
+        // assumes element with id='button'
+        $(this).removeAttr('class').addClass("circle purple selected");
+
+        $("#circle_blue").removeAttr('class').addClass("circle blue");
+        $("#circle_yellow").removeAttr('class').addClass("circle yellow");
+        $("#circle_green").removeAttr('class').addClass("circle green");
+        $("#circle_red").removeAttr('class').addClass("circle red");
+        $("#circle_white").removeAttr('class').addClass("circle whiteCircle");
+
+
+        $("#bg").removeAttr('class').addClass("single-note add-note purple");
+        $("#id_background_color").val("purple");
+
+    });
+
+    $("#circle_white").click(function () {
+        // assumes element with id='button'
+        $(this).removeAttr('class').addClass("circle white selected");
+
+        $("#circle_blue").removeAttr('class').addClass("circle blue");
+        $("#circle_yellow").removeAttr('class').addClass("circle yellow");
+        $("#circle_green").removeAttr('class').addClass("circle green");
+        $("#circle_purple").removeAttr('class').addClass("circle purple");
+        $("#circle_red").removeAttr('class').addClass("circle red");
+
+
+        $("#bg").removeAttr('class').addClass("single-note add-note white");
+        $("#id_background_color").val("white");
+
+    });
+</script>
+
+</body>
+</html>
