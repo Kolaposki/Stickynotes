@@ -27,8 +27,59 @@ class HomeView(CreateView):
 
 def index(request):
     form = NoteForm()
-    up_form = NoteForm2(request.POST or None)
+    up_form = NoteForm2()
 
+    if request.is_ajax() and 'new_dummy' in request.POST:
+        print("THIS REQUEST IS AJAX and FROM NEW DUMMY")
+        form = NoteForm(request.POST)
+
+        if request.method == 'POST':
+            if form.is_valid():
+                note_form = form.save()
+                note_pk = note_form.pk
+
+                title = request.POST.get('title')
+                description = request.POST.get('description')
+                background_color = request.POST.get('background_color')
+
+                data = {}
+                data['message'] = 'form note is saved'
+                data['title'] = title
+                data['description'] = description
+                data['background_color'] = background_color
+                data['note_pk'] = note_pk
+
+                return JsonResponse(data)
+
+    if request.is_ajax() and 'update_dummy' in request.POST:
+        print("THIS REQUEST IS AJAX and FROM UPDATE DUMMY")
+        # up_form = NoteForm2(request.POST)
+        # print(up_form)
+
+        if request.method == 'POST':
+            note_id = request.POST.get('note_id')
+            # note_id = 118
+            print("NOTED-ID: ", note_id)
+
+            obj = get_object_or_404(Note, id=note_id)
+            print(f"Here is object: {obj}")
+
+            up_form = NoteForm2(request.POST or None, instance=obj)
+            print(f"UPDATE FORM: {up_form}")
+
+            if up_form.is_valid():
+                print("UPDATE FORM IS VALID")
+                data = {}
+                title = request.POST.get('title')
+                up_form.save()
+                data['message'] = 'form note is updated'
+                data['pk'] = note_id
+                data['title'] = title
+
+                return JsonResponse(data)
+            
+
+    """
     if request.method == 'POST' and 'update_btn' in request.POST:
         note_id = request.POST.get('note_id')
         print("NOTED-ID: ", note_id)
@@ -45,28 +96,7 @@ def index(request):
         else:
             print("UPDATE FORM IS NOT VALID")
             print(up_form.errors)
-
-    if request.is_ajax():
-        print("THIS REQUEST IS AJAX")
-        form = NoteForm(request.POST)
-
-        if request.method == 'POST' and 'new_dummy' in request.POST:
-            if form.is_valid():
-                note_form = form.save()
-                note_pk = note_form.pk
-                
-                title = request.POST.get('title')
-                description = request.POST.get('description')
-                background_color = request.POST.get('background_color')
-                
-                data = {}
-                data['message'] = 'form note is saved'
-                data['title'] = title
-                data['description'] = description
-                data['background_color'] = background_color
-                data['note_pk'] = note_pk
-                    
-                return JsonResponse(data)
+    """
 
     notes = Note.objects.all().order_by('-date_added')
     return render(request, 'duplicate_home.html',

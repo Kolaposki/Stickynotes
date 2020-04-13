@@ -172,3 +172,43 @@ $(document).ready(function () {
         }
     });
 });
+
+
+/**
+// myUpdateNoteForm
+$(document).ready(function () {
+    let $updateNoteForm = $('.myUpdateNoteForm');
+
+    $updateNoteForm.submit(function (event) {
+        event.preventDefault();
+        let $formData = $updateNoteForm.serialize();
+        let $thisURL = $updateNoteForm.attr('data-url') || window.location();
+
+        console.log($formData);
+        console.log($thisURL);
+
+        $.ajax({
+            method: 'POST',
+            url: $thisURL,
+            data: $formData,
+            success: handleSuccess,
+            error: handleError,
+        });
+
+        function handleSuccess(data) {
+
+            if (data) {
+                $(".all-notes").load(" .all-notes > *");
+            }
+
+            console.log(data.message);
+            console.log("Note id: "+data.pk);
+        }
+
+        function handleError(ThrowError) {
+            console.log("AN ERROR OCCURRED WHILE UPDATING FORM !!")
+            console.log(ThrowError);
+        }
+    });
+});
+ **/

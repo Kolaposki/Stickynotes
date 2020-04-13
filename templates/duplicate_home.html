@@ -73,7 +73,6 @@
                             <div id="circle_white" class="circle whiteCircle selected">
                             </div>
                         </div>
-                        {# <input type="text" name="note_id" value="{{ notes.pk }}"/>#}
                     </form>
                 </div>
             </div>
@@ -83,7 +82,8 @@
                 <div id="all-notes" class="all-notes">
                     {% for note in notes %}
                         <div id="_note-{{ note.pk }}" class="col-md-4 col-sm-6">
-                            <form method="post" id="form-{{ forloop.counter0 }}">
+
+                            <form method="post" id="UpdateNoteForm-{{ note.pk }}" data-url="/">
                                 {% csrf_token %}
                                 <span class="no-display">{{ up_form.update_dummy }}</span>
 
@@ -97,17 +97,17 @@
 
                                     {% if note.is_done %}
                                         <span id="doneMarker-{{ note.pk }}" class="notDone">
-                                        <i class="checked fa-check-square fas"></i>
-                                    </span>
+                                            <i class="checked fa-check-square fas"></i>
+                                        </span>
 
                                         <span id="2doneMarker-{{ note.pk }}" class="no-display notDone">
-                                        <label class="my-checkbox">
-                                            <input type="checkbox" value="note.is_done" name="is_done"
-                                                   id="id_is_done-{{ note.pk }}">
-                                            <i class="checked fa-check-square fas"></i>
-                                            <i class="unchecked fa-check-square far"></i>
-                                        </label>
-                                    </span>
+                                            <label class="my-checkbox">
+                                                <input type="checkbox" value="note.is_done" name="is_done"
+                                                       id="id_is_done-{{ note.pk }}">
+                                                <i class="checked fa-check-square fas"></i>
+                                                <i class="unchecked fa-check-square far"></i>
+                                            </label>
+                                        </span>
 
                                     {% else %}
 
@@ -120,8 +120,6 @@
                                         </label>
                                     </span>
                                     {% endif %}
-
-
 
 
                                     {% if note.is_done %}
@@ -182,6 +180,5 @@
 
         </div>
     </div>
-
 {% endblock %}
 
