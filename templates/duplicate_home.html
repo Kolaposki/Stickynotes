@@ -80,11 +80,13 @@
 
             <!--Show all saved notes-->
             <section>
-             <div id="all-notes" class="all-notes">
-                {% for note in notes %}
-                    <div id="_note-{{ note.pk }}" class="col-md-4 col-sm-6">
+                <div id="all-notes" class="all-notes">
+                    {% for note in notes %}
+                        <div id="_note-{{ note.pk }}" class="col-md-4 col-sm-6">
                             <form method="post" id="form-{{ forloop.counter0 }}">
                                 {% csrf_token %}
+                                <span class="no-display">{{ up_form.update_dummy }}</span>
+
 
                                 <input id="id_background_color-{{ note.pk }}" type="hidden" name="background_color"
                                        value="{{ note.background_color }}">
@@ -174,8 +176,8 @@
                                 </div>
                             </form>
                         </div>
-                {% endfor %}
-             </div>
+                    {% endfor %}
+                </div>
             </section>
 
         </div>
