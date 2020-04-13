@@ -35,7 +35,8 @@ class NoteForm2(forms.ModelForm):
 
     is_done = forms.BooleanField(required=False, help_text="coming from form 2 update",
                                  widget=forms.TextInput(attrs={'id': 'new_is_done'}))
+    update_dummy = forms.CharField(required=False)
 
     class Meta:
         model = Note
-        fields = ('title', 'description', 'background_color', 'is_done')
+        fields = ('title', 'description', 'background_color', 'is_done', 'update_dummy')
