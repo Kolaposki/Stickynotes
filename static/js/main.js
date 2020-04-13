@@ -29,6 +29,8 @@ $(document).ready(function () {
                 $("#title-head-" + $note_pk + "").addClass("no-display");
 
                 $("#palette-" + $note_pk + "").removeAttr('class').addClass("");
+
+                 UpdateForm($note_pk)
             });
 
             $(document).on("click", "#palette-" + $note_pk + "", function () {
