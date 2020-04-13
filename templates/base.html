@@ -48,8 +48,7 @@
 <script src="{% static 'js/main.js' %}" charset="utf-8"></script>
 
 <script>
-    $("#palette").click(function () {
-        // assumes element with id='button'
+    $(document).on("click", "#palette", function () {
         $("#allColor").toggleClass('colors').toggleClass("colors openDivs");
     });
 

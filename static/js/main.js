@@ -30,7 +30,7 @@ $(document).ready(function () {
 
                 $("#palette-" + $note_pk + "").removeAttr('class').addClass("");
 
-                 UpdateForm($note_pk)
+                UpdateForm($note_pk)
             });
 
             $(document).on("click", "#palette-" + $note_pk + "", function () {
@@ -149,6 +149,8 @@ $(document).ready(function () {
 
             if (data) {
                 $(".all-notes").load(" .all-notes > *");
+                $("#noteCreator").load(" #noteCreator > *");
+
             }
 
             console.log(data.message);
@@ -162,7 +164,7 @@ $(document).ready(function () {
             console.log("bg color: " + $noteBG);
             console.log("pk: " + $note_pk);
 
-            $("#bg").removeAttr('class').addClass("single-note add-note white");
+            //$("#bg").removeAttr('class').addClass("single-note add-note white");
             $noteForm[0].reset();
 
             onClickActions($note_pk)
@@ -177,8 +179,8 @@ $(document).ready(function () {
 
 
 /**
-// myUpdateNoteForm
-$(document).ready(function () {
+ // myUpdateNoteForm
+ $(document).ready(function () {
     let $updateNoteForm = $('.myUpdateNoteForm');
 
     $updateNoteForm.submit(function (event) {
