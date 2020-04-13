@@ -55,7 +55,8 @@
 
     {% for note in notes %}
 
-        $("#pencil-{{ note.pk }}").click(function () {
+        /**
+         $("#pencil-{{ note.pk }}").click(function () {
             // PENCIL WORK
             // when the pencil is clicked. Enable editing of the note and show the mark button
             $(this).removeAttr('class').addClass("no-display");
@@ -70,11 +71,11 @@
             $("#palette-{{ note.pk }}").removeAttr('class').addClass("");
         });
 
-        $("#palette-{{ note.pk }}").click(function () {
+         $("#palette-{{ note.pk }}").click(function () {
             $("#allColor-{{ note.pk }}").toggleClass('colors').toggleClass("colors openDivs");
         });
 
-        $('#id_is_done-{{ note.pk }}').click(function () {
+         $('#id_is_done-{{ note.pk }}').click(function () {
             if ($(this).prop('checked')) {
                 $(this).val("True");
                 $("#title-head-{{ note.pk }}").removeAttr('class').addClass("isDone");
@@ -86,7 +87,8 @@
             }
         });
 
-        $('#doneMarker-{{ note.pk }}').click(function () {
+
+         $('#doneMarker-{{ note.pk }}').click(function () {
             $(this).removeAttr('class').addClass("no-display");
             $("#title-head-{{ note.pk }}").removeAttr('class').addClass("");
             $("#desc_p-{{ note.pk }}").removeAttr('class').addClass("")
@@ -94,9 +96,46 @@
         });
 
 
-        // Color Togglers
-        $("#circle_yellow-{{ note.pk }}").click(function () {
-            // assumes element with id='button'
+         **/
+
+        $(document).on("click", "#palette-{{ note.pk }}", function () {
+            $("#allColor-{{ note.pk }}").toggleClass('colors').toggleClass("colors openDivs");
+        });
+
+        $(document).on("click", "#pencil-{{ note.pk }}", function () {
+            $(this).removeAttr('class').addClass("no-display");
+            $("#update_btn-{{ note.pk }}").removeAttr('class').addClass("marker btn btn-lg");
+
+            $("#desc-{{ note.pk }}").removeAttr('class').addClass("");
+            $("#desc_p-{{ note.pk }}").addClass("no-display");
+
+            $("#new_title-{{ note.pk }}").removeAttr('class').addClass("");
+            $("#title-head-{{ note.pk }}").addClass("no-display");
+
+            $("#palette-{{ note.pk }}").removeAttr('class').addClass("");
+        });
+
+        $(document).on("click", "#id_is_done-{{ note.pk }}", function () {
+            if ($(this).prop('checked')) {
+                $(this).val("True");
+                $("#title-head-{{ note.pk }}").removeAttr('class').addClass("isDone");
+                $("#desc_p-{{ note.pk }}").removeAttr('class').addClass("isDone")
+            } else {
+                $(this).val("False");
+                $("#title-head-{{ note.pk }}").removeAttr('class').addClass("");
+                $("#desc_p-{{ note.pk }}").removeAttr('class').addClass("")
+            }
+        });
+
+        $(document).on("click", "#doneMarker-{{ note.pk }}", function () {
+            $(this).removeAttr('class').addClass("no-display");
+            $("#title-head-{{ note.pk }}").removeAttr('class').addClass("");
+            $("#desc_p-{{ note.pk }}").removeAttr('class').addClass("");
+            $("#2doneMarker-{{ note.pk }}").removeAttr('class').addClass("notDone");
+        });
+
+        // Color Toggles
+        $(document).on("click", "#circle_yellow-{{ note.pk }}", function () {
             $(this).removeAttr('class').addClass("circle yellow selected");
 
             $("#circle_blue-{{ note.pk }}").removeAttr('class').addClass("circle blue");
@@ -108,11 +147,9 @@
 
             $("#bg-{{ note.pk }}").removeAttr('class').addClass("single-note add-note yellow");
             $("#id_background_color-{{ note.pk }}").val("yellow");
-
         });
 
-        $("#circle_blue-{{ note.pk }}").click(function () {
-            // assumes element with id='button'
+        $(document).on("click", "#circle_blue-{{ note.pk }}", function () {
             $(this).removeAttr('class').addClass("circle blue selected");
 
             $("#circle_yellow-{{ note.pk }}").removeAttr('class').addClass("circle yellow");
@@ -126,8 +163,7 @@
             $("#id_background_color-{{ note.pk }}").val("blue");
         });
 
-        $("#circle_red-{{ note.pk }}").click(function () {
-            // assumes element with id='button'
+        $(document).on("click", "#circle_red-{{ note.pk }}", function () {
             $(this).removeAttr('class').addClass("circle red selected");
 
             $("#circle_blue-{{ note.pk }}").removeAttr('class').addClass("circle blue");
@@ -139,10 +175,10 @@
 
             $("#bg-{{ note.pk }}").removeAttr('class').addClass("single-note add-note red");
             $("#id_background_color-{{ note.pk }}").val("red");
+
         });
 
-        $("#circle_green-{{ note.pk }}").click(function () {
-            // assumes element with id='button'
+        $(document).on("click", "#circle_green-{{ note.pk }}", function () {
             $(this).removeAttr('class').addClass("circle green selected");
 
             $("#circle_blue-{{ note.pk }}").removeAttr('class').addClass("circle blue");
@@ -154,11 +190,10 @@
 
             $("#bg-{{ note.pk }}").removeAttr('class').addClass("single-note add-note green");
             $("#id_background_color-{{ note.pk }}").val("green");
-
         });
 
-        $("#circle_purple-{{ note.pk }}").click(function () {
-            // assumes element with id='button'
+        $(document).on("click", "#circle_purple-{{ note.pk }}", function () {
+
             $(this).removeAttr('class').addClass("circle purple selected");
 
             $("#circle_blue-{{ note.pk }}").removeAttr('class').addClass("circle blue");
@@ -170,11 +205,9 @@
 
             $("#bg-{{ note.pk }}").removeAttr('class').addClass("single-note add-note purple");
             $("#id_background_color-{{ note.pk }}").val("purple");
-
         });
 
-        $("#circle_white-{{ note.pk }}").click(function () {
-            // assumes element with id='button'
+        $(document).on("click", "#circle_white-{{ note.pk }}", function () {
             $(this).removeAttr('class').addClass("circle white selected");
 
             $("#circle_blue-{{ note.pk }}").removeAttr('class').addClass("circle blue");
@@ -186,9 +219,7 @@
 
             $("#bg-{{ note.pk }}").removeAttr('class').addClass("single-note add-note white");
             $("#id_background_color-{{ note.pk }}").val("white");
-
         });
-
 
     {% endfor %}
 

@@ -37,7 +37,7 @@
             <div class="col-md-4 col-sm-6">
 
                 <div id="bg" class="single-note add-note white">
-                    <form method="POST" class="myNoteForm" data-url="/home/" action="/home/">
+                    <form method="POST" class="myNoteForm" data-url="/">
                         <span class="no-display">{{ form.new_dummy }}</span>
                         {% csrf_token %}
                         <input name="title" type="text" maxlength="20" placeholder="Type a title ...">
@@ -80,9 +80,9 @@
 
             <!--Show all saved notes-->
             <section>
-             <div class="all-notes">
+             <div id="all-notes" class="all-notes">
                 {% for note in notes %}
-                    <div class="col-md-4 col-sm-6">
+                    <div id="_note-{{ note.pk }}" class="col-md-4 col-sm-6">
                             <form method="post" id="form-{{ forloop.counter0 }}">
                                 {% csrf_token %}
 

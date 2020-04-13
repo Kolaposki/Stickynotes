@@ -52,16 +52,20 @@ def index(request):
 
         if request.method == 'POST' and 'new_dummy' in request.POST:
             if form.is_valid():
-                form.save()
+                note_form = form.save()
+                note_pk = note_form.pk
+                
                 title = request.POST.get('title')
                 description = request.POST.get('description')
                 background_color = request.POST.get('background_color')
+                
                 data = {}
                 data['message'] = 'form note is saved'
                 data['title'] = title
                 data['description'] = description
                 data['background_color'] = background_color
-
+                data['note_pk'] = note_pk
+                    
                 return JsonResponse(data)
 
     notes = Note.objects.all().order_by('-date_added')
