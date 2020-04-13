@@ -15,26 +15,8 @@ $(document).ready(function () {
             error: handleError,
         });
 
-        function handleSuccess(data) {
 
-            if (data) {
-                $(".all-notes").load(" .all-notes > *");
-            }
-
-            console.log(data.message);
-            let $noteTitle = data.title;
-            let $noteDescription = data.description;
-            let $noteBG = data.background_color;
-            let $note_pk = data.note_pk;
-
-            console.log("title: " + $noteTitle);
-            console.log("desc: " + $noteDescription);
-            console.log("bg color: " + $noteBG);
-            console.log("pk: " + $note_pk);
-
-            $("#bg").removeAttr('class').addClass("single-note add-note white");
-            $noteForm[0].reset();
-
+        function onClickActions($note_pk) {
 
             $(document).on("click", "#pencil-" + $note_pk + "", function () {
                 $(this).removeAttr('class').addClass("no-display");
@@ -158,9 +140,32 @@ $(document).ready(function () {
                 $("#bg-" + $note_pk + "").removeAttr('class').addClass("single-note add-note white");
                 $("#id_background_color-" + $note_pk + "").val("white");
             });
-
         }
 
+
+        function handleSuccess(data) {
+
+            if (data) {
+                $(".all-notes").load(" .all-notes > *");
+            }
+
+            console.log(data.message);
+            let $noteTitle = data.title;
+            let $noteDescription = data.description;
+            let $noteBG = data.background_color;
+            let $note_pk = data.note_pk;
+
+            console.log("title: " + $noteTitle);
+            console.log("desc: " + $noteDescription);
+            console.log("bg color: " + $noteBG);
+            console.log("pk: " + $note_pk);
+
+            $("#bg").removeAttr('class').addClass("single-note add-note white");
+            $noteForm[0].reset();
+
+            onClickActions($note_pk)
+
+        }
 
         function handleError(ThrowError) {
             console.log(ThrowError);
