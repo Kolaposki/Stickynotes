@@ -116,11 +116,11 @@
             if ($(this).prop('checked')) {
                 $(this).val("True");
                 $("#title-head-{{ note.pk }}").removeAttr('class').addClass("isDone");
-                $("#desc_p-{{ note.pk }}").removeAttr('class').addClass("isDone")
+                $("#desc_p-{{ note.pk }}").removeAttr('class').addClass("isDone");
             } else {
                 $(this).val("False");
                 $("#title-head-{{ note.pk }}").removeAttr('class').addClass("");
-                $("#desc_p-{{ note.pk }}").removeAttr('class').addClass("")
+                $("#desc_p-{{ note.pk }}").removeAttr('class').addClass("");
             }
         });
 

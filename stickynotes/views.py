@@ -77,7 +77,7 @@ def index(request):
                 data['title'] = title
 
                 return JsonResponse(data)
-            
+             
 
     """
     if request.method == 'POST' and 'update_btn' in request.POST:
