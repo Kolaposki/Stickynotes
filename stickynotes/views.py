@@ -149,3 +149,14 @@ def new_update(request):
     return render(request, template_name='update.html',
                   context={"up_form": form, "obj": obj, "hello": "hello"})
 """
+
+
+def delete(request, pk):
+    # note_id = 40
+    obj = get_object_or_404(Note, pk=pk)
+
+    if request.method == "POST":
+        obj.delete()
+        return HttpResponseRedirect('/')
+
+    return render(request, "delete.html", context={"obj": obj})
