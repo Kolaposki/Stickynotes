@@ -5,30 +5,11 @@ from .forms import *
 from django.http import JsonResponse
 
 
-def all_actions(request):
-    if request.method == 'POST' and 'update_btn' in request.POST:
-        pass
-    if request.method == 'POST' and 'create_btn' in request.POST:
-        pass
-
-
-# Create your views here.
-class HomeView(CreateView):
-    model = Note
-    template_name = 'home.html'
-    context_object_name = 'notes'
-    form_class = NoteForm
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["notes"] = self.model.objects.all().order_by('-date_added')
-        return context
-
-
 def index(request):
     form = NoteForm()
     up_form = NoteForm2()
 
+    # Creating note
     if request.is_ajax() and 'new_dummy' in request.POST:
         print("THIS REQUEST IS AJAX and FROM NEW DUMMY")
         form = NoteForm(request.POST)
@@ -51,6 +32,7 @@ def index(request):
 
                 return JsonResponse(data)
 
+    # Updating note
     if request.is_ajax() and 'update_dummy' in request.POST:
         print("THIS REQUEST IS AJAX and FROM UPDATE DUMMY")
         # up_form = NoteForm2(request.POST)
@@ -77,32 +59,15 @@ def index(request):
                 data['title'] = title
 
                 return JsonResponse(data)
-             
 
-    """
-    if request.method == 'POST' and 'update_btn' in request.POST:
-        note_id = request.POST.get('note_id')
-        print("NOTED-ID: ", note_id)
-
-        obj = get_object_or_404(Note, id=note_id)
-        print(f"Here is object: {obj}")
-
-        up_form = NoteForm2(request.POST or None, instance=obj)
-
-        if up_form.is_valid():
-            up_form.save()
-            print("SAVED UPDATE FORM")
-            return redirect('home')
-        else:
-            print("UPDATE FORM IS NOT VALID")
-            print(up_form.errors)
-    """
-
+    # Read note     
     notes = Note.objects.all().order_by('-date_added')
+
     return render(request, 'duplicate_home.html',
                   context={'form': form, 'notes': notes, "up_form": up_form})
 
 
+"""
 class UpdateNoteView(UpdateView):
     model = Note
     template_name = 'update.html'
@@ -119,6 +84,26 @@ class UpdateNoteView(UpdateView):
         form.instance.pk = self.request.POST.get('note_id')
         # return redirect('home')
         return super().form_valid(form)
+
+
+def all_actions(request):
+    if request.method == 'POST' and 'update_btn' in request.POST:
+        pass
+    if request.method == 'POST' and 'create_btn' in request.POST:
+        pass
+
+
+# Create your views here.
+class HomeView(CreateView):
+    model = Note
+    template_name = 'home.html'
+    context_object_name = 'notes'
+    form_class = NoteForm
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["notes"] = self.model.objects.all().order_by('-date_added')
+        return context
 
 
 # update view for details
@@ -163,3 +148,4 @@ def new_update(request):
 
     return render(request, template_name='update.html',
                   context={"up_form": form, "obj": obj, "hello": "hello"})
+"""
