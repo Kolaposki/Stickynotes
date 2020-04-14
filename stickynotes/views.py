@@ -1,5 +1,4 @@
 from django.shortcuts import render, get_object_or_404, redirect, HttpResponseRedirect
-from django.views.generic import CreateView, ListView, UpdateView
 from .models import Note
 from .forms import *
 from django.http import JsonResponse
