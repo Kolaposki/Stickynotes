@@ -9,34 +9,43 @@ def index(request):
     up_form = NoteForm2()
 
     # Creating note
-    if request.is_ajax() and 'new_dummy' in request.POST:
-        print("THIS REQUEST IS AJAX and FROM NEW DUMMY")
-        form = NoteForm(request.POST)
+    if request.is_ajax():
+        if 'new_dummy' in request.POST:
+            print("THIS REQUEST IS AJAX and FROM NEW DUMMY")
+            form = NoteForm(request.POST)
 
-        if request.method == 'POST':
-            if form.is_valid():
-                note_form = form.save()
-                note_pk = note_form.pk
+            if request.method == 'POST':
+                if form.is_valid():
+                    note_form = form.save()
+                    note_pk = note_form.pk
 
-                title = request.POST.get('title')
-                description = request.POST.get('description')
-                background_color = request.POST.get('background_color')
+                    title = request.POST.get('title')
+                    description = request.POST.get('description')
+                    background_color = request.POST.get('background_color')
 
-                data = {}
-                data['message'] = 'form note is saved'
-                data['title'] = title
-                data['description'] = description
-                data['background_color'] = background_color
-                data['note_pk'] = note_pk
+                    data = {}
+                    data['message'] = 'form note is saved'
+                    data['title'] = title
+                    data['description'] = description
+                    data['background_color'] = background_color
+                    data['note_pk'] = note_pk
 
-                return JsonResponse(data)
+                    return JsonResponse(data)
 
     # Updating note
-    if request.is_ajax() and 'update_dummy' in request.POST:
-        print("THIS REQUEST IS AJAX and FROM UPDATE DUMMY")
-        # up_form = NoteForm2(request.POST)
-        # print(up_form)
+    if request.is_ajax():
 
+        print(request.GET)
+        print(up_form)
+
+        # if request.method == 'POST':
+        #     print(request.POST)
+        #     print('update' in request.POST)
+        #     print('update' in request.GET)
+        #     print(request.POST.get('update'))
+        #     print(request.POST.get('btn'))
+
+        # print(up_form.cleaned_data.get("btn"))
         if request.method == 'POST':
             note_id = request.POST.get('note_id')
             # note_id = 118
@@ -46,8 +55,7 @@ def index(request):
             print(f"Here is object: {obj}")
 
             up_form = NoteForm2(request.POST or None, instance=obj)
-            print(f"UPDATE FORM: {up_form}")
-
+            print(up_form)
             if up_form.is_valid():
                 print("UPDATE FORM IS VALID")
                 data = {}
@@ -62,7 +70,7 @@ def index(request):
     # Read note     
     notes = Note.objects.all().order_by('-date_added')
 
-    return render(request, 'duplicate_home.html',
+    return render(request, 'home.html',
                   context={'form': form, 'notes': notes, "up_form": up_form})
 
 
@@ -150,12 +158,23 @@ def new_update(request):
 """
 
 
-def delete(request, pk):
-    # note_id = 40
-    obj = get_object_or_404(Note, pk=pk)
+def delete(request):
+    print("REQUEST IS ", request.method)
+
+    print(f"{request.POST.get('submit') == 'delete'}")
+    print(f"{request.POST.get('delete-note') == 'delete'}")
+    print(f"{'delete-note' in request.POST}")
 
     if request.method == "POST":
+        note_id = request.POST.get('note_id')
+        # note_id = 118
+        print("NOTED-ID: ", note_id)
+
+        obj = get_object_or_404(Note, id=note_id)
+        print(f"To DELETE object: {obj}")
+        print(f"{'delete-note' in request.POST}")
+
         obj.delete()
         return HttpResponseRedirect('/')
 
-    return render(request, "delete.html", context={"obj": obj})
+    return render(request, "home.html")

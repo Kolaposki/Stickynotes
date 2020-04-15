@@ -21,21 +21,18 @@ class NoteForm(forms.ModelForm):
 
 
 class NoteForm2(forms.ModelForm):
-    title = forms.CharField(max_length=20, required=True, strip=True,
-                            help_text="coming from form 2 update",
-                            widget=forms.TextInput(attrs={'id': 'new_title'}))
+    title = forms.CharField(max_length=20, required=True, strip=True)
 
-    description = forms.CharField(required=False, help_text="coming from form 2 update",
-                                  widget=forms.TextInput(attrs={'id': 'new_description'}))
+    description = forms.CharField(required=False)
 
-    background_color = forms.CharField(max_length=10, required=True, strip=True,
-                                       help_text="coming from form 2 update",
-                                       widget=forms.TextInput(attrs={'id': 'new_bgcolor'}))
+    background_color = forms.CharField(max_length=10, required=True, strip=True)
 
-    is_done = forms.BooleanField(required=False, help_text="coming from form 2 update",
-                                 widget=forms.TextInput(attrs={'id': 'new_is_done'}))
+    is_done = forms.BooleanField(required=False)
 
     update_dummy = forms.CharField(required=False)
+
+    btn = forms.CharField(required=False)
+    update = forms.CharField(required=False)
 
     class Meta:
         model = Note

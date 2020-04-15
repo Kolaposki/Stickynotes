@@ -108,6 +108,8 @@
 
             $("#palette-{{ note.pk }}").removeAttr('class').addClass("");
 
+            $("#hider-{{ note.pk }}").remove();
+
             //SUBMIT AJAX UPDATE FORM HERE
             UpdateForm({{ note.pk }})
         });
