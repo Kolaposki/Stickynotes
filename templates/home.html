@@ -81,7 +81,7 @@
             <section>
                 <div id="all-notes" class="all-notes">
                     {% for note in notes %}
-                        <div id="_note-{{ note.pk }}" class="col-md-4 col-sm-6">
+                        <div id="mynote-{{ forloop.counter0 }}" class="col-md-4 col-sm-6">
 
                             <form name="MyNote-{{ note.pk }}" method="post" id="UpdateNoteForm-{{ note.pk }}"
                                   data-url="/">

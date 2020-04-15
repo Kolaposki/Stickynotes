@@ -217,17 +217,32 @@ $(document).ready(function () {
 });
  **/
 
-$(document).on("click", "#delete_btn", function () {
+$(document).on("click", "#delete_btn", function (event) {
 
+    event.preventDefault();
 
     $.ajax({
         type: 'POST',
         url: '/',
-        data: {pk: pk},
-        
-        success: function () {
-            alert('Note deleted!')
-        },
+        // data: {pk: pk},
+        data: {csrfmiddlewaretoken: '{{ csrf_token }}'},
+        success: handleSuccess,
+        error: handleError,
         headers: {'X_METHODOVERRIDE': 'DELETE'}
     });
+
+    function handleSuccess(data) {
+        let $noteTitle = data.title;
+        let $note_pk = data.note_pk;
+        console.log(data.message);
+        console.log("title: " + $noteTitle);
+        console.log("pk: " + $note_pk);
+        $('#mynote-0').hide(); // hide the post on success
+        alert('Note deleted!')
+    }
+
+    function handleError(ThrowError) {
+        console.log("An error occurred while trying to delete this note")
+        console.log(ThrowError);
+    }
 });
