@@ -216,3 +216,18 @@ $(document).ready(function () {
     });
 });
  **/
+
+$(document).on("click", "#delete_btn", function () {
+
+
+    $.ajax({
+        type: 'POST',
+        url: '/',
+        data: {pk: pk},
+        
+        success: function () {
+            alert('Note deleted!')
+        },
+        headers: {'X_METHODOVERRIDE': 'DELETE'}
+    });
+});

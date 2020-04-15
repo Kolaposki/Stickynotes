@@ -178,3 +178,26 @@ def delete(request):
         return HttpResponseRedirect('/')
 
     return render(request, "home.html")
+
+
+def delete_note(request):
+    if request.method == 'DELETE':
+
+        note = Note.objects.get(
+            pk=int(QueryDict(request.body).get('postpk')))
+
+        note.delete()
+
+        response_data = {}
+        response_data['msg'] = 'Note was deleted.'
+
+        return HttpResponse(
+            json.dumps(response_data),
+            content_type="application/json"
+        )
+
+    else:
+        return HttpResponse(
+            json.dumps({"nothing to see": "this isn't happening"}),
+            content_type="application/json"
+        )

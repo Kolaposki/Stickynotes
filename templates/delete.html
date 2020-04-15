@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+    <div class="header" id="header">
+        <div class="container">
+            <div class="col-md-3 col-sm-5">
+                <a href="#">
+                    <h2>Delete</h2>
+                </a>
+            </div>
+            <div class="col-md-6 col-md-push-3 col-sm-7">
+                <div class="hold-img">
+                    <img src="{% static 'img/Group 10.svg' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form method="post">
+        {% csrf_token %}
+        <p>
+            Are u sure u wanna delete {{ obj }}
+            <span>
+        <p> {{ obj.title }} </p>
+        <p> {{ obj.description }} </p>
+        <p> {{ obj.background_color }} </p>
+        </span>
+
+        </p>
+
+        <input type="submit" value="Delete" name="delete-note">
+    </form>
+
+{% endblock %}
