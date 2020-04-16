@@ -220,12 +220,15 @@ $(document).ready(function () {
 $(document).on("click", "#delete_btn", function (event) {
 
     event.preventDefault();
+    let $noteForm = $('.mynote-0');
+    let $formData = $noteForm.serialize();
+
 
     $.ajax({
         type: 'POST',
-        url: '/',
+        url: '',
         // data: {pk: pk},
-        data: {csrfmiddlewaretoken: '{{ csrf_token }}'},
+        data: $formData,
         success: handleSuccess,
         error: handleError,
         headers: {'X_METHODOVERRIDE': 'DELETE'}
@@ -242,7 +245,7 @@ $(document).on("click", "#delete_btn", function (event) {
     }
 
     function handleError(ThrowError) {
-        console.log("An error occurred while trying to delete this note")
+        console.log("An error occurred while trying to delete this note");
         console.log(ThrowError);
     }
 });

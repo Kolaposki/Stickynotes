@@ -24,7 +24,7 @@ def index(request):
                 background_color = request.POST.get('background_color')
 
                 data = {}
-                data['message'] = 'form note is saved'
+                data['message'] = 'form note is created'
                 data['title'] = title
                 data['description'] = description
                 data['background_color'] = background_color
@@ -33,7 +33,17 @@ def index(request):
                 return JsonResponse(data)
 
     # Updating note
-    if request.is_ajax() and request.method == 'POST':
+    if 'btn' in request.method == 'POST':
+        print("BTN POST IS PRESENT")
+
+    if 'btn' in request.method == 'PUT':
+        print("BTN PUT IS PRESENT")
+
+    if 'btn' in request.method == 'DELETE':
+        print("BTN DELETE IS PRESENT")
+
+    if request.method == 'PUT':
+        print("REQUEST IS PUT")
         note_id = request.POST.get('note_id')
         print("NOTED-ID: ", note_id)
 
@@ -53,27 +63,6 @@ def index(request):
             data['title'] = title
 
             return JsonResponse(data)
-
-    if request.is_ajax() and request.method == 'DELETE':
-        note_id = request.POST.get('note_id')
-        print("NOTED-ID: ", note_id)
-        
-        new_id = Note.objects.get(pk=int(QueryDict(request.body).get('note_id')))
-        print("NEW ID: ", new_id)
-
-        # Note.objects.get(pk=request.DELETE['pk']).delete()
-
-        obj = get_object_or_404(Note, id=note_id)
-        print(f"Here is object to delete: {obj}")
-
-        data['message'] = 'Note successfully deleted'
-        data['note_pk'] = note_id
-        data['title'] = obj.title
-
-        obj.delete()
-        print("NOTE DELETED")
-
-        return JsonResponse(data)
 
     # Read note     
     notes = Note.objects.all().order_by('-date_added')
@@ -189,23 +178,26 @@ def delete(request):
 
 
 def delete_note(request):
-    if request.method == 'DELETE':
+    if request.method == 'POST':
+        print("REQUEST IS DELETE")
+        note_id = request.POST.get('note_id')
+        print("NOTED-ID: ", note_id)
 
-        note = Note.objects.get(
-            pk=int(QueryDict(request.body).get('postpk')))
+        new_id = Note.objects.get(pk=int(QueryDict(request.body).get('note_id')))
+        print("NEW ID: ", new_id)
 
-        note.delete()
+        # Note.objects.get(pk=request.DELETE['pk']).delete()
 
-        response_data = {}
-        response_data['msg'] = 'Note was deleted.'
+        obj = get_object_or_404(Note, id=note_id)
+        print(f"Here is object to delete: {obj}")
 
-        return HttpResponse(
-            json.dumps(response_data),
-            content_type="application/json"
-        )
+        data['message'] = 'Note successfully deleted'
+        data['note_pk'] = note_id
+        data['title'] = obj.title
 
-    else:
-        return HttpResponse(
-            json.dumps({"nothing to see": "this isn't happening"}),
-            content_type="application/json"
-        )
+        obj.delete()
+        print("NOTE DELETED")
+
+        return JsonResponse(data)
+
+    return render(request, 'home.html')

@@ -48,6 +48,11 @@
 <script src="{% static 'js/main.js' %}" charset="utf-8"></script>
 
 <script>
+
+    $.ajaxSetup({
+        data: {csrfmiddlewaretoken: '{{ csrf_token }}'},
+    });
+
     $(document).on("click", "#palette", function () {
         $("#allColor").toggleClass('colors').toggleClass("colors openDivs");
     });
@@ -70,6 +75,7 @@
                     data: $formData,
                     success: handleSuccess,
                     error: handleError,
+                    headers: {'X_METHODOVERRIDE': 'PUT'}
                 });
 
                 function handleSuccess(data) {

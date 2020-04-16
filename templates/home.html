@@ -83,7 +83,8 @@
                     {% for note in notes %}
                         <div id="mynote-{{ forloop.counter0 }}" class="col-md-4 col-sm-6">
 
-                            <form name="MyNote-{{ note.pk }}" method="post" id="UpdateNoteForm-{{ note.pk }}"
+                            <form class="mynote-{{ forloop.counter0 }}" name="MyNote-{{ note.pk }}" method="POST"
+                                  id="UpdateNoteForm-{{ note.pk }}"
                                   data-url="/">
                                 {% csrf_token %}
                                 <span class="no-display">{{ up_form.update_dummy }}</span>
