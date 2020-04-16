@@ -1,0 +1,4 @@
+# JetBrains PyCharm settings
+.idea/
+stickynotes/migrations
+db.sqlite3
