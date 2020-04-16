@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/KOLAPO.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/KOLAPO.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stickynotes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -167,7 +169,7 @@
       <workItem from="1585821917598" duration="35029000" />
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
-      <workItem from="1586607169608" duration="126395000" />
+      <workItem from="1586607169608" duration="127575000" />
     </task>
     <task id="LOCAL-00001" summary="Create README">
       <created>1586724269530</created>
@@ -295,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587004530284</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="DELETE function using ajax modified and tested">
+      <created>1587010049328</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1587010049328</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,7 +341,8 @@
     <MESSAGE value="Fix CRSF token not found using ajax for deleting note" />
     <MESSAGE value="Testing deleting of notes using ajax" />
     <MESSAGE value="Create .gitignore file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create .gitignore file" />
+    <MESSAGE value="DELETE function using ajax modified and tested" />
+    <option name="LAST_COMMIT_MESSAGE" value="DELETE function using ajax modified and tested" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">

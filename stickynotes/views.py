@@ -34,18 +34,10 @@ def index(request):
                 return JsonResponse(data)
 
     # Updating note
-    if 'btn' in request.method == 'POST':
-        print("BTN POST IS PRESENT")
-
-    if 'btn' in request.method == 'PUT':
-        print("BTN PUT IS PRESENT")
-
-    if 'btn' in request.method == 'DELETE':
-        print("BTN DELETE IS PRESENT")
-
     if request.method == 'PUT':
         print("REQUEST IS PUT")
-        note_id = request.POST.get('note_id')
+        # note_id = request.POST.get('note_id')
+        note_id = int(QueryDict(request.body).get('note_id'))
         print("NOTED-ID: ", note_id)
 
         obj = get_object_or_404(Note, id=note_id)

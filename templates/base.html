@@ -60,6 +60,7 @@
     function UpdateForm($note_pk) {
         $(document).ready(function () {
             let $updateNoteForm = $('#UpdateNoteForm-' + $note_pk + "");
+            let csrftoken = $("[name=csrfmiddlewaretoken]").val();
 
             $updateNoteForm.submit(function (event) {
                 event.preventDefault();
@@ -70,12 +71,14 @@
                 console.log($thisURL);
 
                 $.ajax({
-                    method: 'POST',
+                    method: 'PUT',
                     url: $thisURL,
                     data: $formData,
                     success: handleSuccess,
                     error: handleError,
-                    headers: {'X_METHODOVERRIDE': 'PUT'}
+                    headers: {
+                        "X-CSRFToken": csrftoken
+                    }
                 });
 
                 function handleSuccess(data) {
@@ -85,7 +88,7 @@
                     }
 
                     console.log(data.message);
-                    console.log("Note id: " + data.pk);
+                    console.log("Note id: " + data.note_pk);
                 }
 
                 function handleError(ThrowError) {
@@ -96,8 +99,46 @@
         });
     }
 
-    {% for note in notes %}
 
+    function DeleteNote($note_pk) {
+        $(document).on("click", "#delete_btn-" + $note_pk + "", function (event) {
+            let csrftoken = $("[name=csrfmiddlewaretoken]").val();
+            let $noteForm = $('#UpdateNoteForm-' + $note_pk + "");
+
+            event.preventDefault();
+            let $formData = $noteForm.serialize();
+
+            $.ajax({
+                type: 'DELETE',
+                url: '',
+                data: $formData,
+                success: handleSuccess,
+                error: handleError,
+                headers: {
+                    "X-CSRFToken": csrftoken
+                }
+            });
+
+            function handleSuccess(data) {
+                let $noteTitle = data.title;
+                let $note_pk = data.note_pk;
+                console.log(data.message);
+                console.log("title: " + $noteTitle);
+                console.log("pk: " + $note_pk);
+                $('#mynote-0').hide(); // hide the post on success
+                alert('Note deleted!');
+                $(".all-notes").load(" .all-notes > *"); // reload all notes
+            }
+
+            function handleError(ThrowError) {
+                console.log("An error occurred while trying to delete this note");
+                console.log(ThrowError);
+            }
+        });
+    }
+
+
+    {% for note in notes %}
         $(document).on("click", "#palette-{{ note.pk }}", function () {
             $("#allColor-{{ note.pk }}").toggleClass('colors').toggleClass("colors openDivs");
         });
@@ -113,6 +154,7 @@
             $("#title-head-{{ note.pk }}").addClass("no-display");
 
             $("#palette-{{ note.pk }}").removeAttr('class').addClass("");
+
             //SUBMIT AJAX UPDATE FORM HERE
             UpdateForm({{ note.pk }})
         });
@@ -223,6 +265,8 @@
             $("#id_background_color-{{ note.pk }}").val("white");
         });
 
+        // delete note using ajax
+        DeleteNote({{ note.pk }})
     {% endfor %}
 
     $("#circle_yellow").click(function () {

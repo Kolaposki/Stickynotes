@@ -83,7 +83,7 @@
                     {% for note in notes %}
                         <div id="mynote-{{ forloop.counter0 }}" class="col-md-4 col-sm-6">
 
-                            <form class="mynote-{{ forloop.counter0 }}" name="MyNote-{{ note.pk }}" method="POST"
+                            <form name="MyNote-{{ note.pk }}" method="POST"
                                   id="UpdateNoteForm-{{ note.pk }}"
                                   data-url="/">
                                 {% csrf_token %}
@@ -161,7 +161,7 @@
                                                 class="fas fa-palette"></i></span>
 
                                         {#                                        <span><i class="far fa-trash-alt"></i></span>#}
-                                        <button id="delete_btn" type="submit" name="delete_btn">
+                                        <button id="delete_btn-{{ note.pk }}" type="submit" name="delete_btn">
                                             <i class="far fa-trash-alt"></i>
                                         </button>
 
