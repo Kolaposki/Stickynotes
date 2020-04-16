@@ -1,0 +1,14 @@
+# login.html
+{% extends "base.html" %}
+
+{% block title %}
+    You've logged out successfully
+{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="from-group">
+        <p>Mistake, Log back in <a href="{% url 'login' %}">here</a></p>
+    </div>
+{% endblock %}

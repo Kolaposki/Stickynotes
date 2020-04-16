@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('stickynotes', '0003_auto_20200402_2003'),
+        ('registration', '0003_auto_20200402_2003'),
     ]
 
     operations = [
