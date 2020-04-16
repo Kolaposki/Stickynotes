@@ -3,7 +3,6 @@ from .models import Note
 from .forms import *
 from django.http import JsonResponse
 from django.http import QueryDict
-from django.views.decorators.csrf import csrf_protect
 
 
 def index(request):
@@ -87,3 +86,16 @@ def index(request):
 
     return render(request, 'home.html',
                   context={'form': form, 'notes': notes, "up_form": up_form})
+
+
+def register(response):
+    if response.method == "POST":
+        form = RegisterForm(response.POST)
+        if form.is_valid():
+            form.save()
+
+        return redirect("home")
+    else:
+        form = RegisterForm()
+
+    return render(response, "register.html", {"form": form})
