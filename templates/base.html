@@ -60,7 +60,6 @@
     function UpdateForm($note_pk) {
         $(document).ready(function () {
             let $updateNoteForm = $('#UpdateNoteForm-' + $note_pk + "");
-            let csrftoken = $("[name=csrfmiddlewaretoken]").val();
 
             $updateNoteForm.submit(function (event) {
                 event.preventDefault();
@@ -71,14 +70,11 @@
                 console.log($thisURL);
 
                 $.ajax({
-                    method: 'PUT',
+                    method: 'POST',
                     url: $thisURL,
                     data: $formData,
                     success: handleSuccess,
                     error: handleError,
-                    headers: {
-                        "X-CSRFToken": csrftoken
-                    }
                 });
 
                 function handleSuccess(data) {

@@ -87,9 +87,6 @@
                                   id="UpdateNoteForm-{{ note.pk }}"
                                   data-url="/">
                                 {% csrf_token %}
-                                <span class="no-display">{{ up_form.update_dummy }}</span>
-
-
                                 <input id="id_background_color-{{ note.pk }}" type="hidden" name="background_color"
                                        value="{{ note.background_color }}">
                                 <input type="hidden" name="note_id" value="{{ note.pk }}">
@@ -145,9 +142,6 @@
 
                                     <textarea class="no-display" id="desc-{{ note.pk }}"
                                               name="description">{{ note.description }}</textarea>
-
-                                    <input id="hider-{{ note.pk }}" type="hidden" name="btn" class="no-display"
-                                           value="yes">
 
                                     <div class="meta">
                                         <button name="update-{{ note.pk }}" id="update_btn-{{ note.pk }}"

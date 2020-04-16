@@ -34,28 +34,32 @@ def index(request):
                 return JsonResponse(data)
 
     # Updating note
-    if request.method == 'PUT':
-        print("REQUEST IS PUT")
-        # note_id = request.POST.get('note_id')
-        note_id = int(QueryDict(request.body).get('note_id'))
-        print("NOTED-ID: ", note_id)
 
-        obj = get_object_or_404(Note, id=note_id)
-        print(f"Here is object: {obj}")
-        up_form = NoteForm2(request.POST or None, instance=obj)
-        if up_form.is_valid():
-            print("UPDATE FORM IS VALID")
+    if request.is_ajax() and 'new_dummy' not in request.POST:
+        print("THIS REQUEST IS AJAX and FROM UPDATE DUMMY")
 
-            data = {}
-            title = request.POST.get('title')
-            up_form.save()
-            print(f"Updated Note: {obj}")
+        if request.method == 'POST':
+            print("REQUEST IS POST")
+            # note_id = int(QueryDict(request.body).get('note_id'))
+            note_id = request.POST.get('note_id')
+            print("NOTED-ID: ", note_id)
 
-            data['message'] = 'form note is updated'
-            data['note_pk'] = note_id
-            data['title'] = title
+            obj = get_object_or_404(Note, id=note_id)
+            print(f"Here is object: {obj}")
+            up_form = NoteForm2(request.POST or None, instance=obj)
+            if up_form.is_valid():
+                print("UPDATE FORM IS VALID")
 
-            return JsonResponse(data)
+                data = {}
+                title = request.POST.get('title')
+                up_form.save()
+                print(f"Updated Note: {obj}")
+
+                data['message'] = 'form note is updated'
+                data['note_pk'] = note_id
+                data['title'] = title
+
+                return JsonResponse(data)
 
     elif request.method == 'DELETE':
         print("REQUEST IS DELETE")
@@ -65,10 +69,9 @@ def index(request):
         new_id = Note.objects.get(pk=int(QueryDict(request.body).get('note_id')))
         print("NEW ID: ", new_id)
 
-        # Note.objects.get(pk=request.DELETE['pk']).delete()
-
         obj = get_object_or_404(Note, id=note_id)
         print(f"Here is object to delete: {obj}")
+
         data = {}
         data['message'] = 'Note successfully deleted'
         data['note_pk'] = note_id

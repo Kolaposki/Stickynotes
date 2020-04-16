@@ -29,11 +29,6 @@ class NoteForm2(forms.ModelForm):
 
     is_done = forms.BooleanField(required=False)
 
-    update_dummy = forms.CharField(required=False)
-
-    btn = forms.CharField(required=False)
-    update = forms.CharField(required=False)
-
     class Meta:
         model = Note
-        fields = ('title', 'description', 'background_color', 'is_done', 'update_dummy')
+        fields = ('title', 'description', 'background_color', 'is_done')
