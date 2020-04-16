@@ -3,6 +3,7 @@ from .models import Note
 from .forms import *
 from django.http import JsonResponse
 from django.http import QueryDict
+from django.views.decorators.csrf import csrf_protect
 
 
 def index(request):
@@ -63,6 +64,28 @@ def index(request):
             data['title'] = title
 
             return JsonResponse(data)
+
+    elif request.method == 'DELETE':
+        print("REQUEST IS DELETE")
+        note_id = int(QueryDict(request.body).get('note_id'))
+        print("NOTED-ID: ", note_id)
+
+        new_id = Note.objects.get(pk=int(QueryDict(request.body).get('note_id')))
+        print("NEW ID: ", new_id)
+
+        # Note.objects.get(pk=request.DELETE['pk']).delete()
+
+        obj = get_object_or_404(Note, id=note_id)
+        print(f"Here is object to delete: {obj}")
+        data = {}
+        data['message'] = 'Note successfully deleted'
+        data['note_pk'] = note_id
+        data['title'] = obj.title
+
+        obj.delete()
+        print("NOTE DELETED")
+
+        return JsonResponse(data)
 
     # Read note     
     notes = Note.objects.all().order_by('-date_added')
@@ -177,8 +200,10 @@ def delete(request):
     return render(request, "home.html")
 
 
+@csrf_protect
 def delete_note(request):
-    if request.method == 'POST':
+    csrfContext = RequestContext(request)
+    if request.method == 'DELETE':
         print("REQUEST IS DELETE")
         note_id = request.POST.get('note_id')
         print("NOTED-ID: ", note_id)
@@ -200,4 +225,4 @@ def delete_note(request):
 
         return JsonResponse(data)
 
-    return render(request, 'home.html')
+    return render(request, 'home.html', csrfContext)

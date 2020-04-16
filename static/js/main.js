@@ -218,20 +218,26 @@ $(document).ready(function () {
  **/
 
 $(document).on("click", "#delete_btn", function (event) {
-
+    let csrftoken = $("[name=csrfmiddlewaretoken]").val();
     event.preventDefault();
     let $noteForm = $('.mynote-0');
     let $formData = $noteForm.serialize();
 
+    $.ajaxSetup({
+        data: {csrfmiddlewaretoken: '{{ csrf_token }}'},
+    });
 
     $.ajax({
-        type: 'POST',
+        type: 'DELETE',
         url: '',
         // data: {pk: pk},
         data: $formData,
         success: handleSuccess,
         error: handleError,
-        headers: {'X_METHODOVERRIDE': 'DELETE'}
+        headers: {
+            "X-CSRFToken": csrftoken
+        }
+        // headers: {'X_METHODOVERRIDE': 'DELETE'}
     });
 
     function handleSuccess(data) {
