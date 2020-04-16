@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Note(models.Model):
-    # manager = models.ForeignKey(User, on_delete=models.CASCADE)
+    manager = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=25, null=False, blank=False)
     description = models.TextField(null=True, blank=True)
     date_added = models.DateTimeField(default=timezone.now)

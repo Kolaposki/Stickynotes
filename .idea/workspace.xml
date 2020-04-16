@@ -3,9 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sticky/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stickynotes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stickynotes/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stickynotes/migrations/0002_auto_20200402_1549.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stickynotes/migrations/0003_auto_20200402_2003.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stickynotes/migrations/0004_auto_20200402_2042.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stickynotes/migrations/0005_auto_20200402_2140.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stickynotes/migrations/0006_note_is_done.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stickynotes/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stickynotes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stickynotes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -167,7 +175,7 @@
       <workItem from="1585821917598" duration="35029000" />
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
-      <workItem from="1586607169608" duration="135934000" />
+      <workItem from="1586607169608" duration="138614000" />
     </task>
     <task id="LOCAL-00001" summary="Create README">
       <created>1586724269530</created>
@@ -344,7 +352,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587043501910</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Create login and logout view">
+      <created>1587044786983</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1587044786990</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,7 +378,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Create README" />
     <MESSAGE value="Fix creation of notes while using ajax and onclicks" />
     <MESSAGE value="Create function for onclick events during ajax create" />
     <MESSAGE value="Add dummy form field when updating note form" />
@@ -388,7 +402,8 @@
     <MESSAGE value="Add favicon" />
     <MESSAGE value="Remove unused comments and codes. Get ready for User auth" />
     <MESSAGE value="Create registration view" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create registration view" />
+    <MESSAGE value="Create login and logout view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create login and logout view" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">

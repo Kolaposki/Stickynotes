@@ -158,11 +158,13 @@ $(document).ready(function () {
             let $noteDescription = data.description;
             let $noteBG = data.background_color;
             let $note_pk = data.note_pk;
+            let $username = data.username;
 
             console.log("title: " + $noteTitle);
             console.log("desc: " + $noteDescription);
             console.log("bg color: " + $noteBG);
             console.log("pk: " + $note_pk);
+            console.log("username: " + $username);
 
             //$("#bg").removeAttr('class').addClass("single-note add-note white");
             $noteForm[0].reset();
