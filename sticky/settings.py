@@ -49,7 +49,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'stickynotes.middleware.HttpPostTunnelingMiddleware',
 ]
 
 ROOT_URLCONF = 'sticky.urls'

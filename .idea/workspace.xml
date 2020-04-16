@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stickynotes/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stickynotes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -167,7 +164,7 @@
       <workItem from="1585821917598" duration="35029000" />
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
-      <workItem from="1586607169608" duration="129036000" />
+      <workItem from="1586607169608" duration="129994000" />
     </task>
     <task id="LOCAL-00001" summary="Create README">
       <created>1586724269530</created>
@@ -309,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587011283413</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Modify update view to POST request">
+      <created>1587012740118</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1587012740118</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,7 +352,8 @@
     <MESSAGE value="Create .gitignore file" />
     <MESSAGE value="DELETE function using ajax modified and tested" />
     <MESSAGE value="Modify update view to PUT request" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modify update view to PUT request" />
+    <MESSAGE value="Modify update view to POST request" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modify update view to POST request" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
