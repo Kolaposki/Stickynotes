@@ -2,90 +2,90 @@
 {% load static %}
 {% block content %}
 
-    <div class="header" id="header">
-        <div class="container">
-            <div class="col-md-3 col-sm-5">
-                <a href="{% url 'home' %}">
-                    <h2>Sticky Notes</h2>
-                </a>
-            </div>
-            <div class="col-md-6 col-md-push-3 col-sm-7">
-                <div class="hold-img">
-                    <img src="{% static 'img/Group 10.svg' %}" alt="">
-                </div>
+<div class="header" id="header">
+    <div class="container">
+        <div class="col-md-3 col-sm-5">
+            <a href="{% url 'home' %}">
+                <h2>Sticky Notes</h2>
+            </a>
+        </div>
+        <div class="col-md-6 col-md-push-3 col-sm-7">
+            <div class="hold-img">
+                <img src="{% static 'img/Group 10.svg' %}" alt="">
             </div>
         </div>
     </div>
+</div>
 
 
-    <div id="notes" class="notes">
-        <div class="container">
-            <!--Search bar-->
-            <div class="searchBar">
-                <form>
-                    <div class="col-xs-11 nopadding">
-                        <input type="text" name="search" placeholder="Search">
-                    </div>
-                    <div class="col-xs-1 nopadding">
-                        <button type="submit"><i class="fas fa-search"></i></button>
-                    </div>
-                </form>
-            </div>
+<div id="notes" class="notes">
+    <div class="container">
+        <!--Search bar-->
+        <div class="searchBar">
+            <form>
+                <div class="col-xs-11 nopadding">
+                    <input type="text" name="search" placeholder="Search">
+                </div>
+                <div class="col-xs-1 nopadding">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+        </div>
 
 
-            <!--Create new note-->
-            <div id="noteCreator" class="col-md-4 col-sm-6">
+        <!--Create new note-->
+        <div id="noteCreator" class="col-md-4 col-sm-6">
 
-                <div id="bg" class="single-note add-note white">
-                    <form name="createNote" method="POST" class="myNoteForm" data-url="/">
-                        <span class="no-display">{{ form.new_dummy }}</span>
-                        {% csrf_token %}
-                        <input name="title" type="text" maxlength="20" placeholder="Type a title ...">
-                        <small>Today: {% now "jS F, Y" %}</small>
+            <div id="bg" class="single-note add-note white">
+                <form name="createNote" method="POST" class="myNoteForm" data-url="/">
+                    <span class="no-display">{{ form.new_dummy }}</span>
+                    {% csrf_token %}
+                    <input name="title" type="text" maxlength="20" placeholder="Type a title ...">
+                    <small>Today: {% now "jS F, Y" %}</small>
 
-                        <input style="display: none !important;" name="background_color" value="white"
-                               id="id_background_color">
-                        <input class="no-display" type="checkbox" value="False" name="is_done" id="id_is_done">
+                    <input style="display: none !important;" name="background_color" value="white"
+                           id="id_background_color">
+                    <input class="no-display" type="checkbox" value="False" name="is_done" id="id_is_done">
 
-                        <hr>
-                        <textarea name="description" placeholder="Type a description ..."></textarea>
-                        <div class="meta">
-                            <span id="palette"><i class="fas fa-palette"></i></span>
-                            <span>
+                    <hr>
+                    <textarea name="description" placeholder="Type a description ..."></textarea>
+                    <div class="meta">
+                        <span id="palette"><i class="fas fa-palette"></i></span>
+                        <span>
                                 <button class="mark btn btn-lg" type="submit" name="create_btn">
                                     <i class="fas fa-check"></i>
                                 </button>
                             </span>
-                        </div>
+                    </div>
 
 
-                        <div id="allColor" class="colors">
-                            <div id="circle_blue" class="circle blue">
-                            </div>
-                            <div id="circle_yellow" class="circle yellow">
-                            </div>
-                            <div id="circle_red" class="circle red">
-                            </div>
-                            <div id="circle_purple" class="circle purple">
-                            </div>
-                            <div id="circle_green" class="circle green">
-                            </div>
-                            <div id="circle_white" class="circle whiteCircle selected">
-                            </div>
+                    <div id="allColor" class="colors">
+                        <div id="circle_blue" class="circle blue">
                         </div>
-                    </form>
-                </div>
+                        <div id="circle_yellow" class="circle yellow">
+                        </div>
+                        <div id="circle_red" class="circle red">
+                        </div>
+                        <div id="circle_purple" class="circle purple">
+                        </div>
+                        <div id="circle_green" class="circle green">
+                        </div>
+                        <div id="circle_white" class="circle whiteCircle selected">
+                        </div>
+                    </div>
+                </form>
             </div>
+        </div>
 
-            <!--Show all saved notes-->
-            <section>
-                <div id="all-notes" class="all-notes">
+        <!--Show all saved notes-->
+        <section>
+            {% endif %}
+            <div id="all-notes" class="all-notes">
+                {% if notes %}
                     {% for note in notes %}
                         <div id="mynote-{{ forloop.counter0 }}" class="col-md-4 col-sm-6">
 
-                            <form name="MyNote-{{ note.pk }}" method="POST"
-                                  id="UpdateNoteForm-{{ note.pk }}"
-                                  data-url="/">
+                            <form method="POST" id="UpdateNoteForm-{{ note.pk }}" data-url="/">
                                 {% csrf_token %}
                                 <input id="id_background_color-{{ note.pk }}" type="hidden" name="background_color"
                                        value="{{ note.background_color }}">
@@ -120,7 +120,6 @@
                                     </span>
                                     {% endif %}
 
-
                                     {% if note.is_done %}
                                         <h2 id="title-head-{{ note.pk }}" class="isDone">{{ note.title }} </h2>
                                     {% else %}
@@ -154,10 +153,12 @@
                                         <span id="palette-{{ note.pk }}" class="no-display"><i
                                                 class="fas fa-palette"></i></span>
 
-                                        {#                                        <span><i class="far fa-trash-alt"></i></span>#}
-                                        <button id="delete_btn-{{ note.pk }}" type="submit" name="delete_btn">
-                                            <i class="far fa-trash-alt"></i>
-                                        </button>
+                                        <span>
+                                            <button id="delete_btn-{{ note.pk }}" type="submit" name="delete_btn"
+                                                    class="mark">
+                                                <i class="far fa-trash-alt"></i>
+                                            </button>
+                                        </span>
 
                                         <span><i class="fas fa-expand"></i></span>
                                         <span><i class="fas fa-link"></i></span>
@@ -179,10 +180,18 @@
                             </form>
                         </div>
                     {% endfor %}
-                </div>
-            </section>
 
-        </div>
+                {% else %}
+                    <div>
+                        <h3>No notes for now start by creating one.</h3>
+                    </div>
+
+                {% endif %}
+            </div>
+
+        </section>
+
     </div>
+</div>
 {% endblock %}
 

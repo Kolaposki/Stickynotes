@@ -508,6 +508,7 @@ footer span i {
     background-color: transparent;
     padding: 0 !important;
     font-size: 23px;
+    border: 0;
 }
 
 .no-display {
