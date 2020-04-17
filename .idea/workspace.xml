@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
+    <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="Remove session creations from view">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stickynotes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -164,7 +167,7 @@
       <workItem from="1585821917598" duration="35029000" />
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
-      <workItem from="1586607169608" duration="164125000" />
+      <workItem from="1586607169608" duration="166281000" />
     </task>
     <task id="LOCAL-00001" summary="Create README">
       <created>1586724269530</created>
@@ -411,7 +414,21 @@
       <option name="project" value="LOCAL" />
       <updated>1587148194304</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Remove unnecessary comments from js file">
+      <created>1587148376677</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1587148376677</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Remove session creations from view">
+      <created>1587148459718</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1587148459718</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -430,8 +447,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Create and tested delete view for deleting notes" />
-    <MESSAGE value="Remove unnecessary imports" />
     <MESSAGE value="Get ready for POST TUNNELLING after several delete trials" />
     <MESSAGE value="Creat middleware file to intercept headers and add DELETE and PUT requests" />
     <MESSAGE value="Register the new middleware to MIDDLEWARE list in settings.py" />
@@ -455,7 +470,9 @@
     <MESSAGE value="Create view to display no notes to unauthenticated users" />
     <MESSAGE value="Implement storing and retrieving to cookie sessions" />
     <MESSAGE value="Create function in js to add note to localstorage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create function in js to add note to localstorage" />
+    <MESSAGE value="Remove unnecessary comments from js file" />
+    <MESSAGE value="Remove session creations from view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove session creations from view" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
