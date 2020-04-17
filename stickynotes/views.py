@@ -15,8 +15,9 @@ def index(request):
     # Getting note
     if request.method == 'GET':
         print("GETTING ALL NOTES")
-        # Read note     
-        notes = Note.objects.all().order_by('-date_added')
+        # Read note
+        notes = Note.objects.filter(manager=request.user).order_by('-date_added')
+        # notes = Note.objects.all().order_by('-date_added')
 
     # Creating note
     if 'new_dummy' in request.POST:
