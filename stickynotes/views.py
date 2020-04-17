@@ -4,6 +4,7 @@ from .forms import *
 from django.http import JsonResponse
 from django.http import QueryDict
 from django.contrib.auth.models import User
+from django.utils import timezone
 
 
 # ALL CRUD FUNCTIONALITIES FOR NOTE
@@ -41,8 +42,8 @@ def index(request):
             title = request.POST.get('title')
             description = request.POST.get('description')
             background_color = request.POST.get('background_color')
-            is_done = request.POST.get('is_done')
-            date_added = request.POST.get('date_added')
+            is_done = False
+            date_added = timezone.now()
 
             data = {}
             data['message'] = 'form note is created'

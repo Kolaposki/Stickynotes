@@ -144,12 +144,21 @@ $(document).on("click", "#create_btn", function (event) {
     }
 
     function storageCollector($pk, $title, $description, $bg_color, $date, $is_done) {
-        localStorage.setItem('pk', $pk);
-        localStorage.setItem('title', $title);
-        localStorage.setItem('description', $description);
-        localStorage.setItem('bg_color', $bg_color);
-        localStorage.setItem('date', $date);
-        localStorage.setItem('is_done', $is_done);
+        let $notesArray = {
+            'pk': $pk,
+            'title': $title,
+            'description': $description,
+            'bg_color': $bg_color,
+            'date': $date,
+            'is_done': $is_done
+        };
+        localStorage.setItem('notes', JSON.stringify($notesArray))
+        // localStorage.setItem('pk', $pk);
+        // localStorage.setItem('title', $title);
+        // localStorage.setItem('description', $description);
+        // localStorage.setItem('bg_color', $bg_color);
+        // localStorage.setItem('date', $date);
+        // localStorage.setItem('is_done', $is_done);
     }
 
     function handleSuccess(data) {
@@ -177,6 +186,8 @@ $(document).on("click", "#create_btn", function (event) {
         console.log("username: " + $username);
 
         storageCollector($note_pk, $noteTitle, $noteDescription, $noteBG, $date_added, $is_done);
+        let $allNotes = JSON.parse(localStorage.getItem('notes'));
+        console.log($allNotes);
         $noteForm[0].reset();
 
         onClickActions($note_pk)
