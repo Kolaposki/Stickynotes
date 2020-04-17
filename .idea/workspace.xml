@@ -3,17 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stickynotes/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stickynotes/migrations/0002_auto_20200402_1549.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stickynotes/migrations/0003_auto_20200402_2003.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stickynotes/migrations/0004_auto_20200402_2042.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stickynotes/migrations/0005_auto_20200402_2140.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stickynotes/migrations/0006_note_is_done.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stickynotes/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stickynotes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stickynotes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -175,7 +168,7 @@
       <workItem from="1585821917598" duration="35029000" />
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
-      <workItem from="1586607169608" duration="138614000" />
+      <workItem from="1586607169608" duration="145264000" />
     </task>
     <task id="LOCAL-00001" summary="Create README">
       <created>1586724269530</created>
@@ -359,7 +352,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587044786990</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Test all authentication views">
+      <created>1587047667966</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1587047667966</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,7 +378,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Fix creation of notes while using ajax and onclicks" />
     <MESSAGE value="Create function for onclick events during ajax create" />
     <MESSAGE value="Add dummy form field when updating note form" />
     <MESSAGE value="Add dummy field to update form in template" />
@@ -403,7 +402,8 @@
     <MESSAGE value="Remove unused comments and codes. Get ready for User auth" />
     <MESSAGE value="Create registration view" />
     <MESSAGE value="Create login and logout view" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create login and logout view" />
+    <MESSAGE value="Test all authentication views" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test all authentication views" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">

@@ -18,6 +18,8 @@ $(document).ready(function () {
 
         function onClickActions($note_pk) {
 
+            //DeleteNote($note_pk) // to delete a newly created note without refreshing the page
+
             $(document).on("click", "#pencil-" + $note_pk + "", function () {
                 $(this).removeAttr('class').addClass("no-display");
                 $("#update_btn-" + $note_pk + "").removeAttr('class').addClass("marker btn btn-lg");
@@ -160,11 +162,13 @@ $(document).ready(function () {
             let $note_pk = data.note_pk;
             let $username = data.username;
 
+
             console.log("title: " + $noteTitle);
             console.log("desc: " + $noteDescription);
             console.log("bg color: " + $noteBG);
             console.log("pk: " + $note_pk);
             console.log("username: " + $username);
+
 
             //$("#bg").removeAttr('class').addClass("single-note add-note white");
             $noteForm[0].reset();

@@ -19,8 +19,8 @@ def index(request):
             if form.is_valid():
                 instance = form.save(commit=False)  # get the form but dont save in db yet
                 instance.manager = request.user
-                # user = User.objects.get(username=request.user.username)
-                print("USER: ", request.user.username)
+                username = request.user.username
+                print("USER: ", username)
                 note_form = form.save()
                 note_pk = note_form.pk
 
@@ -34,7 +34,7 @@ def index(request):
                 data['description'] = description
                 data['background_color'] = background_color
                 data['note_pk'] = note_pk
-                data['username'] = request.user.username
+                data['username'] = username
 
                 return JsonResponse(data)
 
