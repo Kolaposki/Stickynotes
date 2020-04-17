@@ -28,7 +28,7 @@ def index(request):
         print("Session Data: ", request.session.get('title'))
         print("Session Data: ", request.session.get('description'))
         print("Session Data: ", request.session.get('background_color'))
-        
+
     # Creating note
     if 'new_dummy' in request.POST:
         print("THIS REQUEST IS FROM NEW DUMMY")
@@ -45,6 +45,8 @@ def index(request):
             title = request.POST.get('title')
             description = request.POST.get('description')
             background_color = request.POST.get('background_color')
+            is_done = request.POST.get('is_done')
+            date_added = request.POST.get('date_added')
 
             data = {}
             data['message'] = 'form note is created'
@@ -53,6 +55,8 @@ def index(request):
             data['background_color'] = background_color
             data['note_pk'] = note_pk
             data['username'] = username
+            data['is_done'] = is_done
+            data['date_added'] = date_added
 
             # saving data to session cookies
             request.session['title'] = title

@@ -143,6 +143,15 @@ $(document).on("click", "#create_btn", function (event) {
         });
     }
 
+    function storageCollector($pk, $title, $description, $bg_color, $date, $is_done) {
+        localStorage.setItem('pk', $pk);
+        localStorage.setItem('title', $title);
+        localStorage.setItem('description', $description);
+        localStorage.setItem('bg_color', $bg_color);
+        localStorage.setItem('date', $date);
+        localStorage.setItem('is_done', $is_done);
+    }
+
     function handleSuccess(data) {
 
         if (data) {
@@ -157,6 +166,8 @@ $(document).on("click", "#create_btn", function (event) {
         let $noteBG = data.background_color;
         let $note_pk = data.note_pk;
         let $username = data.username;
+        let $is_done = data.is_done;
+        let $date_added = data.date_added;
 
 
         console.log("title: " + $noteTitle);
@@ -165,7 +176,7 @@ $(document).on("click", "#create_btn", function (event) {
         console.log("pk: " + $note_pk);
         console.log("username: " + $username);
 
-
+        storageCollector($note_pk, $noteTitle, $noteDescription, $noteBG, $date_added, $is_done);
         //$("#bg").removeAttr('class').addClass("single-note add-note white");
         $noteForm[0].reset();
 
@@ -403,3 +414,5 @@ $(document).on("click", "#create_btn", function (event) {
 });
  **/
 
+// {"id":8,"title":"hello","date":"12 April, 2020","text":"world","color":"blue","long":false,"completed":false},
+// {"id":11,"title":"wory nop","date":"16 April, 2020","text":"hele","color":"blue","long":false,"completed":false}

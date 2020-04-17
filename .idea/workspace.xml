@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stickynotes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -165,7 +166,7 @@
       <workItem from="1585821917598" duration="35029000" />
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
-      <workItem from="1586607169608" duration="161907000" />
+      <workItem from="1586607169608" duration="163821000" />
     </task>
     <task id="LOCAL-00001" summary="Create README">
       <created>1586724269530</created>
@@ -398,7 +399,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587137441160</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Implement storing and retrieving to cookie sessions">
+      <created>1587140642184</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1587140642184</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -417,7 +425,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Fix check icon not changing to checked" />
     <MESSAGE value="Comment useless codes" />
     <MESSAGE value="Create and tested delete view for deleting notes" />
     <MESSAGE value="Remove unnecessary imports" />
@@ -442,7 +449,8 @@
     <MESSAGE value="Add span to show creator of a note on the note" />
     <MESSAGE value="Add manager to show creator of a note in admin page" />
     <MESSAGE value="Create view to display no notes to unauthenticated users" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create view to display no notes to unauthenticated users" />
+    <MESSAGE value="Implement storing and retrieving to cookie sessions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement storing and retrieving to cookie sessions" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
