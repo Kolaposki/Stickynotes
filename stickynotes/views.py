@@ -16,11 +16,14 @@ def index(request):
     if request.method == 'GET':
         print("GETTING ALL NOTES")
         # Read note
-        if request.user:
+        if not request.user.is_authenticated:
+            notes = Note.objects.none()
+            print("Anonymous [NO USER IS LOGGED IN]")
+        elif request.user:
+            print("GETTING ALL NOTES for ", request.user)
             notes = Note.objects.filter(manager=request.user).order_by('-date_added')
         else:
             notes = Note.objects.all().order_by('-date_added')
-
 
     # Creating note
     if 'new_dummy' in request.POST:
