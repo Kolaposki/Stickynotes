@@ -25,10 +25,6 @@ def index(request):
         else:
             notes = Note.objects.all().order_by('-date_added')
 
-        print("Session Data: ", request.session.get('title'))
-        print("Session Data: ", request.session.get('description'))
-        print("Session Data: ", request.session.get('background_color'))
-
     # Creating note
     if 'new_dummy' in request.POST:
         print("THIS REQUEST IS FROM NEW DUMMY")
@@ -57,12 +53,6 @@ def index(request):
             data['username'] = username
             data['is_done'] = is_done
             data['date_added'] = date_added
-
-            # saving data to session cookies
-            request.session['title'] = title
-            request.session['description'] = description
-            request.session['background_color'] = background_color
-            request.session['note_pk'] = note_pk
 
             print("Created note for ", note_pk)
             return JsonResponse(data)
