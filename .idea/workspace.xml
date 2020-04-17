@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="Remove session creations from view">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stickynotes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -167,7 +165,7 @@
       <workItem from="1585821917598" duration="35029000" />
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
-      <workItem from="1586607169608" duration="166281000" />
+      <workItem from="1586607169608" duration="175751000" />
     </task>
     <task id="LOCAL-00001" summary="Create README">
       <created>1586724269530</created>
@@ -428,7 +426,21 @@
       <option name="project" value="LOCAL" />
       <updated>1587148459718</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Create js function to add note details to localstorage">
+      <created>1587150603079</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1587150603079</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Update gitignore file to exclude Jetbrains idea files">
+      <created>1587150661207</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1587150661207</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,9 +459,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Get ready for POST TUNNELLING after several delete trials" />
-    <MESSAGE value="Creat middleware file to intercept headers and add DELETE and PUT requests" />
-    <MESSAGE value="Register the new middleware to MIDDLEWARE list in settings.py" />
     <MESSAGE value="Fix CRSF token not found using ajax for deleting note" />
     <MESSAGE value="Testing deleting of notes using ajax" />
     <MESSAGE value="Create .gitignore file" />
@@ -472,7 +481,10 @@
     <MESSAGE value="Create function in js to add note to localstorage" />
     <MESSAGE value="Remove unnecessary comments from js file" />
     <MESSAGE value="Remove session creations from view" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove session creations from view" />
+    <MESSAGE value="Create js function to add note details to localstorage" />
+    <MESSAGE value="Update gitignore file to exclude Jetbrains idea files" />
+    <MESSAGE value="Test adding of notes to localstorage with javascript" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test adding of notes to localstorage with javascript" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

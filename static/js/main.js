@@ -144,7 +144,8 @@ $(document).on("click", "#create_btn", function (event) {
     }
 
     function storageCollector($pk, $title, $description, $bg_color, $date, $is_done) {
-        let $notesArray = {
+        //localStorage.clear();
+        let $notesDict = {
             'pk': $pk,
             'title': $title,
             'description': $description,
@@ -152,13 +153,18 @@ $(document).on("click", "#create_btn", function (event) {
             'date': $date,
             'is_done': $is_done
         };
-        localStorage.setItem('notes', JSON.stringify($notesArray))
-        // localStorage.setItem('pk', $pk);
-        // localStorage.setItem('title', $title);
-        // localStorage.setItem('description', $description);
-        // localStorage.setItem('bg_color', $bg_color);
-        // localStorage.setItem('date', $date);
-        // localStorage.setItem('is_done', $is_done);
+
+
+        // [{}, {}]
+
+        let $iniial = JSON.parse(localStorage.getItem('notes')) || [];
+        console.log($iniial);
+        $iniial.push($notesDict);
+
+        localStorage.setItem('notes', JSON.stringify($iniial));
+        console.log($iniial);
+
+        // localStorage.removeItem('key');
     }
 
     function handleSuccess(data) {
