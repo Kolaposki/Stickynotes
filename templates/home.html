@@ -37,7 +37,7 @@
             <div id="noteCreator" class="col-md-4 col-sm-6">
 
                 <div id="bg" class="single-note add-note white">
-                    <form name="createNote" method="POST" class="myNoteForm" data-url="/">
+                    <form name="createNote" id="createNote" method="POST" data-url="/">
                         <span class="no-display">{{ form.new_dummy }}</span>
                         {% csrf_token %}
                         <input name="title" type="text" maxlength="20" placeholder="Type a title ...">
@@ -52,7 +52,7 @@
                         <div class="meta">
                             <span id="palette"><i class="fas fa-palette"></i></span>
                             <span>
-                                <button class="mark btn btn-lg" type="submit" name="create_btn">
+                                <button class="mark btn btn-lg" type="submit" name="create_btn" id="create_btn">
                                     <i class="fas fa-check"></i>
                                 </button>
                             </span>

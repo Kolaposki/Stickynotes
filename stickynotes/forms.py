@@ -31,9 +31,11 @@ class NoteForm2(forms.ModelForm):
 
     is_done = forms.BooleanField(required=False)
 
+    update_delete_dummy = forms.CharField(required=False)
+
     class Meta:
         model = Note
-        fields = ('title', 'description', 'background_color', 'is_done')
+        fields = ('title', 'description', 'background_color', 'is_done', 'update_delete_dummy')
 
 
 class RegisterForm(UserCreationForm):

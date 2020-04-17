@@ -1,9 +1,5 @@
 <script>
 
-    $.ajaxSetup({
-        data: {csrfmiddlewaretoken: '{{ csrf_token }}'},
-    });
-
     $(document).on("click", "#palette", function () {
         $("#allColor").toggleClass('colors').toggleClass("colors openDivs");
     });
@@ -13,6 +9,7 @@
             let $updateNoteForm = $('#UpdateNoteForm-' + $note_pk + "");
 
             $updateNoteForm.submit(function (event) {
+
                 event.preventDefault();
                 let $formData = $updateNoteForm.serialize();
                 let $thisURL = $updateNoteForm.attr('data-url') || window.location();
@@ -26,6 +23,7 @@
                     data: $formData,
                     success: handleSuccess,
                     error: handleError,
+
                 });
 
                 function handleSuccess(data) {

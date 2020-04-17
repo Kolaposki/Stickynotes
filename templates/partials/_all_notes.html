@@ -4,6 +4,8 @@
 
             <form method="POST" id="UpdateNoteForm-{{ note.pk }}" data-url="/">
                 {% csrf_token %}
+                <span class="no-display">{{ up_form.update_delete_dummy }}</span>
+
                 <input id="id_background_color-{{ note.pk }}" type="hidden" name="background_color"
                        value="{{ note.background_color }}">
                 <input type="hidden" name="note_id" value="{{ note.pk }}">

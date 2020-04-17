@@ -6,51 +6,56 @@ from django.http import QueryDict
 from django.contrib.auth.models import User
 
 
+# ALL CRUD FUNCTIONALITIES FOR NOTE
 def index(request):
     form = NoteForm()
-    up_form = NoteForm2()
+    up_form = NoteForm2(request.POST)
+    notes = Note.objects.all().order_by('-date_added')
+
+    # Getting note
+    if request.method == 'GET':
+        print("GETTING ALL NOTES")
+        # Read note     
+        notes = Note.objects.all().order_by('-date_added')
 
     # Creating note
-    if request.is_ajax() and 'new_dummy' in request.POST:
-        print("THIS REQUEST IS AJAX and FROM NEW DUMMY")
+    if 'new_dummy' in request.POST:
+        print("THIS REQUEST IS FROM NEW DUMMY")
         form = NoteForm(request.POST)
 
-        if request.method == 'POST':
-            if form.is_valid():
-                instance = form.save(commit=False)  # get the form but dont save in db yet
-                instance.manager = request.user
-                username = request.user.username
-                print("USER: ", username)
-                note_form = form.save()
-                note_pk = note_form.pk
+        if form.is_valid():
+            instance = form.save(commit=False)  # get the form but dont save in db yet
+            instance.manager = request.user
+            username = request.user.username
+            print("USER who created note is: ", username)
+            note_form = form.save()
+            note_pk = note_form.pk
 
-                title = request.POST.get('title')
-                description = request.POST.get('description')
-                background_color = request.POST.get('background_color')
+            title = request.POST.get('title')
+            description = request.POST.get('description')
+            background_color = request.POST.get('background_color')
 
-                data = {}
-                data['message'] = 'form note is created'
-                data['title'] = title
-                data['description'] = description
-                data['background_color'] = background_color
-                data['note_pk'] = note_pk
-                data['username'] = username
+            data = {}
+            data['message'] = 'form note is created'
+            data['title'] = title
+            data['description'] = description
+            data['background_color'] = background_color
+            data['note_pk'] = note_pk
+            data['username'] = username
 
-                return JsonResponse(data)
+            print("Created note for ", note_pk)
+            return JsonResponse(data)
 
     # Updating note
-
-    if request.is_ajax() and 'new_dummy' not in request.POST:
-        print("THIS REQUEST IS AJAX AND REQUESTING TO UPDATE OR DELETE")
-
-        if request.method == 'POST':
-            print("REQUEST IS POST")
-            # note_id = int(QueryDict(request.body).get('note_id'))
+    elif request.method == 'POST':
+        print("REQUEST IS POST")
+        if 'update_delete_dummy' in request.POST:
+            print("update_delete_dummy")
             note_id = request.POST.get('note_id')
             print("NOTED-ID: ", note_id)
 
             obj = get_object_or_404(Note, id=note_id)
-            print(f"Here is object: {obj}")
+            print(f"Here is object to update: {obj}")
             up_form = NoteForm2(request.POST or None, instance=obj)
             if up_form.is_valid():
                 print("UPDATE FORM IS VALID")
@@ -66,29 +71,23 @@ def index(request):
 
                 return JsonResponse(data)
 
-        elif request.method == 'DELETE':
-            print("REQUEST IS DELETE")
-            note_id = int(QueryDict(request.body).get('note_id'))
-            print("NOTED-ID: ", note_id)
+    # Deleting note
+    elif request.method == 'DELETE':
+        print("REQUEST IS DELETE")
+        note_id = int(QueryDict(request.body).get('note_id'))
+        print("NOTED-ID: ", note_id)
+        obj = get_object_or_404(Note, id=note_id)
+        print(f"Here is object to delete: {obj}")
 
-            new_id = Note.objects.get(pk=int(QueryDict(request.body).get('note_id')))
-            print("NEW ID: ", new_id)
+        data = {}
+        data['message'] = 'Note successfully deleted'
+        data['note_pk'] = note_id
+        data['title'] = obj.title
 
-            obj = get_object_or_404(Note, id=note_id)
-            print(f"Here is object to delete: {obj}")
+        obj.delete()
+        print("NOTE DELETED")
 
-            data = {}
-            data['message'] = 'Note successfully deleted'
-            data['note_pk'] = note_id
-            data['title'] = obj.title
-
-            obj.delete()
-            print("NOTE DELETED")
-
-            return JsonResponse(data)
-
-    # Read note     
-    notes = Note.objects.all().order_by('-date_added')
+        return JsonResponse(data)
 
     return render(request, 'home.html',
                   context={'form': form, 'notes': notes, "up_form": up_form})
