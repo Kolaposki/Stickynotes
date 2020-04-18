@@ -12,6 +12,8 @@ HOMEPAGE = 'home.html'
 # ALL CRUD FUNCTIONALITIES FOR NOTE
 def index(request):
     notes = None
+    form = NoteForm()
+    up_form = NoteForm2(request.POST)
 
     # Getting note
     if request.method == 'GET':
@@ -101,7 +103,7 @@ def index(request):
 
         return JsonResponse(data)
 
-    return render(request, HOMEPAGE, context={'notes': notes})
+    return render(request, HOMEPAGE, context={'notes': notes, 'form': form, 'up_form': up_form})
 
 
 '''

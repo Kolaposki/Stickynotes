@@ -189,7 +189,7 @@ $(document).on("click", "#create_btn", function (event) {
         console.log($allNotes);
         $noteForm[0].reset();
 
-        onClickActions($note_pk)
+        onClickActions($note_pk);
 
     }
 
@@ -198,6 +198,3 @@ $(document).on("click", "#create_btn", function (event) {
         console.log(ThrowError);
     }
 });
-
-// {"id":8,"title":"hello","date":"12 April, 2020","text":"world","color":"blue","long":false,"completed":false},
-// {"id":11,"title":"wory nop","date":"16 April, 2020","text":"hele","color":"blue","long":false,"completed":false}
