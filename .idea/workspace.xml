@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stickynotes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/logout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/logout.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -173,14 +172,7 @@
       <workItem from="1585821917598" duration="35029000" />
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
-      <workItem from="1586607169608" duration="199585000" />
-    </task>
-    <task id="LOCAL-00001" summary="Create README">
-      <created>1586724269530</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1586724269530</updated>
+      <workItem from="1586607169608" duration="200925000" />
     </task>
     <task id="LOCAL-00002" summary="Fix creation of notes while using ajax and onclicks">
       <created>1586784114905</created>
@@ -518,7 +510,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587239565074</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Create demo user for testing and redesign logout page">
+      <created>1587242792416</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1587242792481</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -537,7 +536,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Create registration view" />
     <MESSAGE value="Create login and logout view" />
     <MESSAGE value="Test all authentication views" />
     <MESSAGE value="Create partials for html documents" />
@@ -562,7 +560,8 @@
     <MESSAGE value="Fix login and logout redirect urls" />
     <MESSAGE value="Create login page using neumorphism UI design" />
     <MESSAGE value="Replace login page with new design" />
-    <option name="LAST_COMMIT_MESSAGE" value="Replace login page with new design" />
+    <MESSAGE value="Create demo user for testing and redesign logout page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create demo user for testing and redesign logout page" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
