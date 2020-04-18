@@ -15,11 +15,11 @@ def index(request):
 
     # Getting note
     if request.method == 'GET':
-        print("GETTING ALL NOTES")
+        print("REQUEST IS GET")
         # Read note
         if not request.user.is_authenticated:
             notes = Note.objects.none()
-            print("Anonymous [NO USER IS LOGGED IN]")
+            print("Anonymous [ NO USER IS LOGGED IN ]")
         elif request.user:
             print("GETTING ALL NOTES for ", request.user)
             notes = Note.objects.filter(manager=request.user).order_by('-date_added')

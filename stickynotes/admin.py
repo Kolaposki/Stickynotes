@@ -7,7 +7,7 @@ from django.contrib.auth.models import Group
 
 
 class NoteAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'manager', 'background_color', 'is_done', 'date_added')
+    list_display = ('id', 'title', 'manager', 'background_color', 'is_done', 'date_added', 'date_updated')
     list_display_links = ('title', 'id')
 
 

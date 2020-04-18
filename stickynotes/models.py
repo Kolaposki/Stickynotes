@@ -10,7 +10,7 @@ class Note(models.Model):
     title = models.CharField(max_length=25, null=False, blank=False)
     description = models.TextField(null=True, blank=True)
     date_added = models.DateTimeField(default=timezone.now)
-    # date_updated = models.DateTimeField(auto_now=True)
+    date_updated = models.DateTimeField(auto_now=True)
     background_color = models.CharField(max_length=10)
     is_done = models.BooleanField(blank=True, null=True, default=False)
 

@@ -155,16 +155,9 @@ $(document).on("click", "#create_btn", function (event) {
         };
 
 
-        // [{}, {}]
-
-        let $iniial = JSON.parse(localStorage.getItem('notes')) || [];
-        console.log($iniial);
-        $iniial.push($notesDict);
-
-        localStorage.setItem('notes', JSON.stringify($iniial));
-        console.log($iniial);
-
-        // localStorage.removeItem('key');
+        let $initialNotesInMemory = JSON.parse(localStorage.getItem('notes')) || []; // create empty list if no localstorage
+        $initialNotesInMemory.push($notesDict);
+        localStorage.setItem('notes', JSON.stringify($initialNotesInMemory));
     }
 
     function handleSuccess(data) {
