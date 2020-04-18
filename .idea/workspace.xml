@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sticky/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stickynotes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stickynotes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +35,7 @@
         <option value="JavaScript File" />
         <option value="Python Script" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -56,9 +56,13 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/stickynotes" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\KOLAPO\Desktop\sticky\templates" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\KOLAPO\Desktop\sticky\templates\stickynotes" />
       <recent name="C:\Users\KOLAPO\Desktop\sticky\static\img" />
@@ -167,7 +171,7 @@
       <workItem from="1585821917598" duration="35029000" />
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
-      <workItem from="1586607169608" duration="190192000" />
+      <workItem from="1586607169608" duration="195579000" />
     </task>
     <task id="LOCAL-00001" summary="Create README">
       <created>1586724269530</created>
@@ -491,7 +495,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587213215689</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Fix login and logout redirect urls">
+      <created>1587214896405</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1587214896405</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -510,7 +521,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Delete middleware.py and settings" />
     <MESSAGE value="Add favicon" />
     <MESSAGE value="Remove unused comments and codes. Get ready for User auth" />
     <MESSAGE value="Create registration view" />
@@ -535,7 +545,8 @@
     <MESSAGE value="Undo all changes" />
     <MESSAGE value="Remove unnecessary html files and comments" />
     <MESSAGE value="Remove custom authentication check" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove custom authentication check" />
+    <MESSAGE value="Fix login and logout redirect urls" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix login and logout redirect urls" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
