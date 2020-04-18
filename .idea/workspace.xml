@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +53,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/stickynotes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/js" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -65,11 +63,11 @@
       <recent name="C:\Users\KOLAPO\Desktop\sticky\templates" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\KOLAPO\Desktop\sticky\static\js" />
+      <recent name="C:\Users\KOLAPO\Desktop\sticky\static\css" />
       <recent name="C:\Users\KOLAPO\Desktop\sticky\templates\stickynotes" />
       <recent name="C:\Users\KOLAPO\Desktop\sticky\static\img" />
       <recent name="C:\Users\KOLAPO\Desktop\sticky\templates" />
-      <recent name="C:\Users\KOLAPO\Desktop\sticky\static\js" />
-      <recent name="C:\Users\KOLAPO\Desktop\sticky\stickynotes" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -172,14 +170,7 @@
       <workItem from="1585821917598" duration="35029000" />
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
-      <workItem from="1586607169608" duration="200925000" />
-    </task>
-    <task id="LOCAL-00002" summary="Fix creation of notes while using ajax and onclicks">
-      <created>1586784114905</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1586784114905</updated>
+      <workItem from="1586607169608" duration="201152000" />
     </task>
     <task id="LOCAL-00003" summary="Create function for onclick events during ajax create">
       <created>1586784587216</created>
@@ -517,7 +508,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587242792481</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Update footer to include twitter link">
+      <created>1587244064179</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1587244064180</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -536,7 +534,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Create login and logout view" />
     <MESSAGE value="Test all authentication views" />
     <MESSAGE value="Create partials for html documents" />
     <MESSAGE value="Test all CRUD functions for note" />
@@ -561,7 +558,8 @@
     <MESSAGE value="Create login page using neumorphism UI design" />
     <MESSAGE value="Replace login page with new design" />
     <MESSAGE value="Create demo user for testing and redesign logout page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create demo user for testing and redesign logout page" />
+    <MESSAGE value="Update footer to include twitter link" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update footer to include twitter link" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
