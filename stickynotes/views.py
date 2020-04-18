@@ -5,11 +5,13 @@ from django.http import JsonResponse
 from django.http import QueryDict
 from django.contrib.auth.models import User
 from django.utils import timezone
+from django.contrib.auth.decorators import login_required
 
 HOMEPAGE = 'home.html'
 
 
 # ALL CRUD FUNCTIONALITIES FOR NOTE
+@login_required
 def index(request):
     notes = None
     form = NoteForm()
@@ -19,14 +21,9 @@ def index(request):
     if request.method == 'GET':
         print("REQUEST IS GET")
         # Read note
-        if not request.user.is_authenticated:
-            notes = Note.objects.none()
-            print("Anonymous [ NO USER IS LOGGED IN ]")
-        elif request.user:
+        if request.user.is_authenticated:
             print("GETTING ALL NOTES for ", request.user)
             notes = Note.objects.filter(manager=request.user).order_by('-date_added')
-        else:
-            notes = Note.objects.all().order_by('-date_added')
 
     # Creating note
     if 'new_dummy' in request.POST:
