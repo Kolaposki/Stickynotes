@@ -194,6 +194,7 @@ a:hover {
     resize: none;
     border: none;
     margin-top: -1px;
+    white-space: pre-wrap;
 }
 
 .notes .single-note input::placeholder {
@@ -275,6 +276,7 @@ a:hover {
     transition: all 0.3s ease-in-out;
     overflow: auto;
     line-height: 28px;
+    white-space: pre-wrap;
 }
 
 .expand {
@@ -380,6 +382,10 @@ a:hover {
     border: 1px solid #ccc;
 }
 
+
+textarea, p {
+    white-space: pre-wrap;
+}
 /*
   =====================
   Shared Note
