@@ -1,16 +1,48 @@
-{% extends "base.html" %}
+{% load static %}
 
-{% block title %}
-    Login Here
-{% endblock %}
+<!doctype html>
+<html lang="en">
+<head>
+    <link href="{% static 'css/login.css' %}" type="text/css" rel="stylesheet">
+    <link href="{% static 'css/all.css' %}" type="text/css" rel="stylesheet">
+    <link href="{% static 'css/fontawesome.css' %}" type="text/css" rel="stylesheet">
 
-{% load crispy_forms_tags %}
-
-{% block content %}
-    <form method="post" class="from-group">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <form method="post" class="form">
         {% csrf_token %}
-        {{ form | crispy }}
-        <p>Don't have an accoount? Create one <a href="{% url 'register' %}">here</a></p>
-        <button type="submit" class="btn btn-success">Login</button>
+        <h2 class="form__title">STICKY LOGIN</h2>
+        <div class="form__textfield">
+            <input type="text" name="username" id="id_username" placeholder="Username" autofocus="" required="">
+        </div>
+
+        <div class="form__textfield">
+            <input type="password" placeholder="Password" name="password" id="id_password" required="">
+        </div>
+
+        <button type="submit" class="form__btn">Login</button>
+        <div class="form__forget">
+            <p>Forget password？</p>
+        </div>
     </form>
-{% endblock %}
+
+</div>
+
+<footer>
+    <div class="container">
+        <span>Made With <i class="fas fa-heart"></i> by <a href="#">Kolaposki</a></span>
+    </div>
+</footer>
+</body>
+
+
+</html>
+
+
+

@@ -103,10 +103,6 @@ def index(request):
     return render(request, HOMEPAGE, context={'notes': notes, 'form': form, 'up_form': up_form})
 
 
-def sample(request):
-    return render(request, "sample.html")
-
-
 def register(response):
     if response.method == "POST":
         form = RegisterForm(response.POST)
