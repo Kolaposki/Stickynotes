@@ -91,13 +91,8 @@
         $(document).on("click", "#pencil-{{ note.pk }}", function () {
             $(this).removeAttr('class').addClass("no-display");
             $("#update_btn-{{ note.pk }}").removeAttr('class').addClass("marker btn btn-lg");
-
-            $("#desc-{{ note.pk }}").removeAttr('class').addClass("");
-            $("#desc_p-{{ note.pk }}").addClass("no-display");
-
-            $("#new_title-{{ note.pk }}").removeAttr('class').addClass("");
-            $("#title-head-{{ note.pk }}").addClass("no-display");
-
+            $("#desc-{{ note.pk }}").prop("readonly", false);
+            $("#new_title-{{ note.pk }}").prop("readonly", false);
             $("#palette-{{ note.pk }}").removeAttr('class').addClass("");
 
             //SUBMIT AJAX UPDATE FORM HERE

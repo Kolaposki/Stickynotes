@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/stickyNotes.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/stickyNotes.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partials/_all_notes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_all_notes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partials/_js_utils.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_js_utils.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -171,14 +173,7 @@
       <workItem from="1585821917598" duration="35029000" />
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
-      <workItem from="1586607169608" duration="204144000" />
-    </task>
-    <task id="LOCAL-00005" summary="Add dummy field to update form in template">
-      <created>1586785130361</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1586785130361</updated>
+      <workItem from="1586607169608" duration="205977000" />
     </task>
     <task id="LOCAL-00006" summary="Create function to update notes using ajax">
       <created>1586791816302</created>
@@ -516,7 +511,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587245984003</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Add pre-wrap style to inputs">
+      <created>1587248282483</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1587248282484</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -535,7 +537,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Test all CRUD functions for note" />
     <MESSAGE value="Created filter to get notes created by logged in user" />
     <MESSAGE value="Add span to show creator of a note on the note" />
     <MESSAGE value="Add manager to show creator of a note in admin page" />
@@ -560,7 +561,8 @@
     <MESSAGE value="Update footer to include twitter link" />
     <MESSAGE value="Add OverlayScrollbars styles" />
     <MESSAGE value="Remove 'created by' in home page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove 'created by' in home page" />
+    <MESSAGE value="Add pre-wrap style to inputs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add pre-wrap style to inputs" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

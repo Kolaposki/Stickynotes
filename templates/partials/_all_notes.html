@@ -38,27 +38,27 @@
                             </label>
                         </span>
                     {% endif %}
+                    {##}
+                    {#                    {% if note.is_done %}#}
+                    {#                        <h2 id="title-head-{{ note.pk }}" class="isDone">{{ note.title }} </h2>#}
+                    {#                    {% else %}#}
+                    {#                        <h2 id="title-head-{{ note.pk }}" class="">{{ note.title }} </h2>#}
+                    {#                    {% endif %}#}
 
-                    {% if note.is_done %}
-                        <h2 id="title-head-{{ note.pk }}" class="isDone">{{ note.title }} </h2>
-                    {% else %}
-                        <h2 id="title-head-{{ note.pk }}" class="">{{ note.title }} </h2>
-                    {% endif %}
-
-                    <input id="new_title-{{ note.pk }}" class="no-display" name="title" type="text"
-                           maxlength="20" placeholder="Type a title ..." value="{{ note.title }}">
+                    <input id="new_title-{{ note.pk }}" name="title" type="text"
+                           maxlength="20" placeholder="Type a title ..." value="{{ note.title }}" readonly>
 
                     <small>Last Updated: {{ note.date_updated }}</small>
                     <hr>
+                    {##}
+                    {#                    {% if note.is_done %}#}
+                    {#                        <p class="isDone" id="desc_p-{{ note.pk }}">{{ note.description }}</p>#}
+                    {#                    {% else %}#}
+                    {#                        <p class="" id="desc_p-{{ note.pk }}">{{ note.description }}</p>#}
+                    {#                    {% endif %}#}
 
-                    {% if note.is_done %}
-                        <p class="isDone" id="desc_p-{{ note.pk }}">{{ note.description }}</p>
-                    {% else %}
-                        <p class="" id="desc_p-{{ note.pk }}">{{ note.description }}</p>
-                    {% endif %}
-
-                    <textarea class="no-display" id="desc-{{ note.pk }}"
-                              name="description">{{ note.description }}</textarea>
+                    <textarea id="desc-{{ note.pk }}"
+                              name="description" readonly>{{ note.description }}</textarea>
 
                     <div class="meta">
                         <button name="update-{{ note.pk }}" id="update_btn-{{ note.pk }}"

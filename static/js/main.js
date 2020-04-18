@@ -14,18 +14,16 @@ $(document).on("click", "#create_btn", function (event) {
     });
 
     function onClickActions($note_pk) {
+        //
 
-        DeleteNote($note_pk) // to delete a newly created note without refreshing the page
+        DeleteNote($note_pk);// to delete a newly created note without refreshing the page
 
         $(document).on("click", "#pencil-" + $note_pk + "", function () {
             $(this).removeAttr('class').addClass("no-display");
             $("#update_btn-" + $note_pk + "").removeAttr('class').addClass("marker btn btn-lg");
 
-            $("#desc-" + $note_pk + "").removeAttr('class').addClass("");
-            $("#desc_p-" + $note_pk + "").addClass("no-display");
-
-            $("#new_title-" + $note_pk + "").removeAttr('class').addClass("");
-            $("#title-head-" + $note_pk + "").addClass("no-display");
+            $("#desc-" + $note_pk + "").prop("readonly", false);
+            $("#new_title-" + $note_pk + "").prop("readonly", false);
 
             $("#palette-" + $note_pk + "").removeAttr('class').addClass("");
 
