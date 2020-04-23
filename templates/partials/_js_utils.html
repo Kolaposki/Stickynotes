@@ -70,9 +70,9 @@
                 console.log(data.message);
                 console.log("title: " + $noteTitle);
                 console.log("pk: " + $note_pk);
-                $('#mynote-0').hide(); // hide the post on success
+                $('#mynote-'+ $note_pk).hide(); // hide the post on success
                 alert('Note deleted!');
-                $(".all-notes").load(" .all-notes > *"); // reload all notes
+                {#$(".all-notes").load(" .all-notes > *"); // reload all notes#}
             }
 
             function handleError(ThrowError) {
@@ -103,8 +103,7 @@
             $(this).attr('class', 'd-none');
             $("#title-head-{{ note.pk }}").attr('class', '');
             $("#desc_p-{{ note.pk }}").attr('class', '');
-            $("#id_is_done-{{ note.pk }}").prop('unchecked');
-            $("#id_is_done-{{ note.pk }}").val("False");
+            $("#id_is_done-{{ note.pk }}").prop('unchecked').val("False");
         });
 
         $(document).on("click", "#id_is_done-{{ note.pk }}", function () {
@@ -112,12 +111,10 @@
                 $(this).val("True");
                 $("#new_title-{{ note.pk }}").attr('class', 'isDone');
                 $("#desc-{{ note.pk }}").attr('class', 'isDone');
-                $("doneCheck-{{ note.pk }}").val("True");
             } else {
                 $(this).val("False");
                 $("#new_title-{{ note.pk }}").attr('class', '');
                 $("#desc-{{ note.pk }}").attr('class', '');
-                $("doneCheck-{{ note.pk }}").val("False");
             }
         });
 

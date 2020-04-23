@@ -33,24 +33,27 @@ $(document).on("click", "#create_btn", function (event) {
             $("#allColor-" + $note_pk + "").toggleClass('colors').toggleClass("colors openDivs");
         });
 
+
+        $(document).on("click", "#doneMarker-" + $note_pk + "", function () {
+            $(this).attr('class', 'd-none');
+            $("#title-head-" + $note_pk + "").attr('class', '');
+            $("#desc_p-" + $note_pk + "").attr('class', '');
+            $("#id_is_done-" + $note_pk + "").prop('unchecked').val("False");
+        });
+
+
         $(document).on("click", "#id_is_done-" + $note_pk + "", function () {
             if ($(this).prop('checked')) {
                 $(this).val("True");
-                $("#title-head-" + $note_pk + "").removeAttr('class').addClass("isDone");
-                $("#desc_p-" + $note_pk + "").removeAttr('class').addClass("isDone")
+                $("#title-head-" + $note_pk + "").attr('class', 'isDone');
+                $("#desc_p-" + $note_pk + "").attr('class', 'isDone');
             } else {
                 $(this).val("False");
-                $("#title-head-" + $note_pk + "").removeAttr('class').addClass("");
-                $("#desc_p-" + $note_pk + "").removeAttr('class').addClass("")
+                $("#title-head-" + $note_pk + "").attr('class', '');
+                $("#desc_p-" + $note_pk + "").attr('class', '');
             }
         });
 
-        $(document).on("click", "#doneMarker-" + $note_pk + "", function () {
-            $(this).removeAttr('class').addClass("no-display");
-            $("#title-head-" + $note_pk + "").removeAttr('class').addClass("");
-            $("#desc_p-" + $note_pk + "").removeAttr('class').addClass("");
-            $("#2doneMarker-" + $note_pk + "").removeAttr('class').addClass("notDone");
-        });
 
         // Color Toggles
         $(document).on("click", "#circle_yellow-" + $note_pk + "", function () {
