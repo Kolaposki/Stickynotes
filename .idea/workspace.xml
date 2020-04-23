@@ -4,7 +4,6 @@
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/partials/_all_notes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_all_notes.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/partials/_js_utils.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_js_utils.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -174,14 +173,7 @@
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
-      <workItem from="1587632046275" duration="11077000" />
-    </task>
-    <task id="LOCAL-00011" summary="Create and tested delete view for deleting notes">
-      <created>1586895371015</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1586895371015</updated>
+      <workItem from="1587632046275" duration="12578000" />
     </task>
     <task id="LOCAL-00012" summary="Remove unnecessary imports">
       <created>1586895666178</created>
@@ -519,7 +511,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587643352298</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Fix on delete hiding bug in js file">
+      <created>1587645024507</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1587645024509</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -540,7 +539,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Create function in js to add note to localstorage" />
     <MESSAGE value="Remove unnecessary comments from js file" />
     <MESSAGE value="Remove session creations from view" />
     <MESSAGE value="Create js function to add note details to localstorage" />
@@ -565,9 +563,8 @@
     <MESSAGE value="Fixed bug that causes space at the bottom of markers" />
     <MESSAGE value="Remove bootstrap style for buttons outline" />
     <MESSAGE value="Fix nested checkbox and remove unnecessary codes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix nested checkbox and remove unnecessary codes" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="Fix on delete hiding bug in js file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix on delete hiding bug in js file" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/sticky$dd.coverage" NAME="dd Coverage Results" MODIFIED="1585915712562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stickynotes" />

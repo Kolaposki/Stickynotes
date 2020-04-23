@@ -72,7 +72,6 @@
                 console.log("pk: " + $note_pk);
                 $('#mynote-'+ $note_pk).hide(); // hide the post on success
                 alert('Note deleted!');
-                {#$(".all-notes").load(" .all-notes > *"); // reload all notes#}
             }
 
             function handleError(ThrowError) {
@@ -101,8 +100,8 @@
 
         $(document).on("click", "#doneMarker-{{ note.pk }}", function () {
             $(this).attr('class', 'd-none');
-            $("#title-head-{{ note.pk }}").attr('class', '');
-            $("#desc_p-{{ note.pk }}").attr('class', '');
+            $("#new_title-{{ note.pk }}").attr('class', '');
+            $("#desc-{{ note.pk }}").attr('class', '');
             $("#id_is_done-{{ note.pk }}").prop('unchecked').val("False");
         });
 

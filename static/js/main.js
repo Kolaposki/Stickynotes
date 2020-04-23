@@ -36,8 +36,8 @@ $(document).on("click", "#create_btn", function (event) {
 
         $(document).on("click", "#doneMarker-" + $note_pk + "", function () {
             $(this).attr('class', 'd-none');
-            $("#title-head-" + $note_pk + "").attr('class', '');
-            $("#desc_p-" + $note_pk + "").attr('class', '');
+            $("#new_title-" + $note_pk + "").attr('class', '');
+            $("#desc-" + $note_pk + "").attr('class', '');
             $("#id_is_done-" + $note_pk + "").prop('unchecked').val("False");
         });
 
@@ -45,12 +45,12 @@ $(document).on("click", "#create_btn", function (event) {
         $(document).on("click", "#id_is_done-" + $note_pk + "", function () {
             if ($(this).prop('checked')) {
                 $(this).val("True");
-                $("#title-head-" + $note_pk + "").attr('class', 'isDone');
-                $("#desc_p-" + $note_pk + "").attr('class', 'isDone');
+                $("#new_title-" + $note_pk + "").attr('class', 'isDone');
+                $("#desc-" + $note_pk + "").attr('class', 'isDone');
             } else {
                 $(this).val("False");
-                $("#title-head-" + $note_pk + "").attr('class', '');
-                $("#desc_p-" + $note_pk + "").attr('class', '');
+                $("#new_title-" + $note_pk + "").attr('class', '');
+                $("#desc-" + $note_pk + "").attr('class', '');
             }
         });
 
