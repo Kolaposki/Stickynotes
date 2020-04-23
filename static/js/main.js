@@ -14,7 +14,6 @@ $(document).on("click", "#create_btn", function (event) {
     });
 
     function onClickActions($note_pk) {
-        //
 
         DeleteNote($note_pk);// to delete a newly created note without refreshing the page
 

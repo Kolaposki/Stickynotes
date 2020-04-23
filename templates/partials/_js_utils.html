@@ -89,8 +89,8 @@
         });
 
         $(document).on("click", "#pencil-{{ note.pk }}", function () {
-            $(this).removeAttr('class').addClass("no-display");
-            $("#update_btn-{{ note.pk }}").removeAttr('class').addClass("marker btn btn-lg");
+            $(this).attr('class', 'no-display');
+            $("#update_btn-{{ note.pk }}").attr('class', 'marker btn btn-lg');
             $("#desc-{{ note.pk }}").prop("readonly", false);
             $("#new_title-{{ note.pk }}").prop("readonly", false);
             $("#palette-{{ note.pk }}").removeAttr('class').addClass("");
@@ -102,12 +102,14 @@
         $(document).on("click", "#id_is_done-{{ note.pk }}", function () {
             if ($(this).prop('checked')) {
                 $(this).val("True");
-                $("#title-head-{{ note.pk }}").removeAttr('class').addClass("isDone");
-                $("#desc_p-{{ note.pk }}").removeAttr('class').addClass("isDone");
+                $("#new_title-{{ note.pk }}").attr('class', 'isDone');
+                $("#desc-{{ note.pk }}").attr('class', 'isDone');
+                $("doneCheck-{{ note.pk }}").val("True");
             } else {
                 $(this).val("False");
-                $("#title-head-{{ note.pk }}").removeAttr('class').addClass("");
-                $("#desc_p-{{ note.pk }}").removeAttr('class').addClass("");
+                $("#new_title-{{ note.pk }}").attr('class', '');
+                $("#desc-{{ note.pk }}").attr('class', '');
+                $("doneCheck-{{ note.pk }}").val("False");
             }
         });
 
@@ -206,7 +208,7 @@
         });
 
         // delete note using ajax
-        DeleteNote({{ note.pk }})
+        DeleteNote({{ note.pk }});
     {% endfor %}
 
 

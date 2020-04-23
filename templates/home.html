@@ -38,14 +38,16 @@
 
                 <div id="bg" class="single-note add-note white">
                     <form name="createNote" id="createNote" method="POST" data-url="/">
-                        <span class="no-display">{{ form.new_dummy }}</span>
+                        {#                        <span class="no-display">{{ form.new_dummy }}</span>#}
+                        <input type="hidden" class="d-none" name="new_dummy" id="id_new_dummy">
+                        <input class="d-none" type="checkbox" value="False" name="is_done" id="id_is_done">
+
                         {% csrf_token %}
                         <input name="title" type="text" maxlength="20" placeholder="Type a title ...">
                         <small>Today: {% now "jS F, Y" %}</small>
 
-                        <input style="display: none !important;" name="background_color" value="white"
+                        <input class="d-none" name="background_color" value="white"
                                id="id_background_color">
-                        <input class="no-display" type="checkbox" value="False" name="is_done" id="id_is_done">
 
                         <hr>
                         <textarea name="description" placeholder="Type a description ..."></textarea>

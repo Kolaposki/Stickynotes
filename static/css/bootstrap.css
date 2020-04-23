@@ -67,6 +67,10 @@ mark {
   color: #000;
   background: #ff0;
 }
+
+.d-none {
+  display: none !important;
+}
 small {
   font-size: 80%;
 }

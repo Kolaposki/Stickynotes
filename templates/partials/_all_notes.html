@@ -9,6 +9,7 @@
                 <input id="id_background_color-{{ note.pk }}" type="hidden" name="background_color"
                        value="{{ note.background_color }}">
                 <input type="hidden" name="note_id" value="{{ note.pk }}">
+                <input type="hidden" id="doneCheck-{{ note.pk }}" name="is_done">
 
 
                 <div id="bg-{{ note.pk }}" class="single-note {{ note.background_color }}">
@@ -38,27 +39,28 @@
                             </label>
                         </span>
                     {% endif %}
-                    {##}
-                    {#                    {% if note.is_done %}#}
-                    {#                        <h2 id="title-head-{{ note.pk }}" class="isDone">{{ note.title }} </h2>#}
-                    {#                    {% else %}#}
-                    {#                        <h2 id="title-head-{{ note.pk }}" class="">{{ note.title }} </h2>#}
-                    {#                    {% endif %}#}
 
-                    <input id="new_title-{{ note.pk }}" name="title" type="text"
-                           maxlength="20" placeholder="Type a title ..." value="{{ note.title }}" readonly>
+                    {% if note.is_done %}
+                        <input id="new_title-{{ note.pk }}" name="title" type="text" class="isDone"
+                               maxlength="20" placeholder="Type a title ..." value="{{ note.title }}" readonly>
 
-                    <small>Last Updated: {{ note.date_updated }}</small>
-                    <hr>
-                    {##}
-                    {#                    {% if note.is_done %}#}
-                    {#                        <p class="isDone" id="desc_p-{{ note.pk }}">{{ note.description }}</p>#}
-                    {#                    {% else %}#}
-                    {#                        <p class="" id="desc_p-{{ note.pk }}">{{ note.description }}</p>#}
-                    {#                    {% endif %}#}
+                        <small>Last Updated: {{ note.date_updated }}</small>
+                        <hr>
+                        <textarea id="desc-{{ note.pk }}" class="isDone"
+                                  name="description" readonly>{{ note.description }}</textarea>
 
-                    <textarea id="desc-{{ note.pk }}"
-                              name="description" readonly>{{ note.description }}</textarea>
+                    {% else %}
+
+                        <input id="new_title-{{ note.pk }}" name="title" type="text" class=""
+                               maxlength="20" placeholder="Type a title ..." value="{{ note.title }}" readonly>
+
+                        <small>Last Updated: {{ note.date_updated }}</small>
+                        <hr>
+                        <textarea id="desc-{{ note.pk }}" class=""
+                                  name="description" readonly>{{ note.description }}</textarea>
+                    {% endif %}
+
+
 
                     <div class="meta">
                         <button name="update-{{ note.pk }}" id="update_btn-{{ note.pk }}"
