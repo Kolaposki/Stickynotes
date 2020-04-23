@@ -14,33 +14,20 @@
 
                 <div id="bg-{{ note.pk }}" class="single-note {{ note.background_color }}">
 
+                    <span class="notDone">
+                            <label class="my-checkbox">
+                                <input type="checkbox" value="note.is_done" name="is_done"
+                                       id="id_is_done-{{ note.pk }}">
+                                <i class="checked fa-check-square fas"></i>
+                                <i class="unchecked fa-check-square far"></i>
+                            </label>
+                    </span>
+
                     {% if note.is_done %}
                         <span id="doneMarker-{{ note.pk }}" class="notDone">
                             <i class="checked fa-check-square fas"></i>
                         </span>
 
-                        <span id="2doneMarker-{{ note.pk }}" class="no-display notDone">
-                            <label class="my-checkbox">
-                                <input type="checkbox" value="note.is_done" name="is_done"
-                                       id="id_is_done-{{ note.pk }}">
-                                <i class="checked fa-check-square fas"></i>
-                                <i class="unchecked fa-check-square far"></i>
-                            </label>
-                        </span>
-
-                    {% else %}
-
-                        <span class="notDone">
-                            <label class="my-checkbox">
-                                <input type="checkbox" value="note.is_done" name="is_done"
-                                       id="id_is_done-{{ note.pk }}">
-                                <i class="checked fa-check-square fas"></i>
-                                <i class="unchecked fa-check-square far"></i>
-                            </label>
-                        </span>
-                    {% endif %}
-
-                    {% if note.is_done %}
                         <input id="new_title-{{ note.pk }}" name="title" type="text" class="isDone"
                                maxlength="20" placeholder="Type a title ..." value="{{ note.title }}" readonly>
 
@@ -59,8 +46,6 @@
                         <textarea id="desc-{{ note.pk }}" class=""
                                   name="description" readonly>{{ note.description }}</textarea>
                     {% endif %}
-
-
 
                     <div class="meta">
                         <span>
