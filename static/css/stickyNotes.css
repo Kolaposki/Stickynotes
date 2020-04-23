@@ -524,7 +524,7 @@ footer span i {
 }
 
 .mark:hover, .marker:hover {
-    color: hsla(0, 0%, 0%, 0.2);
+    color: hsla(0, 0%, 0%, 0.3);
 }
 
 .marker {
