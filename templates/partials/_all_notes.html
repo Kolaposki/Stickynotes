@@ -31,7 +31,7 @@
                         <input id="new_title-{{ note.pk }}" name="title" type="text" class="isDone"
                                maxlength="20" placeholder="Type a title ..." value="{{ note.title }}" readonly>
 
-                        <small>Last Updated: {{ note.date_updated }}</small>
+                        <small>Last Updated: {{ note.date_updated|date:"D, dS M Y" }}</small>
                         <hr>
                         <textarea id="desc-{{ note.pk }}" class="isDone"
                                   name="description" readonly>{{ note.description }}</textarea>
@@ -41,7 +41,7 @@
                         <input id="new_title-{{ note.pk }}" name="title" type="text" class=""
                                maxlength="20" placeholder="Type a title ..." value="{{ note.title }}" readonly>
 
-                        <small>Last Updated: {{ note.date_updated }}</small>
+                        <small>Last Updated: {{ note.date_updated|date:"D, dS M Y" }}</small>
                         <hr>
                         <textarea id="desc-{{ note.pk }}" class=""
                                   name="description" readonly>{{ note.description }}</textarea>
