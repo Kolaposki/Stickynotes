@@ -29,28 +29,41 @@ $(document).on("click", "#create_btn", function (event) {
             UpdateForm($note_pk)
         });
 
+
         $(document).on("click", "#palette-" + $note_pk + "", function () {
             $("#allColor-" + $note_pk + "").toggleClass('colors').toggleClass("colors openDivs");
         });
 
 
-        $(document).on("click", "#doneMarker-" + $note_pk + "", function () {
+        $(document).on("click", "#doneMarker-" + $note_pk + "", function (myevent1) {
             $(this).attr('class', 'd-none');
             $("#new_title-" + $note_pk + "").attr('class', '');
             $("#desc-" + $note_pk + "").attr('class', '');
-            $("#id_is_done-" + $note_pk + "").prop('unchecked').val("False");
+            $("#id_is_done-" + $note_pk + "").prop('unchecked');
+            $("#id_is_done-" + $note_pk + "").val("False");
+            AppendMarker(myevent1, "" + $note_pk + "");
+
         });
 
 
-        $(document).on("click", "#id_is_done-" + $note_pk + "", function () {
+        $(document).on("click", "#id_is_done-" + $note_pk + "", function (myevent2) {
             if ($(this).prop('checked')) {
                 $(this).val("True");
                 $("#new_title-" + $note_pk + "").attr('class', 'isDone');
                 $("#desc-" + $note_pk + "").attr('class', 'isDone');
-            } else {
+                $("#doneCheck-" + $note_pk + "").val("True");
+
+                AppendMarker(myevent2, "" + $note_pk + "");
+
+            }
+            if ($(this).prop('unchecked')) {
                 $(this).val("False");
                 $("#new_title-" + $note_pk + "").attr('class', '');
                 $("#desc-" + $note_pk + "").attr('class', '');
+                $("#doneCheck-" + $note_pk + "").val("False");
+
+                AppendMarker(myevent2, "" + $note_pk + "");
+
             }
         });
 
@@ -163,7 +176,6 @@ $(document).on("click", "#create_btn", function (event) {
     function handleSuccess(data) {
 
         if (data) {
-            $(".all-notes").load(" .all-notes > *");
             $("#noteCreator").load(" #noteCreator > *");
 
         }
@@ -188,6 +200,7 @@ $(document).on("click", "#create_btn", function (event) {
         let $allNotes = JSON.parse(localStorage.getItem('notes'));
         console.log($allNotes);
         $noteForm[0].reset();
+        $(".all-notes").load(" .all-notes > *");
 
         onClickActions($note_pk);
 

@@ -9,14 +9,14 @@
                 <input id="id_background_color-{{ note.pk }}" type="hidden" name="background_color"
                        value="{{ note.background_color }}">
                 <input type="hidden" name="note_id" value="{{ note.pk }}">
-{#                <input type="hidden" id="doneCheck-{{ note.pk }}" name="is_done">#}
+                <input class="d-none" id="doneCheck-{{ note.pk }}" name="is_done">
 
 
                 <div id="bg-{{ note.pk }}" class="single-note {{ note.background_color }}">
 
                     <span class="notDone">
                             <label class="my-checkbox">
-                                <input type="checkbox" value="" name="is_done"
+                                <input type="checkbox" value=""
                                        id="id_is_done-{{ note.pk }}">
                                 <i class="checked fa-check-square fas"></i>
                                 <i class="unchecked fa-check-square far"></i>

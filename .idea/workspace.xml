@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/partials/_all_notes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_all_notes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partials/_js_utils.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_js_utils.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -172,14 +174,7 @@
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
-      <workItem from="1587632046275" duration="14276000" />
-    </task>
-    <task id="LOCAL-00013" summary="Get ready for POST TUNNELLING after several delete trials">
-      <created>1586973051189</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1586973051233</updated>
+      <workItem from="1587632046275" duration="31507000" />
     </task>
     <task id="LOCAL-00014" summary="Creat middleware file to intercept headers and add DELETE and PUT requests">
       <created>1586974948106</created>
@@ -517,7 +512,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587646561345</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Format date using template filters to remove time">
+      <created>1587648484011</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1587648484011</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -538,7 +540,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Remove session creations from view" />
     <MESSAGE value="Create js function to add note details to localstorage" />
     <MESSAGE value="Update gitignore file to exclude Jetbrains idea files" />
     <MESSAGE value="Test adding of notes to localstorage with javascript" />
@@ -563,7 +564,8 @@
     <MESSAGE value="Fix nested checkbox and remove unnecessary codes" />
     <MESSAGE value="Fix on delete hiding bug in js file" />
     <MESSAGE value="Fix typo error in js files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix typo error in js files" />
+    <MESSAGE value="Format date using template filters to remove time" />
+    <option name="LAST_COMMIT_MESSAGE" value="Format date using template filters to remove time" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/sticky$dd.coverage" NAME="dd Coverage Results" MODIFIED="1585915712562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stickynotes" />

@@ -4,9 +4,47 @@
         $("#allColor").toggleClass('colors').toggleClass("colors openDivs");
     });
 
+    function AppendMarker(event, $note_pk) {
+        let $updateNoteForm = $('#UpdateNoteForm-' + $note_pk + "");
+        console.log("APPEND UPDATE IS CALLED for note-id: ", $note_pk);
+
+        event.preventDefault();
+        let $formData = $updateNoteForm.serialize();
+        let $thisURL = $updateNoteForm.attr('data-url') || window.location();
+
+        console.log($formData);
+        console.log($thisURL);
+
+        $.ajax({
+            method: 'POST',
+            url: $thisURL,
+            data: $formData,
+            success: handleSuccess,
+            error: handleError,
+        });
+
+        function handleSuccess(data) {
+
+            if (data) {
+                $(".all-notes").load(" .all-notes > *");
+            }
+
+            console.log(data.message);
+            console.log("Note id: " + data.note_pk);
+        }
+
+        function handleError(ThrowError) {
+            console.log("AN ERROR OCCURRED WHILE UPDATING FORM !!");
+            console.log(ThrowError);
+        }
+
+    }
+
     function UpdateForm($note_pk) {
         $(document).ready(function () {
+
             let $updateNoteForm = $('#UpdateNoteForm-' + $note_pk + "");
+            console.log("UPDATE IS CALLED for note-id: ", $note_pk);
 
             $updateNoteForm.submit(function (event) {
 
@@ -23,7 +61,6 @@
                     data: $formData,
                     success: handleSuccess,
                     error: handleError,
-
                 });
 
                 function handleSuccess(data) {
@@ -70,7 +107,7 @@
                 console.log(data.message);
                 console.log("title: " + $noteTitle);
                 console.log("pk: " + $note_pk);
-                $('#mynote-'+ $note_pk).hide(); // hide the post on success
+                $('#mynote-' + $note_pk).hide(); // hide the post on success
                 alert('Note deleted!');
             }
 
@@ -98,22 +135,37 @@
             UpdateForm({{ note.pk }})
         });
 
-        $(document).on("click", "#doneMarker-{{ note.pk }}", function () {
+        $(document).on("click", "#doneMarker-{{ note.pk }}", function (event) {
             $(this).attr('class', 'd-none');
             $("#new_title-{{ note.pk }}").attr('class', '');
             $("#desc-{{ note.pk }}").attr('class', '');
-            $("#id_is_done-{{ note.pk }}").prop('unchecked').val("False");
+            $("#id_is_done-{{ note.pk }}").prop('unchecked');
+            $("#id_is_done-{{ note.pk }}").val("False");
+
+            AppendMarker(event, {{ note.pk }});
         });
 
-        $(document).on("click", "#id_is_done-{{ note.pk }}", function () {
+        $(document).on("click", "#id_is_done-{{ note.pk }}", function (event) {
             if ($(this).prop('checked')) {
                 $(this).val("True");
+                console.log("Checked");
                 $("#new_title-{{ note.pk }}").attr('class', 'isDone');
                 $("#desc-{{ note.pk }}").attr('class', 'isDone');
-            } else {
+                $("#doneCheck-{{ note.pk }}").val("True");
+
+                // ASSIGNING MARKER
+                AppendMarker(event, {{ note.pk }});
+                console.log("Done checked")
+
+            }
+
+            if ($(this).prop('unchecked')) {
+                console.log("Unchecked");
+
                 $(this).val("False");
                 $("#new_title-{{ note.pk }}").attr('class', '');
                 $("#desc-{{ note.pk }}").attr('class', '');
+                $("#doneCheck-{{ note.pk }}").val("False");
             }
         });
 
