@@ -510,21 +510,27 @@ footer span i {
 -----------------
 */
 
+
 .mark {
     background-color: transparent;
     padding: 0 !important;
-    font-size: 23px;
-    border: 0;
+    font-size: inherit;
+    margin-top: -7px;
 }
+
 
 .no-display {
     display: none !important;
 }
 
+.mark:hover, .marker:hover {
+    color: hsla(0, 0%, 0%, 0.2);
+}
+
 .marker {
     background-color: transparent;
     padding: 0 !important;
-    margin: -7px 12px 0;
+    /*margin: -7px 12px 0;*/
     font-size: 27px;
     transition: all 0.2s;
     color: hsla(0, 0%, 0%, 0.2);

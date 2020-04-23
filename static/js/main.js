@@ -19,7 +19,7 @@ $(document).on("click", "#create_btn", function (event) {
 
         $(document).on("click", "#pencil-" + $note_pk + "", function () {
             $(this).removeAttr('class').addClass("no-display");
-            $("#update_btn-" + $note_pk + "").removeAttr('class').addClass("marker btn btn-lg");
+            $("#update_btn-" + $note_pk + "").removeAttr('class').addClass("mark btn btn-lg");
 
             $("#desc-" + $note_pk + "").prop("readonly", false);
             $("#new_title-" + $note_pk + "").prop("readonly", false);

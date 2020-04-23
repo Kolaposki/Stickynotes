@@ -90,7 +90,7 @@
 
         $(document).on("click", "#pencil-{{ note.pk }}", function () {
             $(this).attr('class', 'no-display');
-            $("#update_btn-{{ note.pk }}").attr('class', 'marker btn btn-lg');
+            $("#update_btn-{{ note.pk }}").attr('class', 'mark btn btn-lg');
             $("#desc-{{ note.pk }}").prop("readonly", false);
             $("#new_title-{{ note.pk }}").prop("readonly", false);
             $("#palette-{{ note.pk }}").removeAttr('class').addClass("");

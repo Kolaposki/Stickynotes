@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/stickyNotes.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/stickyNotes.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/partials/_all_notes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_all_notes.html" afterDir="false" />
@@ -176,14 +176,7 @@
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
-      <workItem from="1587632046275" duration="1184000" />
-    </task>
-    <task id="LOCAL-00007" summary="Fix newly created notes not updating through ajax calls">
-      <created>1586792931561</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1586792931561</updated>
+      <workItem from="1587632046275" duration="5293000" />
     </task>
     <task id="LOCAL-00008" summary="Fix palette div showing after creating new note">
       <created>1586793757867</created>
@@ -521,7 +514,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587250457970</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Introduced d-none class and removed unnecessary tags">
+      <created>1587634426704</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1587634426715</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -542,7 +542,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Add span to show creator of a note on the note" />
     <MESSAGE value="Add manager to show creator of a note in admin page" />
     <MESSAGE value="Create view to display no notes to unauthenticated users" />
     <MESSAGE value="Implement storing and retrieving to cookie sessions" />
@@ -567,7 +566,8 @@
     <MESSAGE value="Remove 'created by' in home page" />
     <MESSAGE value="Add pre-wrap style to inputs" />
     <MESSAGE value="Add readonly attribute to input and textarea" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add readonly attribute to input and textarea" />
+    <MESSAGE value="Introduced d-none class and removed unnecessary tags" />
+    <option name="LAST_COMMIT_MESSAGE" value="Introduced d-none class and removed unnecessary tags" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
