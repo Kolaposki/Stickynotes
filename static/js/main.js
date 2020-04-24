@@ -152,6 +152,18 @@ $(document).on("click", "#create_btn", function (event) {
             $("#bg-" + $note_pk + "").removeAttr('class').addClass("single-note add-note white");
             $("#id_background_color-" + $note_pk + "").val("white");
         });
+
+
+        $(document).on("click", "#link-" + $note_pk + "", function () {
+            console.log("Link clciked");
+            $("#copied-" + $note_pk + "").attr('class', 'copied openDivs');
+            $('#copied-' + $note_pk + "").fadeOut(500, function () {
+                $('#copied-' + $note_pk + "").fadeIn(500);
+                $("#copied-" + $note_pk + "").attr('class', 'copied');
+            });
+        });
+
+
     }
 
     function storageCollector($pk, $title, $description, $bg_color, $date, $is_done) {
@@ -202,7 +214,29 @@ $(document).on("click", "#create_btn", function (event) {
 
         onClickActions($note_pk);
         $("textarea").overlayScrollbars({className: "os-theme-round-dark",}); // Textarea scroll bar design
+        let $clip = $note_pk;
 
+        let clipboard_$note_pk = new ClipboardJS('#link-' + $note_pk + '');
+        $clip = new ClipboardJS('#link-' + $note_pk + '');
+        console.log("CLIPBOARD OBJ: ", clipboard_$note_pk);
+        console.log("CLIPBOARD OBJ: ", clip);
+
+        clipboard_$note_pk.on('success', function (e) {
+            //console.log(e);
+            console.log("Link copied");
+            //console.info('Action:', e.action);
+            console.info('Text:', e.text);
+            console.info('Trigger:', e.trigger);
+            //e.clearSelection();
+        });
+
+        clipboard_$note_pk.on('error', function (e) {
+            console.log(e);
+            console.error('Action:', e.action);
+            console.error('Trigger:', e.trigger);
+            console.log("Error occured while Link copying");
+
+        });
 
     }
 

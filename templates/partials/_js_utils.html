@@ -299,6 +299,10 @@
         // delete note using ajax
         DeleteNote({{ note.pk }});
 
+        function ClipLink($note_pk) {
+
+        }
+
         let clipboard_{{ note.pk }} = new ClipboardJS('#link-{{ note.pk }}');
 
         clipboard_{{ note.pk }}.on('success', function (e) {
@@ -318,14 +322,12 @@
 
         });
 
-
         $(document).on("click", "#link-{{ note.pk }}", function () {
             console.log("Link clciked");
             $("#copied-{{ note.pk }}").attr('class', 'copied openDivs');
             $('#copied-{{ note.pk }}').fadeOut(500, function () {
                 $('#copied-{{ note.pk }}').fadeIn(500);
                 $("#copied-{{ note.pk }}").attr('class', 'copied');
-
             });
         });
 
