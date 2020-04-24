@@ -1,4 +1,13 @@
 <script>
+    $("body").overlayScrollbars({
+        textarea: {
+            dynWidth: false,
+            dynHeight: false,
+            inheritedAttrs: ["style", "class"]
+        },
+    });
+    //OverlayScrollbars(document.getElementsByClassName("textarea"), { });
+    $("textarea").overlayScrollbars({});
 
     $(document).on("click", "#palette", function () {
         $("#allColor").toggleClass('colors').toggleClass("colors openDivs");
@@ -122,6 +131,10 @@
     {% for note in notes %}
         $(document).on("click", "#palette-{{ note.pk }}", function () {
             $("#allColor-{{ note.pk }}").toggleClass('colors').toggleClass("colors openDivs");
+        });
+
+        $(document).on("click", "#expand-{{ note.pk }}", function () {
+            $("#desc-{{ note.pk }}").toggleClass('').toggleClass("expand");
         });
 
         $(document).on("click", "#pencil-{{ note.pk }}", function () {

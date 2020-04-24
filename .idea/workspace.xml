@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/stickyNotes.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/stickyNotes.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/partials/_all_notes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_all_notes.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/partials/_js_utils.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_js_utils.html" afterDir="false" />
     </list>
@@ -174,14 +176,7 @@
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
-      <workItem from="1587632046275" duration="31507000" />
-    </task>
-    <task id="LOCAL-00014" summary="Creat middleware file to intercept headers and add DELETE and PUT requests">
-      <created>1586974948106</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1586974948106</updated>
+      <workItem from="1587632046275" duration="42599000" />
     </task>
     <task id="LOCAL-00015" summary="Register the new middleware to MIDDLEWARE list in settings.py">
       <created>1586975092065</created>
@@ -519,7 +514,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587648484011</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Create function in js to save checkbox click state to db">
+      <created>1587670045580</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1587670045580</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -540,7 +542,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Create js function to add note details to localstorage" />
     <MESSAGE value="Update gitignore file to exclude Jetbrains idea files" />
     <MESSAGE value="Test adding of notes to localstorage with javascript" />
     <MESSAGE value="Add date_updated field to model" />
@@ -565,7 +566,10 @@
     <MESSAGE value="Fix on delete hiding bug in js file" />
     <MESSAGE value="Fix typo error in js files" />
     <MESSAGE value="Format date using template filters to remove time" />
-    <option name="LAST_COMMIT_MESSAGE" value="Format date using template filters to remove time" />
+    <MESSAGE value="Create function in js to save checkbox click state to db" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create function in js to save checkbox click state to db" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/sticky$dd.coverage" NAME="dd Coverage Results" MODIFIED="1585915712562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stickynotes" />

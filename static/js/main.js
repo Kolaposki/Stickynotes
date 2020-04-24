@@ -62,8 +62,6 @@ $(document).on("click", "#create_btn", function (event) {
                 $("#desc-" + $note_pk + "").attr('class', '');
                 $("#doneCheck-" + $note_pk + "").val("False");
 
-                AppendMarker(myevent2, "" + $note_pk + "");
-
             }
         });
 
@@ -211,3 +209,8 @@ $(document).on("click", "#create_btn", function (event) {
         console.log(ThrowError);
     }
 });
+
+function auto_grow(element) {
+    element.style.height = "5px";
+    element.style.height = (element.scrollHeight) + "px";
+}

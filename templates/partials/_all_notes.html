@@ -33,7 +33,7 @@
 
                         <small>Last Updated: {{ note.date_updated|date:"D, dS M Y" }}</small>
                         <hr>
-                        <textarea id="desc-{{ note.pk }}" class="isDone"
+                        <textarea id="desc-{{ note.pk }}" class="isDone" style="height: 85px !important;"
                                   name="description" readonly>{{ note.description }}</textarea>
 
                     {% else %}
@@ -43,7 +43,7 @@
 
                         <small>Last Updated: {{ note.date_updated|date:"D, dS M Y" }}</small>
                         <hr>
-                        <textarea id="desc-{{ note.pk }}" class=""
+                        <textarea id="desc-{{ note.pk }}" class="" style="height: 85px !important;"
                                   name="description" readonly>{{ note.description }}</textarea>
                     {% endif %}
 
@@ -65,7 +65,7 @@
                             </button>
                         </span>
 
-                        <span><i class="fas fa-expand"></i></span>
+                        <span id="expand-{{ note.pk }}"><i class="fas fa-expand"></i></span>
                         <span><i class="fas fa-link"></i></span>
                     </div>
 
