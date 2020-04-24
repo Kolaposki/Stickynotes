@@ -103,8 +103,8 @@ def index(request):
     return render(request, HOMEPAGE, context={'notes': notes, 'form': form, 'up_form': up_form})
 
 
-def register(response):
-    if response.method == "POST":
+def register(request):
+    if request.method == "POST":
         form = RegisterForm(response.POST)
         if form.is_valid():
             form.save()
@@ -113,4 +113,8 @@ def register(response):
     else:
         form = RegisterForm()
 
-    return render(response, "register.html", {"form": form})
+    return render(request, "register.html", {"form": form})
+
+
+def shared(request):
+    return render(request, 'shared.html')

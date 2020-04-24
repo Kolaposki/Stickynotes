@@ -303,10 +303,9 @@
         let clipboard_{{ note.pk }} = new ClipboardJS('#link-{{ note.pk }}');
 
         clipboard_{{ note.pk }}.on('success', function (e) {
-            console.log(e);
+            //console.log(e);
             console.log("Link copied");
-
-            console.info('Action:', e.action);
+            //console.info('Action:', e.action);
             console.info('Text:', e.text);
             console.info('Trigger:', e.trigger);
             //e.clearSelection();
@@ -316,7 +315,7 @@
             console.log(e);
             console.error('Action:', e.action);
             console.error('Trigger:', e.trigger);
-            console.log("Error Link copied");
+            console.log("Error occured while Link copying");
 
         });
 

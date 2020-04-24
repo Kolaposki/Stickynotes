@@ -2,17 +2,35 @@
 {% load static %}
 {% block content %}
 
-<div class="header shared-note" id="header">
-    <div class="container">
-        <div class="col-md-3 col-sm-5">
-            <a href=""><h2>Shared Note</h2></a>
-        </div>
-        <div class="col-md-6 col-md-push-3 col-sm-7">
-            <div class="hold-img">
-                <img src="{% static 'img/Group 12.svg' %}" alt="">
+    <div class="header shared-note" id="header">
+        <div class="container">
+            <div class="col-md-3 col-sm-5">
+                <a href="{% url 'home' %}"><h2>Shared Note</h2></a>
+            </div>
+            <div class="col-md-6 col-md-push-3 col-sm-7">
+                <div class="hold-img">
+                    <img src="{% static 'img/Group 12.svg' %}" alt="">
+                </div>
             </div>
         </div>
     </div>
-</div>
+
+    <div id="notes" class="notes">
+        <div class="container">
+            <div class="col-md-offset-4 col-sm-offset-2 col-md-4 col-sm-8">
+                <div class="single-note shared green">
+                    <h2>Lolly Wolly</h2>
+                    <small>The Date: </small>
+                    <hr>
+                    <p>This book will save you time.On many occasions we’ve seen clever students get stuck,
+                        spendinghours trying to fight with Django and other aspects of web development. More often than
+                        not, theproblem was usually because a key piece of information was not provided, or something
+                        was notmade clear. While the occasional blip might set you back 10-15 minutes, sometimes they
+                        can takehours to resolve. We’ve tried to remove as many of these hurdles as possible. This will
+                        mean youcan get on with developing your application instead of stumbling along</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}
