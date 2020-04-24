@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/stickyNotes.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/stickyNotes.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/partials/_all_notes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_all_notes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/OverlayScrollbars.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/OverlayScrollbars.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/partials/_js_utils.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_js_utils.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -176,14 +173,7 @@
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
-      <workItem from="1587632046275" duration="42599000" />
-    </task>
-    <task id="LOCAL-00015" summary="Register the new middleware to MIDDLEWARE list in settings.py">
-      <created>1586975092065</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1586975092065</updated>
+      <workItem from="1587632046275" duration="45079000" />
     </task>
     <task id="LOCAL-00016" summary="Fix CRSF token not found using ajax for deleting note">
       <created>1586978671856</created>
@@ -521,7 +511,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587670045580</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Implement OverlayScrollbars.css to textarea and body">
+      <created>1587697178536</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1587697178536</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -542,7 +539,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Update gitignore file to exclude Jetbrains idea files" />
     <MESSAGE value="Test adding of notes to localstorage with javascript" />
     <MESSAGE value="Add date_updated field to model" />
     <MESSAGE value="Add date_updated to home page and remove date_created" />
@@ -567,7 +563,8 @@
     <MESSAGE value="Fix typo error in js files" />
     <MESSAGE value="Format date using template filters to remove time" />
     <MESSAGE value="Create function in js to save checkbox click state to db" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create function in js to save checkbox click state to db" />
+    <MESSAGE value="Implement OverlayScrollbars.css to textarea and body" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement OverlayScrollbars.css to textarea and body" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

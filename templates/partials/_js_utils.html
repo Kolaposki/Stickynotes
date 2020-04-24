@@ -6,8 +6,9 @@
             inheritedAttrs: ["style", "class"]
         },
     });
+
     //OverlayScrollbars(document.getElementsByClassName("textarea"), { });
-    $("textarea").overlayScrollbars({});
+    $("textarea").overlayScrollbars({className: "os-theme-round-dark",});
 
     $(document).on("click", "#palette", function () {
         $("#allColor").toggleClass('colors').toggleClass("colors openDivs");
