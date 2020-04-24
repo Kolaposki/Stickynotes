@@ -107,42 +107,49 @@
         });
     }
 
-
     function DeleteNote($note_pk) {
         $(document).on("click", "#delete_btn-" + $note_pk + "", function (event) {
-            let csrftoken = $("[name=csrfmiddlewaretoken]").val();
-            let $noteForm = $('#UpdateNoteForm-' + $note_pk + "");
-
             event.preventDefault();
-            let $formData = $noteForm.serialize();
+            alertify.confirm('Confirm Delete', 'Are you sure you want to delete this Note', function () {
 
-            $.ajax({
-                type: 'DELETE',
-                url: '',
-                data: $formData,
-                success: handleSuccess,
-                error: handleError,
-                headers: {
-                    "X-CSRFToken": csrftoken
+                let csrftoken = $("[name=csrfmiddlewaretoken]").val();
+                let $noteForm = $('#UpdateNoteForm-' + $note_pk + "");
+
+                event.preventDefault();
+                let $formData = $noteForm.serialize();
+
+                $.ajax({
+                    type: 'DELETE',
+                    url: '',
+                    data: $formData,
+                    success: handleSuccess,
+                    error: handleError,
+                    headers: {
+                        "X-CSRFToken": csrftoken
+                    }
+                });
+
+                function handleSuccess(data) {
+                    let $noteTitle = data.title;
+                    let $note_pk = data.note_pk;
+                    console.log(data.message);
+                    console.log("title: " + $noteTitle);
+                    console.log("pk: " + $note_pk);
+                    $('#mynote-' + $note_pk).hide(); // hide the post on success
+                    // alert('Note deleted!');
+                    $("textarea").overlayScrollbars({className: "os-theme-round-dark",}); // Textarea scroll bar design
+
                 }
-            });
 
-            function handleSuccess(data) {
-                let $noteTitle = data.title;
-                let $note_pk = data.note_pk;
-                console.log(data.message);
-                console.log("title: " + $noteTitle);
-                console.log("pk: " + $note_pk);
-                $('#mynote-' + $note_pk).hide(); // hide the post on success
-                alert('Note deleted!');
-                $("textarea").overlayScrollbars({className: "os-theme-round-dark",}); // Textarea scroll bar design
+                function handleError(ThrowError) {
+                    console.log("An error occurred while trying to delete this note");
+                    console.log(ThrowError);
+                }
+            }, function () {
+                alertify.error('Cancel');
+                console.log("Note cancelled ", $note_pk)
 
-            }
-
-            function handleError(ThrowError) {
-                console.log("An error occurred while trying to delete this note");
-                console.log(ThrowError);
-            }
+            }).set('resizable', true).set('labels', {ok: 'Yes', cancel: 'Na, cancel'});
         });
     }
 
