@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stickynotes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stickynotes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partials/_all_notes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_all_notes.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/partials/_js_utils.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_js_utils.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/shared.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shared.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -175,14 +173,7 @@
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
-      <workItem from="1587632046275" duration="55711000" />
-    </task>
-    <task id="LOCAL-00020" summary="Modify update view to PUT request">
-      <created>1587011283413</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1587011283413</updated>
+      <workItem from="1587632046275" duration="59756000" />
     </task>
     <task id="LOCAL-00021" summary="Modify update view to POST request">
       <created>1587012740118</created>
@@ -520,7 +511,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587730190834</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="Get ready for shared note page">
+      <created>1587731334655</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1587731339544</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -541,7 +539,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Undo all changes" />
     <MESSAGE value="Remove unnecessary html files and comments" />
     <MESSAGE value="Remove custom authentication check" />
     <MESSAGE value="Fix login and logout redirect urls" />
@@ -566,7 +563,8 @@
     <MESSAGE value="Add textarea scroll style to js" />
     <MESSAGE value="Implement Alertify library to confirm deletion of notes" />
     <MESSAGE value="Implement clipboard library to copy links to clipboard" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement clipboard library to copy links to clipboard" />
+    <MESSAGE value="Get ready for shared note page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Get ready for shared note page" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
