@@ -298,6 +298,38 @@
 
         // delete note using ajax
         DeleteNote({{ note.pk }});
+
+        // $('#link-{{ note.pk }}').click({});
+        let clipboard_{{ note.pk }} = new ClipboardJS('#link-{{ note.pk }}');
+
+        clipboard_{{ note.pk }}.on('success', function (e) {
+            console.log(e);
+            console.log("Link copied");
+
+            console.info('Action:', e.action);
+            console.info('Text:', e.text);
+            console.info('Trigger:', e.trigger);
+            //e.clearSelection();
+        });
+
+        clipboard_{{ note.pk }}.on('error', function (e) {
+            console.log(e);
+            console.error('Action:', e.action);
+            console.error('Trigger:', e.trigger);
+            console.log("Error Link copied");
+
+        });
+
+        /**
+         $(document).on("click", "#link-{{ note.pk }}", function () {
+            console.log("Link clciked");
+
+            let clipboard = new ClipboardJS(this);
+
+
+        });**/
+
+
     {% endfor %}
 
 

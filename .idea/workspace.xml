@@ -4,6 +4,7 @@
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partials/_all_notes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_all_notes.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/partials/_js_utils.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_js_utils.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -173,14 +174,7 @@
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
-      <workItem from="1587632046275" duration="50828000" />
-    </task>
-    <task id="LOCAL-00018" summary="Create .gitignore file">
-      <created>1587004530284</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1587004530284</updated>
+      <workItem from="1587632046275" duration="54589000" />
     </task>
     <task id="LOCAL-00019" summary="DELETE function using ajax modified and tested">
       <created>1587010049328</created>
@@ -518,7 +512,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587721223897</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Implement Alertify library to confirm deletion of notes">
+      <created>1587726154992</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1587726154992</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -539,7 +540,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Add date_updated to home page and remove date_created" />
     <MESSAGE value="Create separate functions for crud operations on note" />
     <MESSAGE value="Undo all changes" />
     <MESSAGE value="Remove unnecessary html files and comments" />
@@ -564,7 +564,8 @@
     <MESSAGE value="Implement OverlayScrollbars.css to textarea and body" />
     <MESSAGE value="Change textarea scroll style" />
     <MESSAGE value="Add textarea scroll style to js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add textarea scroll style to js" />
+    <MESSAGE value="Implement Alertify library to confirm deletion of notes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement Alertify library to confirm deletion of notes" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
