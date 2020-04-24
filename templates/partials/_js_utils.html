@@ -7,8 +7,18 @@
         },
     });
 
-    //OverlayScrollbars(document.getElementsByClassName("textarea"), { });
-    $("textarea").overlayScrollbars({className: "os-theme-round-dark",});
+    $("textarea").overlayScrollbars({
+        className: "os-theme-round-dark",
+        scrollbars: {
+            visibility: "auto",
+            autoHide: "never",
+            autoHideDelay: 100,
+            dragScrolling: true,
+            clickScrolling: false,
+            touchSupport: true,
+            snapHandle: false
+        },
+    });
 
     $(document).on("click", "#palette", function () {
         $("#allColor").toggleClass('colors').toggleClass("colors openDivs");
@@ -38,6 +48,9 @@
             if (data) {
                 $(".all-notes").load(" .all-notes > *");
             }
+
+
+            $("textarea").overlayScrollbars({className: "os-theme-round-dark",}); // Textarea scroll bar design
 
             console.log(data.message);
             console.log("Note id: " + data.note_pk);
@@ -79,6 +92,9 @@
                         $(".all-notes").load(" .all-notes > *");
                     }
 
+                    $("textarea").overlayScrollbars({className: "os-theme-round-dark",}); // Textarea scroll bar design
+
+
                     console.log(data.message);
                     console.log("Note id: " + data.note_pk);
                 }
@@ -119,6 +135,8 @@
                 console.log("pk: " + $note_pk);
                 $('#mynote-' + $note_pk).hide(); // hide the post on success
                 alert('Note deleted!');
+                $("textarea").overlayScrollbars({className: "os-theme-round-dark",}); // Textarea scroll bar design
+
             }
 
             function handleError(ThrowError) {

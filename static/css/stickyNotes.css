@@ -2,11 +2,8 @@
   [ General Information ]
 
   Project:        Sticky To-Do Note
-  Version:        1.1
-  Last change:    25/09/2018 [fixed Float bug, vf]
-  Assigned to:    Eng Techno (ET)
-  Primary use:    Seprate App, Plugin
-  Techologies:    Vue.js
+  Version:        1.0
+  Author:    Oshodi Kolapo
 
   [ Important Classes ]
 
@@ -16,7 +13,7 @@
   [ Colors Classes ]
 
   - We defined Colors as classes to dynamically switch between them
-  { blue, red, yellow, purple, white }
+  { blue, red, yellow, purple, green, white }
 
   [ Main Structure ]
 

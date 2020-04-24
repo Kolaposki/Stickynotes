@@ -201,6 +201,8 @@ $(document).on("click", "#create_btn", function (event) {
         $(".all-notes").load(" .all-notes > *");
 
         onClickActions($note_pk);
+        $("textarea").overlayScrollbars({className: "os-theme-round-dark",}); // Textarea scroll bar design
+
 
     }
 
