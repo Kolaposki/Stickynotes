@@ -24,7 +24,7 @@ def index(request):
         # Read note
         if request.user.is_authenticated:
             print("GETTING ALL NOTES for ", request.user)
-            notes = Note.objects.filter(manager=request.user).order_by('-date_added')
+            notes = Note.objects.filter(manager=request.user).order_by('-date_updated')
 
     # Creating note
     if 'new_dummy' in request.POST:
@@ -132,7 +132,7 @@ def search(request):
         )
 
         context = {"search_term": search_term,
-                   "notes": search_result.filter(manager=request.user)}
+                   "notes": search_result.filter(manager=request.user).order_by('-date_updated')}
         return render(request, 'search.html', context=context)
     else:
         return redirect('home')  # redirect to home page if there's no data in d url
