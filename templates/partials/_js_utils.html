@@ -313,7 +313,7 @@
             console.log("Link copied");
             //console.info('Action:', e.action);
             console.info('Text:', e.text);
-            console.info('Trigger:', e.trigger);
+            //console.info('Trigger:', e.trigger);
             //e.clearSelection();
         });
 
@@ -328,8 +328,8 @@
         $(document).on("click", "#link-{{ note.pk }}", function () {
             console.log("Link clciked");
             $("#copied-{{ note.pk }}").attr('class', 'copied openDivs');
-            $('#copied-{{ note.pk }}').fadeOut(500, function () {
-                $('#copied-{{ note.pk }}').fadeIn(500);
+            $('#copied-{{ note.pk }}').fadeOut(1200, function () {
+                $('#copied-{{ note.pk }}').fadeIn(1200);
                 $("#copied-{{ note.pk }}").attr('class', 'copied');
             });
         });
