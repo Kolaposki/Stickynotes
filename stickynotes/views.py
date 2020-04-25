@@ -3,6 +3,7 @@ from .models import Note
 from .forms import *
 from django.http import JsonResponse
 from django.http import QueryDict
+from django.db.models import Q
 from django.contrib.auth.models import User
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
@@ -120,3 +121,18 @@ def register(request):
 def shared(request, pk):
     note = get_object_or_404(Note, pk=pk)
     return render(request, 'shared.html', {'note': note})
+
+
+def search(request):
+    if request.GET:
+        search_term = request.GET['search_term']  # get value that was passed in url
+        # using complex query - Q
+        search_result = Note.objects.filter(
+            Q(title__icontains=search_term) | Q(description__icontains=search_term)
+        )
+
+        context = {"search_term": search_term,
+                   "notes": search_result.filter(manager=request.user)}
+        return render(request, 'search.html', context=context)
+    else:
+        return redirect('home')  # redirect to home page if there's no data in d url

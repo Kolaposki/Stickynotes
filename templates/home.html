@@ -22,9 +22,9 @@
         <div class="container">
             <!--Search bar-->
             <div class="searchBar">
-                <form>
+                <form action="{% url 'search' %}">
                     <div class="col-xs-11 nopadding">
-                        <input type="text" name="search" placeholder="Search">
+                        <input type="text" placeholder="Search Note" name="search_term" value="{{ search_term }}">
                     </div>
                     <div class="col-xs-1 nopadding">
                         <button type="submit"><i class="fas fa-search"></i></button>
