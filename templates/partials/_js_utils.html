@@ -89,10 +89,13 @@
                 function handleSuccess(data) {
 
                     if (data) {
+                        //let $refresh = '#UpdateNoteForm-' + $note_pk + '';
                         $(".all-notes").load(" .all-notes > *");
+                        // $($refresh).load(' '+$refresh + " > *");
+                        // console.log("Resfresh succes of ", $refresh)
                     }
 
-                    $("textarea").overlayScrollbars({className: "os-theme-round-dark",}); // Textarea scroll bar design
+                    // $("textarea").overlayScrollbars({className: "os-theme-round-dark",}); // Textarea scroll bar design
 
 
                     console.log(data.message);
