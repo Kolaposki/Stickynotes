@@ -100,7 +100,8 @@ def index(request):
 
         return JsonResponse(data)
 
-    return render(request, HOMEPAGE, context={'notes': notes, 'form': form, 'up_form': up_form})
+    baseurl = request.build_absolute_uri()[:-1]  # to remove the last /
+    return render(request, HOMEPAGE, context={'notes': notes, 'form': form, 'up_form': up_form, 'baseurl': baseurl})
 
 
 def register(request):

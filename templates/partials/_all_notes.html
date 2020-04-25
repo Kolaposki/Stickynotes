@@ -11,7 +11,6 @@
                 <input type="hidden" name="note_id" value="{{ note.pk }}">
                 <input class="d-none" id="doneCheck-{{ note.pk }}" name="is_done">
 
-
                 <div id="bg-{{ note.pk }}" class="single-note {{ note.background_color }}">
 
                     <span class="notDone">
@@ -66,7 +65,8 @@
                         </span>
 
                         <span id="expand-{{ note.pk }}"><i class="fas fa-expand"></i></span>
-                        <span id="link-{{ note.pk }}" data-clipboard-text="Lorem copied for id {{ note.pk }}">
+                        <span id="link-{{ note.pk }}"
+                              data-clipboard-text="{{ baseurl }}{% url 'shared' note.pk %}">
                             <i class="fas fa-link"></i></span>
                     </div>
 

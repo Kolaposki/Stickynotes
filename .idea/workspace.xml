@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/shared.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shared.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stickynotes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partials/_all_notes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_all_notes.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -171,21 +173,7 @@
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
-      <workItem from="1587632046275" duration="70641000" />
-    </task>
-    <task id="LOCAL-00026" summary="Create login and logout view">
-      <created>1587044786983</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1587044786990</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Test all authentication views">
-      <created>1587047667966</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1587047667966</updated>
+      <workItem from="1587632046275" duration="72820000" />
     </task>
     <task id="LOCAL-00028" summary="Create partials for html documents">
       <created>1587120128071</created>
@@ -516,7 +504,21 @@
       <option name="project" value="LOCAL" />
       <updated>1587803657638</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="Add last updated to shared template">
+      <created>1587803800753</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1587803800753</updated>
+    </task>
+    <task id="LOCAL-00076" summary="Add template filter to shared template on date updated">
+      <created>1587803957532</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1587803957532</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -537,8 +539,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Create demo user for testing and redesign logout page" />
-    <MESSAGE value="Update footer to include twitter link" />
     <MESSAGE value="Add OverlayScrollbars styles" />
     <MESSAGE value="Remove 'created by' in home page" />
     <MESSAGE value="Add pre-wrap style to inputs" />
@@ -562,7 +562,9 @@
     <MESSAGE value="Change reloading all full notes to the updated note only" />
     <MESSAGE value="Modify view to render shared notes relative with the pk" />
     <MESSAGE value="Modify shared template to check if the note is done or not" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modify shared template to check if the note is done or not" />
+    <MESSAGE value="Add last updated to shared template" />
+    <MESSAGE value="Add template filter to shared template on date updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add template filter to shared template on date updated" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
