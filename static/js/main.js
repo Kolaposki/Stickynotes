@@ -250,7 +250,7 @@ function auto_grow(element) {
     element.style.height = (element.scrollHeight) + "px";
 }
 
-
+/**
 $(document).on("click", "#searchBtn", function (event) {
     console.log("Search button clicked");
     event.preventDefault();
@@ -279,3 +279,4 @@ $(document).on("click", "#searchBtn", function (event) {
         console.log(ThrowError);
     }
 });
+ **/

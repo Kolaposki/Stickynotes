@@ -39,16 +39,7 @@ def index(request):
                 Q(title__icontains=search_term) | Q(description__icontains=search_term)
             )
 
-            # notes = None
             notes = search_result.filter(manager=request.user).order_by('-date_updated')
-
-            data = {}
-            data['message'] = 'Searching succeeded'
-            data['query'] = search_term
-            # data['total'] = len(notes)
-            print("NOTE DELETED")
-
-            return JsonResponse(data)
 
     # Creating note
     if 'new_dummy' in request.POST:
