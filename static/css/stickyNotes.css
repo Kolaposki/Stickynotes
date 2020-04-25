@@ -277,8 +277,7 @@ a:hover {
 }
 
 .expand {
-    /*height: auto !important;*/
-    height: fit-content !important;
+    height: auto !important;
     overflow: unset !important;
 }
 

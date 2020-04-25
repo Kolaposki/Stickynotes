@@ -31,7 +31,6 @@
             }
 
 
-
             console.log(data.message);
             console.log("Note id: " + data.note_pk);
         }
@@ -74,7 +73,6 @@
                         // $($refresh).load(' '+$refresh + " > *");
                         // console.log("Resfresh succes of ", $refresh)
                     }
-
 
 
                     console.log(data.message);
@@ -141,7 +139,8 @@
         });
 
         $(document).on("click", "#expand-{{ note.pk }}", function () {
-            $("#desc-{{ note.pk }}").toggleClass('').toggleClass("expand");
+            $("#desc-{{ note.pk }}").toggleClass('').toggleClass('no-display');
+            $("#descPara-{{ note.pk }}").toggleClass('d-none').toggleClass('');
         });
 
         $(document).on("click", "#pencil-{{ note.pk }}", function () {
@@ -151,6 +150,8 @@
             $("#new_title-{{ note.pk }}").prop("readonly", false);
             $("#palette-{{ note.pk }}").removeAttr('class').addClass("");
 
+            $("#desc-{{ note.pk }}").toggleClass('no-display').toggleClass('');
+            $("#descPara-{{ note.pk }}").toggleClass('').toggleClass('d-none');
             //SUBMIT AJAX UPDATE FORM HERE
             UpdateForm({{ note.pk }})
         });
