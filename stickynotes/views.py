@@ -116,5 +116,6 @@ def register(request):
     return render(request, "register.html", {"form": form})
 
 
-def shared(request):
-    return render(request, 'shared.html')
+def shared(request, pk):
+    note = get_object_or_404(Note, pk=pk)
+    return render(request, 'shared.html', {'note': note})
