@@ -222,7 +222,7 @@ a:hover {
 }
 
 .notes .single-note:hover {
-    box-shadow: 2px 7px 9px rgba(0, 0, 0, 0.11);
+    box-shadow: 4px 9px 12px rgba(0, 0, 0, 0.11);
 }
 
 .notes .single-note.add-note {
