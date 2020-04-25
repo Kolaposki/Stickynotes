@@ -17,14 +17,29 @@ def index(request):
     notes = None
     form = NoteForm()
     up_form = NoteForm2(request.POST)
+    search_term = ''
+    is_searching = False
 
     # Getting note
-    if request.method == 'GET':
-        print("REQUEST IS GET")
+    if request.method == 'GET' and 'search_term' not in request.GET:
+        print("REQUEST IS GET and not searching")
         # Read note
         if request.user.is_authenticated:
             print("GETTING ALL NOTES for ", request.user)
             notes = Note.objects.filter(manager=request.user).order_by('-date_updated')
+
+    elif request.method == 'GET' and 'search_term' in request.GET:
+        is_searching = True
+        if request.user.is_authenticated:
+            print("GETTING SEARCH NOTES for ", request.user)
+            print("REQUEST IS GET and searching")
+            print("SEARCHING.............................\n\n")
+            search_term = request.GET['search_term']  # get value that was passed in url
+            search_result = Note.objects.filter(
+                Q(title__icontains=search_term) | Q(description__icontains=search_term)
+            )
+
+            notes = search_result.filter(manager=request.user).order_by('-date_updated')
 
     # Creating note
     if 'new_dummy' in request.POST:
@@ -102,7 +117,9 @@ def index(request):
         return JsonResponse(data)
 
     baseurl = request.build_absolute_uri()[:-1]  # to remove the last /
-    return render(request, HOMEPAGE, context={'notes': notes, 'form': form, 'up_form': up_form, 'baseurl': baseurl})
+
+    return render(request, HOMEPAGE, context={'notes': notes, 'form': form, 'up_form': up_form, 'baseurl': baseurl,
+                                              "search_term": search_term, "is_searching": is_searching})
 
 
 def register(request):
@@ -122,17 +139,3 @@ def shared(request, pk):
     note = get_object_or_404(Note, pk=pk)
     return render(request, 'shared.html', {'note': note})
 
-
-def search(request):
-    if request.GET:
-        search_term = request.GET['search_term']  # get value that was passed in url
-        # using complex query - Q
-        search_result = Note.objects.filter(
-            Q(title__icontains=search_term) | Q(description__icontains=search_term)
-        )
-
-        context = {"search_term": search_term,
-                   "notes": search_result.filter(manager=request.user).order_by('-date_updated')}
-        return render(request, 'search.html', context=context)
-    else:
-        return redirect('home')  # redirect to home page if there's no data in d url

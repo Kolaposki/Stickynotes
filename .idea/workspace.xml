@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
+    <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="Change notes ordering to date updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stickynotes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stickynotes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/search.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -172,14 +175,7 @@
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
-      <workItem from="1587632046275" duration="77201000" />
-    </task>
-    <task id="LOCAL-00031" summary="Add span to show creator of a note on the note">
-      <created>1587131958301</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1587131958301</updated>
+      <workItem from="1587632046275" duration="79073000" />
     </task>
     <task id="LOCAL-00032" summary="Add manager to show creator of a note in admin page">
       <created>1587132186520</created>
@@ -517,7 +513,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587809794411</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="Change notes ordering to date updated">
+      <created>1587813398841</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1587813398848</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -538,7 +541,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Add readonly attribute to input and textarea" />
     <MESSAGE value="Introduced d-none class and removed unnecessary tags" />
     <MESSAGE value="Fixed bug that causes space at the bottom of markers" />
     <MESSAGE value="Remove bootstrap style for buttons outline" />
@@ -563,7 +565,8 @@
     <MESSAGE value="Create view to get full base url so as to link with shared note url" />
     <MESSAGE value="Increased fadeout and fadein timer for link copied toast" />
     <MESSAGE value="Create search functionality for looking up notes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create search functionality for looking up notes" />
+    <MESSAGE value="Change notes ordering to date updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change notes ordering to date updated" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
