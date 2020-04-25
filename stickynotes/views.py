@@ -116,7 +116,8 @@ def index(request):
 
         return JsonResponse(data)
 
-    baseurl = request.build_absolute_uri()[:-1]  # to remove the last /
+    # baseurl = request.build_absolute_uri()[:-1]  # to remove the last /
+    baseurl = 'http://127.0.0.1:9000'
 
     return render(request, HOMEPAGE, context={'notes': notes, 'form': form, 'up_form': up_form, 'baseurl': baseurl,
                                               "search_term": search_term, "is_searching": is_searching})

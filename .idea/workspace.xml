@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stickynotes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -172,14 +172,7 @@
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
-      <workItem from="1587632046275" duration="86080000" />
-    </task>
-    <task id="LOCAL-00035" summary="Create function in js to add note to localstorage">
-      <created>1587148194304</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1587148194304</updated>
+      <workItem from="1587632046275" duration="86435000" />
     </task>
     <task id="LOCAL-00036" summary="Remove unnecessary comments from js file">
       <created>1587148376677</created>
@@ -517,7 +510,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587837640259</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="Remove Ajax search functionality">
+      <created>1587837907789</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1587837907792</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -538,7 +538,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Fix nested checkbox and remove unnecessary codes" />
     <MESSAGE value="Fix on delete hiding bug in js file" />
     <MESSAGE value="Fix typo error in js files" />
     <MESSAGE value="Format date using template filters to remove time" />
@@ -563,7 +562,8 @@
     <MESSAGE value="Attach search functionality to index view and deleted search page" />
     <MESSAGE value="Create ajax function for search" />
     <MESSAGE value="Remove Overlay scrollbar function for textarea" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove Overlay scrollbar function for textarea" />
+    <MESSAGE value="Remove Ajax search functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove Ajax search functionality" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
