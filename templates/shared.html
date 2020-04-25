@@ -21,12 +21,12 @@
                 <div class="single-note shared {{ note.background_color }}">
                     {% if note.is_done %}
                         <h2 class="isDone">{{ note.title }}</h2>
-                        <small>Last Updated: {{ note.date_updated }} </small>
+                        <small>Last Updated: {{ note.date_updated|date:"D, dS M Y" }} </small>
                         <hr>
                         <p class="isDone">{{ note.description }}</p>
                     {% else %}
                         <h2>{{ note.title }}</h2>
-                        <small>Last Updated: {{ note.date_updated }} </small>
+                        <small>Last Updated: {{ note.date_updated|date:"D, dS M Y" }} </small>
                         <hr>
                         <p>{{ note.description }}</p>
                     {% endif %}

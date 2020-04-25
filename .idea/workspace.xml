@@ -171,14 +171,7 @@
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
-      <workItem from="1587632046275" duration="70354000" />
-    </task>
-    <task id="LOCAL-00025" summary="Create registration view">
-      <created>1587043501910</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1587043501910</updated>
+      <workItem from="1587632046275" duration="70641000" />
     </task>
     <task id="LOCAL-00026" summary="Create login and logout view">
       <created>1587044786983</created>
@@ -516,7 +509,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587803378269</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="Modify shared template to check if the note is done or not">
+      <created>1587803657638</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1587803657638</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -537,7 +537,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Replace login page with new design" />
     <MESSAGE value="Create demo user for testing and redesign logout page" />
     <MESSAGE value="Update footer to include twitter link" />
     <MESSAGE value="Add OverlayScrollbars styles" />
@@ -562,7 +561,8 @@
     <MESSAGE value="Add copy paste functions to newly creaed notes" />
     <MESSAGE value="Change reloading all full notes to the updated note only" />
     <MESSAGE value="Modify view to render shared notes relative with the pk" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modify view to render shared notes relative with the pk" />
+    <MESSAGE value="Modify shared template to check if the note is done or not" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modify shared template to check if the note is done or not" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
