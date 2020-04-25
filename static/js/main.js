@@ -213,7 +213,6 @@ $(document).on("click", "#create_btn", function (event) {
         $(".all-notes").load(" .all-notes > *");
 
         onClickActions($note_pk);
-        $("textarea").overlayScrollbars({className: "os-theme-round-dark",}); // Textarea scroll bar design
         let $clip = $note_pk;
 
         let clipboard_$note_pk = new ClipboardJS('#link-' + $note_pk + '');

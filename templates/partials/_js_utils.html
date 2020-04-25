@@ -1,24 +1,5 @@
 <script>
-    $("body").overlayScrollbars({
-        textarea: {
-            dynWidth: false,
-            dynHeight: false,
-            inheritedAttrs: ["style", "class"]
-        },
-    });
-
-    $("textarea").overlayScrollbars({
-        className: "os-theme-round-dark",
-        scrollbars: {
-            visibility: "auto",
-            autoHide: "never",
-            autoHideDelay: 100,
-            dragScrolling: true,
-            clickScrolling: false,
-            touchSupport: true,
-            snapHandle: false
-        },
-    });
+    $("body").overlayScrollbars({});
 
     $(document).on("click", "#palette", function () {
         $("#allColor").toggleClass('colors').toggleClass("colors openDivs");
@@ -50,7 +31,6 @@
             }
 
 
-            $("textarea").overlayScrollbars({className: "os-theme-round-dark",}); // Textarea scroll bar design
 
             console.log(data.message);
             console.log("Note id: " + data.note_pk);
@@ -95,7 +75,6 @@
                         // console.log("Resfresh succes of ", $refresh)
                     }
 
-                    // $("textarea").overlayScrollbars({className: "os-theme-round-dark",}); // Textarea scroll bar design
 
 
                     console.log(data.message);
@@ -140,7 +119,6 @@
                     console.log("pk: " + $note_pk);
                     $('#mynote-' + $note_pk).hide(); // hide the post on success
                     // alert('Note deleted!');
-                    $("textarea").overlayScrollbars({className: "os-theme-round-dark",}); // Textarea scroll bar design
 
                 }
 
