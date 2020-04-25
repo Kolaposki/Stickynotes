@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="Change notes ordering to date updated">
+    <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stickynotes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stickynotes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/search.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partials/_all_notes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_all_notes.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -175,14 +175,7 @@
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
-      <workItem from="1587632046275" duration="79073000" />
-    </task>
-    <task id="LOCAL-00032" summary="Add manager to show creator of a note in admin page">
-      <created>1587132186520</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1587132186520</updated>
+      <workItem from="1587632046275" duration="84977000" />
     </task>
     <task id="LOCAL-00033" summary="Create view to display no notes to unauthenticated users">
       <created>1587137441160</created>
@@ -520,7 +513,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587813398848</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="Attach search functionality to index view and deleted search page">
+      <created>1587815482883</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1587815482883</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -541,7 +541,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Introduced d-none class and removed unnecessary tags" />
     <MESSAGE value="Fixed bug that causes space at the bottom of markers" />
     <MESSAGE value="Remove bootstrap style for buttons outline" />
     <MESSAGE value="Fix nested checkbox and remove unnecessary codes" />
@@ -566,7 +565,8 @@
     <MESSAGE value="Increased fadeout and fadein timer for link copied toast" />
     <MESSAGE value="Create search functionality for looking up notes" />
     <MESSAGE value="Change notes ordering to date updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change notes ordering to date updated" />
+    <MESSAGE value="Attach search functionality to index view and deleted search page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Attach search functionality to index view and deleted search page" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

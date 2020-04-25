@@ -22,17 +22,17 @@
         <div class="container">
             <!--Search bar-->
             <div class="searchBar">
-                <form action="{% url 'home' %}">
+                <form action="{% url 'home' %}" id="searchForm">
                     <div class="col-xs-11 nopadding">
                         <input type="text" placeholder="Search Note" name="search_term" value="{{ search_term }}">
                     </div>
                     <div class="col-xs-1 nopadding">
-                        <button type="submit"><i class="fas fa-search"></i></button>
+                        <button type="submit" id="searchBtn"><i class="fas fa-search"></i></button>
                     </div>
                 </form>
             </div>
 
-
+            <!-- Check if the request is trying to search or just a normal GET-->
             {% if is_searching %}
                 <!--Show all saved notes-->
                 <section>
@@ -57,6 +57,8 @@
                 </section>
 
             {% else %}
+                <!--Request is not for search but a normal GET-->
+
                 <!--Create new note-->
                 <div id="noteCreator" class="col-md-4 col-sm-6">
 

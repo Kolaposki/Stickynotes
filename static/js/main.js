@@ -250,3 +250,33 @@ function auto_grow(element) {
     element.style.height = "5px";
     element.style.height = (element.scrollHeight) + "px";
 }
+
+
+$(document).on("click", "#searchBtn", function (event) {
+    console.log("Search button clicked");
+    event.preventDefault();
+    let $searchFomr = $('#searchForm');
+    let $formData = $searchFomr.serialize();
+
+    $.ajax({
+        method: 'GET',
+        url: '',
+        data: $formData,
+        success: handleSuccess,
+        error: handleError,
+    });
+
+    function handleSuccess(data) {
+
+        if (data) {
+            // $("#noteCreator").load(" #noteCreator > *");
+            console.log(data.message);
+            console.log("Searching for: ", data.query);
+        }
+    }
+
+    function handleError(ThrowError) {
+        console.log("An error occurred while trying to create the note");
+        console.log(ThrowError);
+    }
+});
