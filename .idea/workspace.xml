@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/partials/_js_utils.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_js_utils.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,17 +54,17 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\KOLAPO\Desktop\sticky" />
       <recent name="C:\Users\KOLAPO\Desktop\sticky\static\js" />
       <recent name="C:\Users\KOLAPO\Desktop\sticky\templates" />
       <recent name="C:\Users\KOLAPO\Desktop\sticky\static\css" />
       <recent name="C:\Users\KOLAPO\Desktop\sticky\templates\stickynotes" />
-      <recent name="C:\Users\KOLAPO\Desktop\sticky\static\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\KOLAPO\Desktop\sticky\templates\registration" />
@@ -175,21 +172,7 @@
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
-      <workItem from="1587632046275" duration="124864000" />
-    </task>
-    <task id="LOCAL-00054" summary="Add pre-wrap style to inputs">
-      <created>1587248282483</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1587248282484</updated>
-    </task>
-    <task id="LOCAL-00055" summary="Add readonly attribute to input and textarea">
-      <created>1587250457969</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1587250457970</updated>
+      <workItem from="1587632046275" duration="125606000" />
     </task>
     <task id="LOCAL-00056" summary="Introduced d-none class and removed unnecessary tags">
       <created>1587634426704</created>
@@ -520,7 +503,21 @@
       <option name="project" value="LOCAL" />
       <updated>1587933291192</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="Remove delete cancelled toast, add db file to .gitignore">
+      <created>1587936500593</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1587936500594</updated>
+    </task>
+    <task id="LOCAL-00104" summary="Add screenshot of project home to base">
+      <created>1587937039353</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1587937039353</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -541,8 +538,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Increased fadeout and fadein timer for link copied toast" />
-    <MESSAGE value="Create search functionality for looking up notes" />
     <MESSAGE value="Change notes ordering to date updated" />
     <MESSAGE value="Attach search functionality to index view and deleted search page" />
     <MESSAGE value="Create ajax function for search" />
@@ -566,7 +561,9 @@
     <MESSAGE value="Redesign login and registration page" />
     <MESSAGE value="Remove unnecessary codes in js file and delete stickyNotes.js" />
     <MESSAGE value="fix response is undefined in views.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix response is undefined in views.py" />
+    <MESSAGE value="Remove delete cancelled toast, add db file to .gitignore" />
+    <MESSAGE value="Add screenshot of project home to base" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add screenshot of project home to base" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
