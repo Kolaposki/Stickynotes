@@ -137,21 +137,6 @@
             $("#allColor-{{ note.pk }}").toggleClass('colors').toggleClass("colors openDivs");
         });
 
-        /**      $(document).ready(function () {
-            let $element_{{ note.pk }} = document.getElementById('desc-{{ note.pk }}');
-
-            if ($element_{{ note.pk }}.clientHeight < $element_{{ note.pk }}.scrollHeight) {
-                console.log("Scrollbar exists for: ", $element_{{ note.pk }});
-                $("#expand-{{ note.pk }}").toggleClass("").toggleClass("no-display");
-                console.log("Expand show for ", {{ note.pk }})
-            } else {
-                console.log("no scrollbar at", $element_{{ note.pk }});
-                $("#expand-{{ note.pk }}").toggleClass("no-display").toggleClass("");
-                console.log("Expand hidden for ", {{ note.pk }})
-            }
-        });
-         **/
-
         $(document).on("click", "#expand-{{ note.pk }}", function () {
             $("#desc-{{ note.pk }}").toggleClass('').toggleClass('no-display');
             $("#descPara-{{ note.pk }}").toggleClass('d-none').toggleClass('');
