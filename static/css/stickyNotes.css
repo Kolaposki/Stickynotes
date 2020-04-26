@@ -279,6 +279,9 @@ a:hover {
 .expand {
     height: auto !important;
     overflow: unset !important;
+    min-height: 85px !important;
+    margin-bottom: -10px !important;
+    margin-top: -1px !important;;
 }
 
 .notes .single-note p::-webkit-scrollbar {
