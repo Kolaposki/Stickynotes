@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/stickyNotes.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/stickyNotes.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/partials/_all_notes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_all_notes.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/partials/_js_utils.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_js_utils.html" afterDir="false" />
@@ -175,14 +174,7 @@
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
-      <workItem from="1587632046275" duration="106727000" />
-    </task>
-    <task id="LOCAL-00042" summary="Add date_updated to home page and remove date_created">
-      <created>1587199494381</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1587199494382</updated>
+      <workItem from="1587632046275" duration="107327000" />
     </task>
     <task id="LOCAL-00043" summary="Create separate functions for crud operations on note">
       <created>1587201289747</created>
@@ -520,7 +512,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587899288883</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="Fix height bugs and add functions to newly created notes">
+      <created>1587909983756</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1587909983772</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -541,7 +540,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Add textarea scroll style to js" />
     <MESSAGE value="Implement Alertify library to confirm deletion of notes" />
     <MESSAGE value="Implement clipboard library to copy links to clipboard" />
     <MESSAGE value="Get ready for shared note page" />
@@ -566,7 +564,8 @@
     <MESSAGE value="Increased box shadow of notes when hovered" />
     <MESSAGE value="Create function to check if scroll bar is present in textarea using js" />
     <MESSAGE value="Remove scrollbar checker function as its not effective" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove scrollbar checker function as its not effective" />
+    <MESSAGE value="Fix height bugs and add functions to newly created notes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix height bugs and add functions to newly created notes" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

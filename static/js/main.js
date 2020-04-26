@@ -167,8 +167,8 @@ $(document).on("click", "#create_btn", function (event) {
         $(document).on("click", "#link-" + $note_pk + "", function () {
             console.log("Link clciked");
             $("#copied-" + $note_pk + "").attr('class', 'copied openDivs');
-            $('#copied-' + $note_pk + "").fadeOut(500, function () {
-                $('#copied-' + $note_pk + "").fadeIn(500);
+            $('#copied-' + $note_pk + "").fadeOut(800, function () {
+                $('#copied-' + $note_pk + "").fadeIn(300);
                 $("#copied-" + $note_pk + "").attr('class', 'copied');
             });
         });
