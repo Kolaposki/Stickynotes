@@ -128,7 +128,7 @@ def index(request):
 
 def register(request):
     if request.method == "POST":
-        form = RegisterForm(response.POST)
+        form = RegisterForm(request.POST)
         if form.is_valid():
             form.save()
 
@@ -143,4 +143,3 @@ def shared(request, pk):
     note = get_object_or_404(Note, pk=pk)
     return render(request, 'shared.html', {'note': note})
 
-#
