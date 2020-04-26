@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -171,14 +172,7 @@
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
-      <workItem from="1587632046275" duration="113476000" />
-    </task>
-    <task id="LOCAL-00048" summary="Create login page using neumorphism UI design">
-      <created>1587238454338</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1587238454339</updated>
+      <workItem from="1587632046275" duration="113891000" />
     </task>
     <task id="LOCAL-00049" summary="Replace login page with new design">
       <created>1587239565073</created>
@@ -516,7 +510,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587917101562</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="Bump python version in runtime.txt from 3.7.2 to 3.8.0">
+      <created>1587918176962</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1587918176962</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -537,7 +538,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Change reloading all full notes to the updated note only" />
     <MESSAGE value="Modify view to render shared notes relative with the pk" />
     <MESSAGE value="Modify shared template to check if the note is done or not" />
     <MESSAGE value="Add last updated to shared template" />
@@ -562,7 +562,8 @@
     <MESSAGE value="Create requirements.txt and Procfile, also collectstatic" />
     <MESSAGE value="Add whitenoise middleware to settings" />
     <MESSAGE value="Add runtime.txt to specify python version: 3.7.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add runtime.txt to specify python version: 3.7.2" />
+    <MESSAGE value="Bump python version in runtime.txt from 3.7.2 to 3.8.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bump python version in runtime.txt from 3.7.2 to 3.8.0" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
