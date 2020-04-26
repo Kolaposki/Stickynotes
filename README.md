@@ -2,7 +2,7 @@
 
 An easy on eye, colorful and alluring note taking app for all
 
-!['screenshot'](https://github.com/kolaposki/stickynotes/master/Screenshot.png?raw=true)
+![](https://github.com/Kolaposki/Stickynotes/blob/master/Screenshot.png?raw=true)
 
 ## Functionality
 
