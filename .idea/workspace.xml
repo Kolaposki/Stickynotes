@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/stickyNotes.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -173,14 +173,7 @@
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
-      <workItem from="1587632046275" duration="119632000" />
-    </task>
-    <task id="LOCAL-00051" summary="Update footer to include twitter link">
-      <created>1587244064179</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1587244064180</updated>
+      <workItem from="1587632046275" duration="121146000" />
     </task>
     <task id="LOCAL-00052" summary="Add OverlayScrollbars styles">
       <created>1587244624475</created>
@@ -518,7 +511,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587922035291</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="Redesign login and registration page">
+      <created>1587930329970</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1587930329971</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -539,7 +539,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Add last updated to shared template" />
     <MESSAGE value="Add template filter to shared template on date updated" />
     <MESSAGE value="Create view to get full base url so as to link with shared note url" />
     <MESSAGE value="Increased fadeout and fadein timer for link copied toast" />
@@ -564,7 +563,8 @@
     <MESSAGE value="Bump python version in runtime.txt from 3.7.2 to 3.8.0" />
     <MESSAGE value="Change login page title and add registration link" />
     <MESSAGE value="Update base url to https://stickyynotes.herokuapp.com" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update base url to https://stickyynotes.herokuapp.com" />
+    <MESSAGE value="Redesign login and registration page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Redesign login and registration page" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

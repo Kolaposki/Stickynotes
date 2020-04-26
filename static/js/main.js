@@ -176,66 +176,47 @@ $(document).on("click", "#create_btn", function (event) {
 
     }
 
-    function storageCollector($pk, $title, $description, $bg_color, $date, $is_done) {
-        //localStorage.clear();
-        let $notesDict = {
-            'pk': $pk,
-            'title': $title,
-            'description': $description,
-            'bg_color': $bg_color,
-            'date': $date,
-            'is_done': $is_done
-        };
-
-
-        let $initialNotesInMemory = JSON.parse(localStorage.getItem('notes')) || []; // create empty list if no localstorage
-        $initialNotesInMemory.push($notesDict);
-        localStorage.setItem('notes', JSON.stringify($initialNotesInMemory));
-    }
-
     function handleSuccess(data) {
 
         if (data) {
+            $("#bg").attr("class", "single-note add-note white");
             $("#noteCreator").load(" #noteCreator > *");
-
+            $noteForm[0].reset();
+            $(".all-notes").load(" .all-notes > *");
         }
 
         console.log(data.message);
-        let $noteTitle = data.title;
-        let $noteDescription = data.description;
-        let $noteBG = data.background_color;
-        let $note_pk = data.note_pk;
-        let $username = data.username;
-        let $is_done = data.is_done;
-        let $date_added = data.date_added;
+        /**
+         let $noteTitle = data.title;
+         let $noteDescription = data.description;
+         let $noteBG = data.background_color;
+         let $note_pk = data.note_pk;
+         let $username = data.username;
+         let $is_done = data.is_done;
+         let $date_added = data.date_added;
 
 
-        console.log("title: " + $noteTitle);
-        console.log("desc: " + $noteDescription);
-        console.log("bg color: " + $noteBG);
-        console.log("pk: " + $note_pk);
-        console.log("username: " + $username);
+         console.log("title: " + $noteTitle);
+         console.log("desc: " + $noteDescription);
+         console.log("bg color: " + $noteBG);
+         console.log("pk: " + $note_pk);
+         console.log("username: " + $username);
 
-        storageCollector($note_pk, $noteTitle, $noteDescription, $noteBG, $date_added, $is_done);
-        let $allNotes = JSON.parse(localStorage.getItem('notes'));
-        console.log($allNotes);
-        $noteForm[0].reset();
-        $(".all-notes").load(" .all-notes > *");
+         // storageCollector($note_pk, $noteTitle, $noteDescription, $noteBG, $date_added, $is_done);
+         // let $allNotes = JSON.parse(localStorage.getItem('notes'));
+         // console.log($allNotes);
+         */
 
         onClickActions($note_pk);
         let $clip = $note_pk;
 
         let clipboard_$note_pk = new ClipboardJS('#link-' + $note_pk + '');
-        $clip = new ClipboardJS('#link-' + $note_pk + '');
-        console.log("CLIPBOARD OBJ: ", clipboard_$note_pk);
-        console.log("CLIPBOARD OBJ: ", clip);
-
         clipboard_$note_pk.on('success', function (e) {
             //console.log(e);
             console.log("Link copied");
             //console.info('Action:', e.action);
             console.info('Text:', e.text);
-            console.info('Trigger:', e.trigger);
+            //console.info('Trigger:', e.trigger);
             //e.clearSelection();
         });
 
@@ -255,12 +236,29 @@ $(document).on("click", "#create_btn", function (event) {
     }
 });
 
-function auto_grow(element) {
+/**
+ function storageCollector($pk, $title, $description, $bg_color, $date, $is_done) {
+        //localStorage.clear();
+        let $notesDict = {
+            'pk': $pk,
+            'title': $title,
+            'description': $description,
+            'bg_color': $bg_color,
+            'date': $date,
+            'is_done': $is_done
+        };
+
+
+        let $initialNotesInMemory = JSON.parse(localStorage.getItem('notes')) || []; // create empty list if no localstorage
+        $initialNotesInMemory.push($notesDict);
+        localStorage.setItem('notes', JSON.stringify($initialNotesInMemory));
+    }
+ function auto_grow(element) {
     element.style.height = "5px";
     element.style.height = (element.scrollHeight) + "px";
 }
 
-/**
+
  $(document).on("click", "#searchBtn", function (event) {
     console.log("Search button clicked");
     event.preventDefault();
