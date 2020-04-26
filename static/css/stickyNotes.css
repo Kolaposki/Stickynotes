@@ -262,7 +262,7 @@ a:hover {
     margin: 12px 0;
 }
 
-.notes .single-note textarea,
+
 .notes .single-note p {
     font-family: 'poppin-reg', 'toriom-light';
     font-size: 16px;
@@ -276,12 +276,26 @@ a:hover {
     white-space: pre-wrap;
 }
 
+
+.notes .single-note textarea {
+    font-family: 'poppin-reg', 'toriom-light';
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.69);
+    /*margin-bottom: 28px !important;*/
+    word-wrap: break-word;
+    height: 97px !important;
+    min-height: 85px !important;
+    transition: all 0.3s ease-in-out;
+    overflow: auto;
+    line-height: 28px;
+    white-space: pre-wrap;
+}
+
+
 .expand {
     height: auto !important;
     overflow: unset !important;
     min-height: 85px !important;
-    margin-bottom: -10px !important;
-    margin-top: -1px !important;;
 }
 
 .notes .single-note p::-webkit-scrollbar {
@@ -385,7 +399,9 @@ a:hover {
 
 textarea, p {
     white-space: pre-wrap;
+    min-height: 85px !important;
 }
+
 /*
   =====================
   Shared Note
@@ -537,7 +553,7 @@ footer span i {
     cursor: pointer;
 }
 
-.my-checkbox input[type="checkbox"], .my-checkbox .checked{
+.my-checkbox input[type="checkbox"], .my-checkbox .checked {
     display: none;
 }
 

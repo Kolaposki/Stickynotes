@@ -4,6 +4,8 @@
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/stickyNotes.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/stickyNotes.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partials/_all_notes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_all_notes.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/partials/_js_utils.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_js_utils.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -173,21 +175,7 @@
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
-      <workItem from="1587632046275" duration="102282000" />
-    </task>
-    <task id="LOCAL-00040" summary="Test adding of notes to localstorage with javascript">
-      <created>1587160959796</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1587160959796</updated>
-    </task>
-    <task id="LOCAL-00041" summary="Add date_updated field to model">
-      <created>1587198849128</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1587198849128</updated>
+      <workItem from="1587632046275" duration="106727000" />
     </task>
     <task id="LOCAL-00042" summary="Add date_updated to home page and remove date_created">
       <created>1587199494381</created>
@@ -518,7 +506,21 @@
       <option name="project" value="LOCAL" />
       <updated>1587854976119</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="Create function to check if scroll bar is present in textarea using js">
+      <created>1587899115990</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1587899115992</updated>
+    </task>
+    <task id="LOCAL-00090" summary="Remove scrollbar checker function as its not effective">
+      <created>1587899288883</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1587899288883</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -539,8 +541,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Implement OverlayScrollbars.css to textarea and body" />
-    <MESSAGE value="Change textarea scroll style" />
     <MESSAGE value="Add textarea scroll style to js" />
     <MESSAGE value="Implement Alertify library to confirm deletion of notes" />
     <MESSAGE value="Implement clipboard library to copy links to clipboard" />
@@ -564,7 +564,9 @@
     <MESSAGE value="Add SmoothScroll and easing js libraries" />
     <MESSAGE value="Implemented long view for notes using javascript" />
     <MESSAGE value="Increased box shadow of notes when hovered" />
-    <option name="LAST_COMMIT_MESSAGE" value="Increased box shadow of notes when hovered" />
+    <MESSAGE value="Create function to check if scroll bar is present in textarea using js" />
+    <MESSAGE value="Remove scrollbar checker function as its not effective" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove scrollbar checker function as its not effective" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

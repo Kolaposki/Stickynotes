@@ -25,10 +25,17 @@ $(document).on("click", "#create_btn", function (event) {
             $("#new_title-" + $note_pk + "").prop("readonly", false);
 
             $("#palette-" + $note_pk + "").removeAttr('class').addClass("");
+            $("#descPara-" + $note_pk + "").toggleClass('').toggleClass('no-display');
+            $("#desc-" + $note_pk + "").toggleClass('').toggleClass('no-display');
 
+            //SUBMIT AJAX UPDATE FORM HERE
             UpdateForm($note_pk)
         });
 
+
+        $(document).on("click", "#expand-" + $note_pk + "", function () {
+            $("#descPara-" + $note_pk + "").toggleClass('').toggleClass("expand");
+        });
 
         $(document).on("click", "#palette-" + $note_pk + "", function () {
             $("#allColor-" + $note_pk + "").toggleClass('colors').toggleClass("colors openDivs");
@@ -36,9 +43,10 @@ $(document).on("click", "#create_btn", function (event) {
 
 
         $(document).on("click", "#doneMarker-" + $note_pk + "", function (myevent1) {
-            $(this).attr('class', 'd-none');
+            $(this).attr('class', 'no-display');
             $("#new_title-" + $note_pk + "").attr('class', '');
             $("#desc-" + $note_pk + "").attr('class', '');
+            $("#descPara-" + $note_pk + "").attr('class', 'no-display');
             $("#id_is_done-" + $note_pk + "").prop('unchecked');
             $("#id_is_done-" + $note_pk + "").val("False");
             AppendMarker(myevent1, "" + $note_pk + "");
@@ -51,6 +59,7 @@ $(document).on("click", "#create_btn", function (event) {
                 $(this).val("True");
                 $("#new_title-" + $note_pk + "").attr('class', 'isDone');
                 $("#desc-" + $note_pk + "").attr('class', 'isDone');
+                $("#descPara-" + $note_pk + "").attr('class', 'no-display');
                 $("#doneCheck-" + $note_pk + "").val("True");
 
                 AppendMarker(myevent2, "" + $note_pk + "");
@@ -61,6 +70,7 @@ $(document).on("click", "#create_btn", function (event) {
                 $("#new_title-" + $note_pk + "").attr('class', '');
                 $("#desc-" + $note_pk + "").attr('class', '');
                 $("#doneCheck-" + $note_pk + "").val("False");
+                $("#descPara-" + $note_pk + "").attr('class', 'no-display');
 
             }
         });
@@ -251,7 +261,7 @@ function auto_grow(element) {
 }
 
 /**
-$(document).on("click", "#searchBtn", function (event) {
+ $(document).on("click", "#searchBtn", function (event) {
     console.log("Search button clicked");
     event.preventDefault();
     let $searchFomr = $('#searchForm');

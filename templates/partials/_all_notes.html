@@ -32,9 +32,9 @@
 
                         <small>Last Updated: {{ note.date_updated|date:"D, dS M Y" }}</small>
                         <hr>
-                        <textarea id="desc-{{ note.pk }}" class="isDone"
+                        <textarea id="desc-{{ note.pk }}" class="no-display isDone"
                                   name="description" readonly>{{ note.description }}</textarea>
-                        <p id="descPara-{{ note.pk }}" class="expand d-none isDone">{{ note.description }}</p>
+                        <p id="descPara-{{ note.pk }}" class="isDone">{{ note.description }}</p>
 
                     {% else %}
 
@@ -43,9 +43,9 @@
 
                         <small>Last Updated: {{ note.date_updated|date:"D, dS M Y" }}</small>
                         <hr>
-                        <textarea id="desc-{{ note.pk }}" class=""
+                        <textarea id="desc-{{ note.pk }}" class="no-display"
                                   name="description" readonly>{{ note.description }}</textarea>
-                        <p id="descPara-{{ note.pk }}" class="expand d-none">{{ note.description }}</p>
+                        <p id="descPara-{{ note.pk }}" class="">{{ note.description }}</p>
                     {% endif %}
 
 

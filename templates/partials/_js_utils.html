@@ -138,9 +138,8 @@
         });
 
         $(document).on("click", "#expand-{{ note.pk }}", function () {
-            $("#desc-{{ note.pk }}").toggleClass('').toggleClass('no-display');
-            $("#descPara-{{ note.pk }}").toggleClass('d-none').toggleClass('');
-
+            // $("#desc-{{ note.pk }}").toggleClass('').toggleClass('');
+            $("#descPara-{{ note.pk }}").toggleClass('').toggleClass('expand');
         });
 
         $(document).on("click", "#pencil-{{ note.pk }}", function () {
@@ -151,15 +150,17 @@
             $("#palette-{{ note.pk }}").removeAttr('class').addClass("");
 
             $("#desc-{{ note.pk }}").toggleClass('no-display').toggleClass('');
-            $("#descPara-{{ note.pk }}").toggleClass('').toggleClass('d-none');
+            $("#descPara-{{ note.pk }}").toggleClass('').toggleClass('no-display');
             //SUBMIT AJAX UPDATE FORM HERE
             UpdateForm({{ note.pk }})
         });
 
         $(document).on("click", "#doneMarker-{{ note.pk }}", function (event) {
-            $(this).attr('class', 'd-none');
+            $(this).attr('class', 'no-display');
             $("#new_title-{{ note.pk }}").attr('class', '');
             $("#desc-{{ note.pk }}").attr('class', '');
+            $("#descPara-{{ note.pk }}").attr('class', 'no-display');
+
             $("#id_is_done-{{ note.pk }}").prop('unchecked');
             $("#id_is_done-{{ note.pk }}").val("False");
 
@@ -172,6 +173,7 @@
                 console.log("Checked");
                 $("#new_title-{{ note.pk }}").attr('class', 'isDone');
                 $("#desc-{{ note.pk }}").attr('class', 'isDone');
+                $("#descPara-{{ note.pk }}").attr('class', 'no-display');
                 $("#doneCheck-{{ note.pk }}").val("True");
 
                 // ASSIGNING MARKER
@@ -186,6 +188,7 @@
                 $(this).val("False");
                 $("#new_title-{{ note.pk }}").attr('class', '');
                 $("#desc-{{ note.pk }}").attr('class', '');
+                $("#descPara-{{ note.pk }}").attr('class', 'no-display');
                 $("#doneCheck-{{ note.pk }}").val("False");
             }
         });
