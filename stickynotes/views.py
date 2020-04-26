@@ -12,6 +12,7 @@ from django.contrib.auth.decorators import login_required
 HOMEPAGE = 'home.html'
 
 
+# https://stickyynotes.herokuapp.com/
 # ALL CRUD FUNCTIONALITIES FOR NOTE
 @login_required
 def index(request):
@@ -119,7 +120,7 @@ def index(request):
 
     # baseurl = request.build_absolute_uri()[:-1]  # to remove the last /
     # baseurl = 'http://127.0.0.1:9000'
-    baseurl = 'stickyynotes'
+    baseurl = 'https://stickyynotes.herokuapp.com'
 
     return render(request, HOMEPAGE, context={'notes': notes, 'form': form, 'up_form': up_form, 'baseurl': baseurl,
                                               "search_term": search_term, "is_searching": is_searching})
