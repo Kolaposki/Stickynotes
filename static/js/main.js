@@ -32,7 +32,6 @@ $(document).on("click", "#create_btn", function (event) {
             UpdateForm($note_pk)
         });
 
-
         $(document).on("click", "#expand-" + $note_pk + "", function () {
             $("#descPara-" + $note_pk + "").toggleClass('').toggleClass("expand");
         });
@@ -163,7 +162,6 @@ $(document).on("click", "#create_btn", function (event) {
             $("#id_background_color-" + $note_pk + "").val("white");
         });
 
-
         $(document).on("click", "#link-" + $note_pk + "", function () {
             console.log("Link clciked");
             $("#copied-" + $note_pk + "").attr('class', 'copied openDivs');
@@ -172,8 +170,6 @@ $(document).on("click", "#create_btn", function (event) {
                 $("#copied-" + $note_pk + "").attr('class', 'copied');
             });
         });
-
-
     }
 
     function handleSuccess(data) {
@@ -181,9 +177,9 @@ $(document).on("click", "#create_btn", function (event) {
         if (data) {
             $("#bg").attr("class", "single-note add-note white");
             $("#noteCreator").load(" #noteCreator > *");
-            $noteForm[0].reset();
-            $(".all-notes").load(" .all-notes > *");
         }
+        $noteForm[0].reset();
+        $(".all-notes").load(" .all-notes > *"); // Reload all notes
 
         console.log(data.message);
         /**
@@ -206,10 +202,9 @@ $(document).on("click", "#create_btn", function (event) {
          // let $allNotes = JSON.parse(localStorage.getItem('notes'));
          // console.log($allNotes);
          */
+        let $note_pk = data.note_pk;
 
         onClickActions($note_pk);
-        let $clip = $note_pk;
-
         let clipboard_$note_pk = new ClipboardJS('#link-' + $note_pk + '');
         clipboard_$note_pk.on('success', function (e) {
             //console.log(e);
@@ -227,6 +222,7 @@ $(document).on("click", "#create_btn", function (event) {
             console.log("Error occured while Link copying");
 
         });
+
 
     }
 

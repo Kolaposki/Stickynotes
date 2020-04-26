@@ -91,6 +91,7 @@
         $(document).on("click", "#delete_btn-" + $note_pk + "", function (event) {
             event.preventDefault();
             alertify.confirm('Confirm Delete', 'Are you sure you want to delete this Note', function () {
+                alertify.error('Note deleted!');
 
                 let csrftoken = $("[name=csrfmiddlewaretoken]").val();
                 let $noteForm = $('#UpdateNoteForm-' + $note_pk + "");
@@ -116,7 +117,6 @@
                     console.log("title: " + $noteTitle);
                     console.log("pk: " + $note_pk);
                     $('#mynote-' + $note_pk).hide(); // hide the post on success
-                    // alert('Note deleted!');
 
                 }
 
@@ -125,7 +125,7 @@
                     console.log(ThrowError);
                 }
             }, function () {
-                alertify.error('Cancel');
+                {#alertify.error('Cancel');#}
                 console.log("Note cancelled ", $note_pk)
 
             }).set('resizable', true).set('labels', {ok: 'Yes', cancel: 'Na, cancel'});

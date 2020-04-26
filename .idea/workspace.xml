@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stickynotes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partials/_js_utils.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_js_utils.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -173,14 +175,7 @@
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
-      <workItem from="1587632046275" duration="121825000" />
-    </task>
-    <task id="LOCAL-00053" summary="Remove 'created by' in home page">
-      <created>1587245984001</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1587245984003</updated>
+      <workItem from="1587632046275" duration="124864000" />
     </task>
     <task id="LOCAL-00054" summary="Add pre-wrap style to inputs">
       <created>1587248282483</created>
@@ -518,7 +513,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587932518890</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="fix response is undefined in views.py">
+      <created>1587933291192</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1587933291192</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -539,7 +541,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Create view to get full base url so as to link with shared note url" />
     <MESSAGE value="Increased fadeout and fadein timer for link copied toast" />
     <MESSAGE value="Create search functionality for looking up notes" />
     <MESSAGE value="Change notes ordering to date updated" />
@@ -564,7 +565,8 @@
     <MESSAGE value="Update base url to https://stickyynotes.herokuapp.com" />
     <MESSAGE value="Redesign login and registration page" />
     <MESSAGE value="Remove unnecessary codes in js file and delete stickyNotes.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove unnecessary codes in js file and delete stickyNotes.js" />
+    <MESSAGE value="fix response is undefined in views.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix response is undefined in views.py" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

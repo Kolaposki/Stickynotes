@@ -6,4 +6,4 @@ sticky/.idea
 
 # database stuffs
 stickynotes/migrations/
-#db.sqlite3
+db.sqlite3
