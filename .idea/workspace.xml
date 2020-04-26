@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
-    </list>
+    <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,14 +169,7 @@
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
-      <workItem from="1587632046275" duration="113891000" />
-    </task>
-    <task id="LOCAL-00049" summary="Replace login page with new design">
-      <created>1587239565073</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1587239565074</updated>
+      <workItem from="1587632046275" duration="114135000" />
     </task>
     <task id="LOCAL-00050" summary="Create demo user for testing and redesign logout page">
       <created>1587242792416</created>
@@ -517,7 +507,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587918176962</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="Change login page title and add registration link">
+      <created>1587918719798</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1587918719798</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -538,7 +535,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Modify view to render shared notes relative with the pk" />
     <MESSAGE value="Modify shared template to check if the note is done or not" />
     <MESSAGE value="Add last updated to shared template" />
     <MESSAGE value="Add template filter to shared template on date updated" />
@@ -563,7 +559,8 @@
     <MESSAGE value="Add whitenoise middleware to settings" />
     <MESSAGE value="Add runtime.txt to specify python version: 3.7.2" />
     <MESSAGE value="Bump python version in runtime.txt from 3.7.2 to 3.8.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bump python version in runtime.txt from 3.7.2 to 3.8.0" />
+    <MESSAGE value="Change login page title and add registration link" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change login page title and add registration link" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
