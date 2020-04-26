@@ -1,3 +1,4 @@
+
 from django.shortcuts import render, get_object_or_404, redirect, HttpResponseRedirect
 from .models import Note
 from .forms import *
@@ -117,7 +118,8 @@ def index(request):
         return JsonResponse(data)
 
     # baseurl = request.build_absolute_uri()[:-1]  # to remove the last /
-    baseurl = 'http://127.0.0.1:9000'
+    # baseurl = 'http://127.0.0.1:9000'
+    baseurl = 'stickyynotes'
 
     return render(request, HOMEPAGE, context={'notes': notes, 'form': form, 'up_form': up_form, 'baseurl': baseurl,
                                               "search_term": search_term, "is_searching": is_searching})
@@ -139,3 +141,5 @@ def register(request):
 def shared(request, pk):
     note = get_object_or_404(Note, pk=pk)
     return render(request, 'shared.html', {'note': note})
+
+#

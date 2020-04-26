@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/partials/_all_notes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_all_notes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/partials/_js_utils.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_js_utils.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sticky/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sticky/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stickynotes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stickynotes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -174,14 +174,7 @@
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
-      <workItem from="1587632046275" duration="107327000" />
-    </task>
-    <task id="LOCAL-00043" summary="Create separate functions for crud operations on note">
-      <created>1587201289747</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1587201289748</updated>
+      <workItem from="1587632046275" duration="110707000" />
     </task>
     <task id="LOCAL-00044" summary="Undo all changes">
       <created>1587211541988</created>
@@ -519,7 +512,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587909983772</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="Reduce fade in and fade out time in link copied">
+      <created>1587910670219</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1587910670219</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -540,7 +540,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Implement Alertify library to confirm deletion of notes" />
     <MESSAGE value="Implement clipboard library to copy links to clipboard" />
     <MESSAGE value="Get ready for shared note page" />
     <MESSAGE value="Create toast to show when note link is clicked and copied" />
@@ -565,7 +564,8 @@
     <MESSAGE value="Create function to check if scroll bar is present in textarea using js" />
     <MESSAGE value="Remove scrollbar checker function as its not effective" />
     <MESSAGE value="Fix height bugs and add functions to newly created notes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix height bugs and add functions to newly created notes" />
+    <MESSAGE value="Reduce fade in and fade out time in link copied" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reduce fade in and fade out time in link copied" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
