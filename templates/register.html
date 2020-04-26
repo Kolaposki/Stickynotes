@@ -5,9 +5,19 @@
 
 
 {% block content %}
-    <form method="POST" class="form-group">
-        {% csrf_token %}
-        {{ form|crispy }}
-        <button type="submit" class="btn btn-success">Register</button>
-    </form>
+    <div class="container text-center"
+         style="display: flex; justify-content: center; margin-bottom: 50px; margin-top: 20px">
+        <div style="padding: 5px">
+            <form method="POST" class="form-group">
+                <h2 style="margin: 25px">Create Account</h2>
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+
+            <span style="margin-top: 10px">Already have an acount? </span><a href="{% url 'register' %}"><span>Log in here</span></a>
+        </div>
+
+
+    </div>
 {% endblock %}
