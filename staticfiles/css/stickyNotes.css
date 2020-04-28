@@ -564,3 +564,19 @@ footer span i {
 .my-checkbox input[type="checkbox"]:checked ~ .unchecked {
     display: none;
 }
+
+/*for registration error*/
+p.invalid-feedback {
+    margin: 0 !important;
+    color: tomato;
+}
+
+#error_1_id_username {
+    margin: 0 !important;
+    color: tomato;
+}
+
+.invalid-feedback {
+    margin: 0 !important;
+    color: tomato;
+}

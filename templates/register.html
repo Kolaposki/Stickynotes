@@ -8,11 +8,6 @@
     <div class="container text-center"
          style="display: flex; justify-content: center; margin-bottom: 50px; margin-top: 20px">
         <div style="padding: 5px">
-
-            {% if error %}
-                {{ error }}
-            {% endif %}
-
             <form method="POST" class="form-group">
                 <h2 style="margin: 25px">Create Account</h2>
                 {% csrf_token %}
