@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -171,14 +172,7 @@
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
-      <workItem from="1587632046275" duration="126049000" />
-    </task>
-    <task id="LOCAL-00057" summary="Fixed bug that causes space at the bottom of markers">
-      <created>1587639085836</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1587639085836</updated>
+      <workItem from="1587632046275" duration="131712000" />
     </task>
     <task id="LOCAL-00058" summary="Remove bootstrap style for buttons outline">
       <created>1587640141184</created>
@@ -516,7 +510,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587937184763</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="Update screenshot url in README">
+      <created>1587937645198</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1587937645198</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -537,7 +538,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Attach search functionality to index view and deleted search page" />
     <MESSAGE value="Create ajax function for search" />
     <MESSAGE value="Remove Overlay scrollbar function for textarea" />
     <MESSAGE value="Remove Ajax search functionality" />
@@ -562,7 +562,8 @@
     <MESSAGE value="Remove delete cancelled toast, add db file to .gitignore" />
     <MESSAGE value="Add screenshot of project home to base" />
     <MESSAGE value="Add screenshot url to README" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add screenshot url to README" />
+    <MESSAGE value="Update screenshot url in README" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update screenshot url in README" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
