@@ -9,6 +9,7 @@ from .models import Note
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from django_registration.forms import RegistrationFormUniqueEmail
 
 
 class NoteForm(forms.ModelForm):
@@ -38,9 +39,17 @@ class NoteForm2(forms.ModelForm):
         fields = ('title', 'description', 'background_color', 'is_done', 'update_delete_dummy')
 
 
+"""
 class RegisterForm(UserCreationForm):
     email = forms.EmailField()
 
     class Meta:
+        model = User
+        fields = ["username", "email", "password1", "password2"]
+"""
+
+
+class UserRegistrationForm(RegistrationFormUniqueEmail):
+    class Meta(RegistrationFormUniqueEmail.Meta):
         model = User
         fields = ["username", "email", "password1", "password2"]

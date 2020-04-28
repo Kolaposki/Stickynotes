@@ -1,4 +1,3 @@
-
 from django.shortcuts import render, get_object_or_404, redirect, HttpResponseRedirect
 from .models import Note
 from .forms import *
@@ -8,6 +7,8 @@ from django.db.models import Q
 from django.contrib.auth.models import User
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
+from django.urls import reverse_lazy
+from django_registration.backends.one_step.views import RegistrationView
 
 HOMEPAGE = 'home.html'
 
@@ -126,20 +127,47 @@ def index(request):
                                               "search_term": search_term, "is_searching": is_searching})
 
 
+"""
 def register(request):
     if request.method == "POST":
-        form = RegisterForm(request.POST)
+        form = RegisterForm(request.POST or None)
+        emailvalue, uservalue, passwordvalue = '', '', ''
         if form.is_valid():
-            form.save()
+            fs = form.save(commit=False)
+            emailvalue = form.cleaned_data.get("email")
+            uservalue = form.cleaned_data.get("username")
 
+            try:
+                user = User.objects.get(username=uservalue)
+                if user:
+                    print("User already exists")
+                context = {'form': form,
+                           'error': 'The username you entered has already been taken. Please try another username.'}
+                return redirect('register')
+                # return render(request, 'register.html', context)
+            except User.DoesNotExist:
+                user = User.objects.create_user(uservalue, password=passwordvalue, email=emailvalue)
+                user.save()
+                print(f"Account created for {uservalue}")
+
+                # login(request, user)
+                # print("New user logged in")
+                # fs.save()
         return redirect("home")
+
     else:
+        # context['form_errors'] = form.errors
         form = RegisterForm()
 
     return render(request, "register.html", {"form": form})
+"""
+
+
+class UserRegistrationView(RegistrationView):
+    template_name = "register.html"
+    success_url = reverse_lazy("home")
 
 
 def shared(request, pk):
     note = get_object_or_404(Note, pk=pk)
     return render(request, 'shared.html', {'note': note})
-

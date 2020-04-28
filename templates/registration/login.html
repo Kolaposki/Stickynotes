@@ -19,10 +19,16 @@
 <div>
     <form method="post" class="form">
         <h2 class="form__title">STICKY LOGIN</h2>
-        <div class="text-center">
-            <span style="list-style: none;" class="form__forget text-muted"> {{ form.non_field_errors }}</span>
-            <span style="list-style: none;" class="form__forget text-muted"> {{ form.username.errors }}</span>
-            <span style="list-style: none;" class="form__forget text-muted"> {{ form.password.errors }}</span>
+        <div class="text-center" style="margin-top: 5px;margin-bottom: 15px;">
+            {% for error in form.non_field_errors %}
+                <span class="form__forget text-muted"> {{ error }} </span>
+            {% endfor %}
+            {% for error in form.password.errors %}
+                <span class="form__forget text-muted"> {{ error }} </span>
+            {% endfor %}
+            {% for error in form.username.errors %}
+                <span class="form__forget text-muted"> {{ error }} </span>
+            {% endfor %}
         </div>
 
         {% csrf_token %}
@@ -40,7 +46,7 @@
             <p>Forget password？</p>
         </div>
         <div class="form__forget">
-            <a href="{% url 'register' %}"><p>Create an account</p></a>
+            <a href="{% url 'django_registration_register' %}"><p>Create an account</p></a>
         </div>
     </form>
 
