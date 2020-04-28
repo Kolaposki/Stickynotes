@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -172,14 +173,7 @@
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
-      <workItem from="1587632046275" duration="131712000" />
-    </task>
-    <task id="LOCAL-00058" summary="Remove bootstrap style for buttons outline">
-      <created>1587640141184</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1587640141184</updated>
+      <workItem from="1587632046275" duration="133851000" />
     </task>
     <task id="LOCAL-00059" summary="Fix nested checkbox and remove unnecessary codes">
       <created>1587643352298</created>
@@ -517,7 +511,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587937645198</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="Create .gitattributes file and updated .gitignore file">
+      <created>1588063526772</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1588063526773</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -538,7 +539,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Create ajax function for search" />
     <MESSAGE value="Remove Overlay scrollbar function for textarea" />
     <MESSAGE value="Remove Ajax search functionality" />
     <MESSAGE value="Changed search base url to a static url" />
@@ -563,7 +563,8 @@
     <MESSAGE value="Add screenshot of project home to base" />
     <MESSAGE value="Add screenshot url to README" />
     <MESSAGE value="Update screenshot url in README" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update screenshot url in README" />
+    <MESSAGE value="Create .gitattributes file and updated .gitignore file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create .gitattributes file and updated .gitignore file" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
