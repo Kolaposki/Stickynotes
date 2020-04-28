@@ -16,6 +16,8 @@
     <meta property="og:image:width" content="265">
     <meta property="og:image:height" content="265">
     <meta property="og:site_name" content="Sticky Notes">
+    <meta property="og:site_author" content="Oshodi Kolapo">
+    <meta property="og:author" content="Oshodi Kolapo">
     <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/png">
 
 
@@ -52,11 +54,15 @@
 <script src="{% static 'js/jquery.min.js' %}" charset="utf-8"></script>
 <script src="{% static 'js/stickyNotes.js' %}" charset="utf-8"></script>
 <script src="{% static 'js/main.js' %}" charset="utf-8"></script>
+<script src="{% static 'js/darkmode.js' %}"></script>
 <script src="{% static 'js/OverlayScrollbars.js' %}" charset="utf-8"></script>
 <script src="{% static 'js/alertify.min.js' %}" charset="utf-8"></script>
 <script src="{% static 'js/clipboard.min.js' %}" charset="utf-8"></script>
 <script src="{% static 'js/easing.js' %}" charset="utf-8"></script>
 <script src="{% static 'js/SmoothScroll.min.js' %}" charset="utf-8"></script>
+<script>
+    new Darkmode().showWidget();
+</script>
 
 {% include 'partials/_js_utils.html' %}
 

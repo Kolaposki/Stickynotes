@@ -163,6 +163,7 @@ def register(request):
 """
 
 
+# Registration View
 class UserRegistrationView(RegistrationView):
     template_name = "register.html"
     success_url = reverse_lazy("home")

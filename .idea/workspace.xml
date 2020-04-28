@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/stickyNotes.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/stickyNotes.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/staticfiles/css/stickyNotes.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/stickyNotes.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stickynotes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,14 +58,14 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/js" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\KOLAPO\Desktop\sticky" />
       <recent name="C:\Users\KOLAPO\Desktop\sticky\static\js" />
+      <recent name="C:\Users\KOLAPO\Desktop\sticky" />
       <recent name="C:\Users\KOLAPO\Desktop\sticky\templates" />
       <recent name="C:\Users\KOLAPO\Desktop\sticky\static\css" />
       <recent name="C:\Users\KOLAPO\Desktop\sticky\templates\stickynotes" />
@@ -173,14 +176,7 @@
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
-      <workItem from="1587632046275" duration="146382000" />
-    </task>
-    <task id="LOCAL-00062" summary="Format date using template filters to remove time">
-      <created>1587648484011</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1587648484011</updated>
+      <workItem from="1587632046275" duration="148125000" />
     </task>
     <task id="LOCAL-00063" summary="Create function in js to save checkbox click state to db">
       <created>1587670045580</created>
@@ -518,7 +514,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588085026313</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="Update registration form error style">
+      <created>1588085965777</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1588085965777</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -539,7 +542,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Add SmoothScroll and easing js libraries" />
     <MESSAGE value="Implemented long view for notes using javascript" />
     <MESSAGE value="Increased box shadow of notes when hovered" />
     <MESSAGE value="Create function to check if scroll bar is present in textarea using js" />
@@ -564,7 +566,8 @@
     <MESSAGE value="Update .gitattributes and .gitignore file" />
     <MESSAGE value="Redesign registration logic using django-registration" />
     <MESSAGE value="Add django-registration to requirements.txt file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add django-registration to requirements.txt file" />
+    <MESSAGE value="Update registration form error style" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update registration form error style" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
