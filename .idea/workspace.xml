@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sticky/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,14 +169,7 @@
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
-      <workItem from="1587632046275" duration="168175000" />
-    </task>
-    <task id="LOCAL-00069" summary="Get ready for shared note page">
-      <created>1587731334655</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1587731339544</updated>
+      <workItem from="1587632046275" duration="168800000" />
     </task>
     <task id="LOCAL-00070" summary="Create toast to show when note link is clicked and copied">
       <created>1587735642593</created>
@@ -519,7 +507,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588153625005</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="Upgraded to Postgres database">
+      <created>1588166573102</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1588166573102</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -540,7 +535,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Ammend codes to get ready for deployment" />
     <MESSAGE value="Create requirements.txt and Procfile, also collectstatic" />
     <MESSAGE value="Add whitenoise middleware to settings" />
     <MESSAGE value="Add runtime.txt to specify python version: 3.7.2" />
@@ -565,7 +559,8 @@
     <MESSAGE value="Add filters and search fields to admin page" />
     <MESSAGE value="Add django-import-export library" />
     <MESSAGE value="Add import and export feature to admin page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add import and export feature to admin page" />
+    <MESSAGE value="Upgraded to Postgres database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Upgraded to Postgres database" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
