@@ -32,14 +32,9 @@ class Note(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.link:
+            # generate 4 random alphabets then set it to be the note link
             self.link = slugify(random_string())
         return super().save(*args, **kwargs)
-
-    def note_link(self):
-        """Returns any random 4 alphabets and append the note pk to it.
-            Example:  'scro34' ==> 34 is the note id
-        """
-        return f"{random_string()}{self.title}"
 
     def get_absolute_url(self):
         return reverse('home')
