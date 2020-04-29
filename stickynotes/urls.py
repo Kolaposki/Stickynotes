@@ -7,7 +7,7 @@ from .forms import UserRegistrationForm
 
 urlpatterns = [
     path('', views.index, name='home'),
-    path('shared/<int:pk>/', views.shared, name='shared'),
+    path('shared/<str:link>/', views.shared, name='shared'),
     # path("register/", views.register, name="register"),
     path('', include("django.contrib.auth.urls")),  # for authentication purposes
     path('login', auth_views.LoginView.as_view(template_name='registration/login.html'), name='login'),

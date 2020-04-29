@@ -182,6 +182,7 @@ $(document).on("click", "#create_btn", function (event) {
         $(".all-notes").load(" .all-notes > *"); // Reload all notes
 
         console.log(data.message);
+        console.log("Note link: ", data.note_link);
         /**
          let $noteTitle = data.title;
          let $noteDescription = data.description;
@@ -210,7 +211,7 @@ $(document).on("click", "#create_btn", function (event) {
             //console.log(e);
             console.log("Link copied");
             //console.info('Action:', e.action);
-            console.info('Text:', e.text);
+            console.info('Text that was copied:', e.text);
             //console.info('Trigger:', e.trigger);
             //e.clearSelection();
         });

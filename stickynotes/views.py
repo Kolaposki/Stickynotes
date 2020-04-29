@@ -9,9 +9,10 @@ from django.utils import timezone
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
 from django_registration.backends.one_step.views import RegistrationView
-import random, string
 
 HOMEPAGE = 'home.html'
+# baseurl = 'https://stickyynotes.herokuapp.com'
+baseurl = 'http://127.0.0.1:9000'
 
 
 # https://stickyynotes.herokuapp.com/
@@ -23,7 +24,6 @@ def index(request):
     up_form = NoteForm2(request.POST)
     search_term = ''
     is_searching = False
-    link = ''
 
     # Getting note
     if request.method == 'GET' and 'search_term' not in request.GET:
@@ -58,9 +58,8 @@ def index(request):
             print("USER who created note is: ", username)
             note_form = form.save()
             note_pk = note_form.pk
-            # note_link = f"{random_string()}{note_pk}"
-            # link = Note.note_link(request)
-            note_link = note_form.link
+            # append the generated link and note pk to the baseurl. Eg ==> https://stickyynotes.herokuapp.com/kros45
+            note_link = f'{baseurl}/shared/{note_form.link}{note_pk}'
             print("NOTE LINK: ", note_link)
 
             title = request.POST.get('title')
@@ -78,6 +77,7 @@ def index(request):
             data['username'] = username
             data['is_done'] = is_done
             data['date_added'] = date_added
+            data['note_link'] = note_link
 
             print("Created note for ", note_pk)
             return JsonResponse(data)
@@ -125,12 +125,9 @@ def index(request):
 
         return JsonResponse(data)
 
-    # baseurl = request.build_absolute_uri()[:-1]  # to remove the last /
-    # baseurl = 'http://127.0.0.1:9000'
-    baseurl = 'https://stickyynotes.herokuapp.com'
-
     return render(request, HOMEPAGE, context={'notes': notes, 'form': form, 'up_form': up_form, 'baseurl': baseurl,
-                                              "search_term": search_term, "is_searching": is_searching})
+                                              "search_term": search_term, "is_searching": is_searching,
+                                              })
 
 
 # Registration View
@@ -139,6 +136,13 @@ class UserRegistrationView(RegistrationView):
     success_url = reverse_lazy("home")
 
 
-def shared(request, pk):
-    note = get_object_or_404(Note, pk=pk)
+# shared link handler
+def shared(request, link: str):
+    # url to recieve ==> https://stickyynotes.herokuapp.com/shared/noix164 ==> noix164
+    pk = int(''.join([i for i in link if i.isdigit()]))  # returns ==> 164
+    note_link = str(''.join([i for i in link if i.isalpha()]))  # returns ==> noix
+
+    # get the exact Note where the pk and link is the same as what's in the url
+    # this design is done to make it harder for people to randomly guess a note shared url (:-
+    note = get_object_or_404(Note, pk=pk, link=note_link)
     return render(request, 'shared.html', {'note': note})

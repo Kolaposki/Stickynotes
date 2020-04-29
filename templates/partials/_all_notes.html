@@ -69,8 +69,9 @@
 
                         <span id="expand-{{ note.pk }}"><i class="fas fa-expand"></i></span>
                         <span id="link-{{ note.pk }}"
-                              data-clipboard-text="{{ baseurl }}{% url 'shared' note.pk %}">
-                            <i class="fas fa-link"></i></span>
+                              data-clipboard-text="{{ baseurl }}/shared/{{ note.link }}{{ note.pk }}">
+                            <i class="fas fa-link"></i>
+                        </span>
                     </div>
 
                     <div id="allColor-{{ note.pk }}" class="colors">
