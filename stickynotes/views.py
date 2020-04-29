@@ -9,6 +9,7 @@ from django.utils import timezone
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
 from django_registration.backends.one_step.views import RegistrationView
+import random, string
 
 HOMEPAGE = 'home.html'
 
@@ -22,6 +23,7 @@ def index(request):
     up_form = NoteForm2(request.POST)
     search_term = ''
     is_searching = False
+    link = ''
 
     # Getting note
     if request.method == 'GET' and 'search_term' not in request.GET:
@@ -56,6 +58,10 @@ def index(request):
             print("USER who created note is: ", username)
             note_form = form.save()
             note_pk = note_form.pk
+            # note_link = f"{random_string()}{note_pk}"
+            # link = Note.note_link(request)
+            note_link = note_form.link
+            print("NOTE LINK: ", note_link)
 
             title = request.POST.get('title')
             description = request.POST.get('description')
@@ -125,42 +131,6 @@ def index(request):
 
     return render(request, HOMEPAGE, context={'notes': notes, 'form': form, 'up_form': up_form, 'baseurl': baseurl,
                                               "search_term": search_term, "is_searching": is_searching})
-
-
-"""
-def register(request):
-    if request.method == "POST":
-        form = RegisterForm(request.POST or None)
-        emailvalue, uservalue, passwordvalue = '', '', ''
-        if form.is_valid():
-            fs = form.save(commit=False)
-            emailvalue = form.cleaned_data.get("email")
-            uservalue = form.cleaned_data.get("username")
-
-            try:
-                user = User.objects.get(username=uservalue)
-                if user:
-                    print("User already exists")
-                context = {'form': form,
-                           'error': 'The username you entered has already been taken. Please try another username.'}
-                return redirect('register')
-                # return render(request, 'register.html', context)
-            except User.DoesNotExist:
-                user = User.objects.create_user(uservalue, password=passwordvalue, email=emailvalue)
-                user.save()
-                print(f"Account created for {uservalue}")
-
-                # login(request, user)
-                # print("New user logged in")
-                # fs.save()
-        return redirect("home")
-
-    else:
-        # context['form_errors'] = form.errors
-        form = RegisterForm()
-
-    return render(request, "register.html", {"form": form})
-"""
 
 
 # Registration View
