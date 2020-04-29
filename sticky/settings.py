@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'stickynotes.apps.StickynotesConfig',
     'crispy_forms',
+    'import_export',
 ]
 
 MIDDLEWARE = [

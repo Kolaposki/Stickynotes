@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stickynotes/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stickynotes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/shared.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shared.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sticky/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sticky/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -174,14 +172,7 @@
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
-      <workItem from="1587632046275" duration="164751000" />
-    </task>
-    <task id="LOCAL-00066" summary="Add textarea scroll style to js">
-      <created>1587721223897</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1587721223897</updated>
+      <workItem from="1587632046275" duration="165018000" />
     </task>
     <task id="LOCAL-00067" summary="Implement Alertify library to confirm deletion of notes">
       <created>1587726154992</created>
@@ -519,7 +510,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588150364949</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="Add filters and search fields to admin page">
+      <created>1588152673243</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1588152673244</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -540,7 +538,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Remove scrollbar checker function as its not effective" />
     <MESSAGE value="Fix height bugs and add functions to newly created notes" />
     <MESSAGE value="Reduce fade in and fade out time in link copied" />
     <MESSAGE value="Ammend codes to get ready for deployment" />
@@ -565,7 +562,8 @@
     <MESSAGE value="Add darkmode using js library" />
     <MESSAGE value="Create algorithm to generate random strings for note link" />
     <MESSAGE value="Rewrote shared link method to grab the note pk and link" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rewrote shared link method to grab the note pk and link" />
+    <MESSAGE value="Add filters and search fields to admin page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add filters and search fields to admin page" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
