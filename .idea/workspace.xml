@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sticky/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sticky/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stickynotes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -195,14 +198,7 @@
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
-      <workItem from="1587632046275" duration="171716000" />
-    </task>
-    <task id="LOCAL-00071" summary="Add copy paste functions to newly creaed notes">
-      <created>1587750604986</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1587750604986</updated>
+      <workItem from="1587632046275" duration="173339000" />
     </task>
     <task id="LOCAL-00072" summary="Change reloading all full notes to the updated note only">
       <created>1587802833915</created>
@@ -540,7 +536,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588167601373</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="Set password and username for db">
+      <created>1588171499721</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1588171499721</updated>
+    </task>
+    <option name="localTasksCounter" value="121" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -561,7 +564,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Add whitenoise middleware to settings" />
     <MESSAGE value="Add runtime.txt to specify python version: 3.7.2" />
     <MESSAGE value="Bump python version in runtime.txt from 3.7.2 to 3.8.0" />
     <MESSAGE value="Change login page title and add registration link" />
@@ -586,7 +588,8 @@
     <MESSAGE value="Add import and export feature to admin page" />
     <MESSAGE value="Upgraded to Postgres database" />
     <MESSAGE value="Add psycopg2 to requirements" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add psycopg2 to requirements" />
+    <MESSAGE value="Set password and username for db" />
+    <option name="LAST_COMMIT_MESSAGE" value="Set password and username for db" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

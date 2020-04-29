@@ -74,18 +74,17 @@ WSGI_APPLICATION = 'sticky.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-print("Sticy USERNAME", os.environ["STICKY_USERNAME"])
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'stickynotes',
-        'USER': os.environ["STICKY_USERNAME"],
-        'PASSWORD': os.environ['STICKY_PASSWORD'],
-        'HOST': 'localhost',
-        'PORT': '8000',
+        # 'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME': 'stickynotes',
+        # 'USER': os.environ["STICKY_USERNAME"],
+        # 'PASSWORD': os.environ['STICKY_PASSWORD'],
+        # 'HOST': 'localhost',
+        # 'PORT': '8000',
     }
 }
 

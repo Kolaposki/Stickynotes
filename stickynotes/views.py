@@ -11,8 +11,10 @@ from django.urls import reverse_lazy
 from django_registration.backends.one_step.views import RegistrationView
 
 HOMEPAGE = 'home.html'
-# baseurl = 'https://stickyynotes.herokuapp.com'
-baseurl = 'http://127.0.0.1:9000'
+baseurl = 'https://stickyynotes.herokuapp.com'
+
+
+# baseurl = 'http://127.0.0.1:9000'
 
 
 # https://stickyynotes.herokuapp.com/
