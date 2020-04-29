@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/stickyNotes.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/stickyNotes.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stickynotes/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sticky/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sticky/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -174,14 +174,7 @@
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
-      <workItem from="1587632046275" duration="165546000" />
-    </task>
-    <task id="LOCAL-00068" summary="Implement clipboard library to copy links to clipboard">
-      <created>1587730190834</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1587730190834</updated>
+      <workItem from="1587632046275" duration="168175000" />
     </task>
     <task id="LOCAL-00069" summary="Get ready for shared note page">
       <created>1587731334655</created>
@@ -519,7 +512,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588153117702</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="Add import and export feature to admin page">
+      <created>1588153625005</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1588153625005</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -540,7 +540,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Reduce fade in and fade out time in link copied" />
     <MESSAGE value="Ammend codes to get ready for deployment" />
     <MESSAGE value="Create requirements.txt and Procfile, also collectstatic" />
     <MESSAGE value="Add whitenoise middleware to settings" />
@@ -565,7 +564,8 @@
     <MESSAGE value="Rewrote shared link method to grab the note pk and link" />
     <MESSAGE value="Add filters and search fields to admin page" />
     <MESSAGE value="Add django-import-export library" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add django-import-export library" />
+    <MESSAGE value="Add import and export feature to admin page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add import and export feature to admin page" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

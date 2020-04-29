@@ -76,8 +76,15 @@ WSGI_APPLICATION = 'sticky.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'stickynotes',
+        'USER': 'kolaposki',
+        'PASSWORD': 'kolaposki6665',
+        'HOST': 'localhost',
+        'PORT': '8000',
     }
 }
 
