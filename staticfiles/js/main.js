@@ -32,7 +32,6 @@ $(document).on("click", "#create_btn", function (event) {
             UpdateForm($note_pk)
         });
 
-
         $(document).on("click", "#expand-" + $note_pk + "", function () {
             $("#descPara-" + $note_pk + "").toggleClass('').toggleClass("expand");
         });
@@ -163,7 +162,6 @@ $(document).on("click", "#create_btn", function (event) {
             $("#id_background_color-" + $note_pk + "").val("white");
         });
 
-
         $(document).on("click", "#link-" + $note_pk + "", function () {
             console.log("Link clciked");
             $("#copied-" + $note_pk + "").attr('class', 'copied openDivs');
@@ -172,11 +170,71 @@ $(document).on("click", "#create_btn", function (event) {
                 $("#copied-" + $note_pk + "").attr('class', 'copied');
             });
         });
+    }
+
+    function handleSuccess(data) {
+
+        if (data) {
+            $("#bg").attr("class", "single-note add-note white");
+            $("#noteCreator").load(" #noteCreator > *");
+        }
+        $noteForm[0].reset();
+        $(".all-notes").load(" .all-notes > *"); // Reload all notes
+
+        console.log(data.message);
+        console.log("Note link: ", data.note_link);
+        /**
+         let $noteTitle = data.title;
+         let $noteDescription = data.description;
+         let $noteBG = data.background_color;
+         let $note_pk = data.note_pk;
+         let $username = data.username;
+         let $is_done = data.is_done;
+         let $date_added = data.date_added;
+
+
+         console.log("title: " + $noteTitle);
+         console.log("desc: " + $noteDescription);
+         console.log("bg color: " + $noteBG);
+         console.log("pk: " + $note_pk);
+         console.log("username: " + $username);
+
+         // storageCollector($note_pk, $noteTitle, $noteDescription, $noteBG, $date_added, $is_done);
+         // let $allNotes = JSON.parse(localStorage.getItem('notes'));
+         // console.log($allNotes);
+         */
+        let $note_pk = data.note_pk;
+
+        onClickActions($note_pk);
+        let clipboard_$note_pk = new ClipboardJS('#link-' + $note_pk + '');
+        clipboard_$note_pk.on('success', function (e) {
+            //console.log(e);
+            console.log("Link copied");
+            //console.info('Action:', e.action);
+            console.info('Text that was copied:', e.text);
+            //console.info('Trigger:', e.trigger);
+            //e.clearSelection();
+        });
+
+        clipboard_$note_pk.on('error', function (e) {
+            console.log(e);
+            console.error('Action:', e.action);
+            console.error('Trigger:', e.trigger);
+            console.log("Error occured while Link copying");
+
+        });
 
 
     }
 
-    function storageCollector($pk, $title, $description, $bg_color, $date, $is_done) {
+    function handleError(ThrowError) {
+        console.log("An error occurred while trying to create the note");
+        console.log(ThrowError);
+    }
+});
+
+/**
+ function storageCollector($pk, $title, $description, $bg_color, $date, $is_done) {
         //localStorage.clear();
         let $notesDict = {
             'pk': $pk,
@@ -192,75 +250,12 @@ $(document).on("click", "#create_btn", function (event) {
         $initialNotesInMemory.push($notesDict);
         localStorage.setItem('notes', JSON.stringify($initialNotesInMemory));
     }
-
-    function handleSuccess(data) {
-
-        if (data) {
-            $("#noteCreator").load(" #noteCreator > *");
-
-        }
-
-        console.log(data.message);
-        let $noteTitle = data.title;
-        let $noteDescription = data.description;
-        let $noteBG = data.background_color;
-        let $note_pk = data.note_pk;
-        let $username = data.username;
-        let $is_done = data.is_done;
-        let $date_added = data.date_added;
-
-
-        console.log("title: " + $noteTitle);
-        console.log("desc: " + $noteDescription);
-        console.log("bg color: " + $noteBG);
-        console.log("pk: " + $note_pk);
-        console.log("username: " + $username);
-
-        storageCollector($note_pk, $noteTitle, $noteDescription, $noteBG, $date_added, $is_done);
-        let $allNotes = JSON.parse(localStorage.getItem('notes'));
-        console.log($allNotes);
-        $noteForm[0].reset();
-        $(".all-notes").load(" .all-notes > *");
-
-        onClickActions($note_pk);
-        let $clip = $note_pk;
-
-        let clipboard_$note_pk = new ClipboardJS('#link-' + $note_pk + '');
-        $clip = new ClipboardJS('#link-' + $note_pk + '');
-        console.log("CLIPBOARD OBJ: ", clipboard_$note_pk);
-        console.log("CLIPBOARD OBJ: ", clip);
-
-        clipboard_$note_pk.on('success', function (e) {
-            //console.log(e);
-            console.log("Link copied");
-            //console.info('Action:', e.action);
-            console.info('Text:', e.text);
-            console.info('Trigger:', e.trigger);
-            //e.clearSelection();
-        });
-
-        clipboard_$note_pk.on('error', function (e) {
-            console.log(e);
-            console.error('Action:', e.action);
-            console.error('Trigger:', e.trigger);
-            console.log("Error occured while Link copying");
-
-        });
-
-    }
-
-    function handleError(ThrowError) {
-        console.log("An error occurred while trying to create the note");
-        console.log(ThrowError);
-    }
-});
-
-function auto_grow(element) {
+ function auto_grow(element) {
     element.style.height = "5px";
     element.style.height = (element.scrollHeight) + "px";
 }
 
-/**
+
  $(document).on("click", "#searchBtn", function (event) {
     console.log("Search button clicked");
     event.preventDefault();

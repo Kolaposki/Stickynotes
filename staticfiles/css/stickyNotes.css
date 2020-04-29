@@ -564,3 +564,44 @@ footer span i {
 .my-checkbox input[type="checkbox"]:checked ~ .unchecked {
     display: none;
 }
+
+
+/*for registration error*/
+p.invalid-feedback {
+    margin: 0 !important;
+    color: tomato;
+}
+
+#error_1_id_username {
+    margin: 0 !important;
+    color: tomato;
+}
+
+.invalid-feedback {
+    margin: 0 !important;
+    color: tomato;
+}
+
+/*Darkmode settings*/
+
+.darkmode-toggle {
+    content: '🌓';
+    background: #100f2c;
+    width: 3rem;
+    height: 3rem;
+    position: fixed;
+    border-radius: 50%;
+    right: 58px;
+    bottom: 12px;
+    left: unset;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+button .darkmode-toggle {
+    content: '🌓' !important;
+}
