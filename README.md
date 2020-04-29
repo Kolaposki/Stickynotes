@@ -13,7 +13,7 @@ An easy on eye, colorful and alluring note taking app for all
 * Search Notes
 * Mark notes as completed
 * Share notes with friends and many more
-
+* Dark mode added
 ## Tools & Libraries
 
 * Django web framework
