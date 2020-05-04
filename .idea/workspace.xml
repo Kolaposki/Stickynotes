@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/930ec5dc-f3ad-4bcc-b43f-6992e38576ca.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/930ec5dc-f3ad-4bcc-b43f-6992e38576ca.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sticky.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sticky.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sticky/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sticky/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stickynotes/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stickynotes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/logout.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +195,7 @@
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
       <workItem from="1587632046275" duration="173339000" />
-      <workItem from="1588549151769" duration="5921000" />
+      <workItem from="1588549151769" duration="7156000" />
     </task>
     <task id="LOCAL-00072" summary="Change reloading all full notes to the updated note only">
       <created>1587802833915</created>

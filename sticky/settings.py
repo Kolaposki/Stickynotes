@@ -138,9 +138,24 @@ LOGOUT_URL = 'logout'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Email settings
+"""
+    To use gmail smtp settings,
+    1. log in to your gmail account on your browser
+    2. Go to https://myaccount.google.com/lesssecureapps and allow access for less secure apps
+    3. Go to https://accounts.google.com/displayunlockcaptcha and allow access for display unlock captcha
+    4. Finally enter you gmail account details below(just replace the EMAIL_HOST_USER and EMAIL_HOST_PASSWORD with your details)
+"""
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'shell.appointment@gmail.com'
-EMAIL_HOST_PASSWORD = 'DDVdzdwH8uLbWsX'
+EMAIL_HOST_USER = 'example@gmail.com'
+EMAIL_HOST_PASSWORD = 'your_email_password'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-# test email send_mail('Django', 'mail from django', 'shell.appointment@gmail.com', ['ayobabalolaofficial@gmail.co'], fail_silently=False)
+
+"""
+    You can quickly check whether your mails are correct by sending a sample email to the  any email you like
+    steps:
+    1. run python manage.py shell
+    2. from django.core.mail import send_mail
+    3. send_mail('Subject', 'Message', 'youremail@gmail.com', ['destinationemail@gmail.com'], fail_silently=False)
+    4. if sent successfully you should see 1 as you output
+"""
