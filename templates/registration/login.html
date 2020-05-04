@@ -43,7 +43,7 @@
 
         <button type="submit" class="form__btn">Login</button>
         <div class="form__forget">
-            <p>Forget password？</p>
+            <p><a href="{% url "password_reset" %}">Forget password？</a></p>
         </div>
         <div class="form__forget">
             <a href="{% url 'django_registration_register' %}"><p>Create an account</p></a>

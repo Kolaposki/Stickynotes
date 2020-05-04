@@ -29,13 +29,13 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'stickynotes.apps.StickynotesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'stickynotes.apps.StickynotesConfig',
     'crispy_forms',
     'import_export',
 ]
@@ -131,7 +131,16 @@ STATICFILES_DIRS = (
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 LOGIN_REDIRECT_URL = "home"
-LOGOUT_REDIRECT_URL = "home"
+# LOGOUT_REDIRECT_URL = "home"
 LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# Email settings
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'shell.appointment@gmail.com'
+EMAIL_HOST_PASSWORD = 'DDVdzdwH8uLbWsX'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+# test email send_mail('Django', 'mail from django', 'shell.appointment@gmail.com', ['ayobabalolaofficial@gmail.co'], fail_silently=False)

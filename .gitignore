@@ -6,6 +6,7 @@ __pycache__*
 __pycache__
 sticky/.idea
 workspace.xml
+venv/
 
 # database stuffs
 stickynotes/migrations/

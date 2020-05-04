@@ -16,4 +16,4 @@ class NoteAdmin(ImportExportModelAdmin, admin.ModelAdmin):
 
 
 admin.site.register(Note, NoteAdmin)
-admin.site.unregister(Group)
+# admin.site.unregister(Group)
