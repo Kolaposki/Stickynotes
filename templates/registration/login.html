@@ -6,6 +6,7 @@
     <link href="{% static 'css/login.css' %}" type="text/css" rel="stylesheet">
     <link href="{% static 'css/all.css' %}" type="text/css" rel="stylesheet">
     <link href="{% static 'css/fontawesome.css' %}" type="text/css" rel="stylesheet">
+    <link type="text/css" href="{% static "css/profile.css" %}" rel="stylesheet"/>
 
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -34,7 +35,8 @@
         {% csrf_token %}
 
         <div class="form__textfield">
-            <input type="text" name="username" id="id_username" placeholder="Username" autofocus="" required="">
+            <input type="text" name="username" id="id_username" placeholder="Username or Email" autofocus=""
+                   required="">
         </div>
 
         <div class="form__textfield">
@@ -48,8 +50,17 @@
         <div class="form__forget">
             <a href="{% url 'django_registration_register' %}"><p>Create an account</p></a>
         </div>
+        <div class="social">
+            <ul>
+                <li class="facebook">
+                    <a href="{% url "social:begin" "facebook" %}">Sign in with facebook</a>
+                </li>
+                <li class="google">
+                    <a href="{% url "social:begin" "google-oauth2" %}">Sign in with google</a>
+                </li>
+            </ul>
+        </div>
     </form>
-
 </div>
 <footer>
     <div class="container">
@@ -59,6 +70,4 @@
     </div>
 </footer>
 </body>
-
-
 </html>

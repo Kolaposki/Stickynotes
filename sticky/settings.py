@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'crispy_forms',
     'import_export',
+    'social_django',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -130,6 +132,10 @@ STATICFILES_DIRS = (
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+# media files
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
 LOGIN_REDIRECT_URL = "home"
 # LOGOUT_REDIRECT_URL = "home"
 LOGIN_URL = 'login'
@@ -159,3 +165,38 @@ EMAIL_USE_TLS = True
     3. send_mail('Subject', 'Message', 'youremail@gmail.com', ['destinationemail@gmail.com'], fail_silently=False)
     4. if sent successfully you should see 1 as you output
 """
+
+# Our custom authentication backend
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'stickynotes.authentication.EmailAuthBackend',
+    'social_core.backends.facebook.FacebookOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.google.GoogleOAuth2',
+]
+
+"""
+    But several services like facebook and the likes will not will not allow redirecting users to 127.0.0.1 
+    or localhost after successful authentication. Why? they expect a domain name.
+    So in order to make social auth. work why your are not ready to have a domain name, you can fix this on both
+    windows and linux;
+    1. linux: go to /etc/hosts and add the following line to it 
+        127.0.0.1 mysite.com
+    
+    2. Windows: go to C:\windows\System32\Drivers\etc\hosts and add the following line to it
+        127.0.0.1 mysite.com
+    
+    So nexttime instead of running python manage.py runserver, you'll run: python manage.py runserver_plus --cert-file cert.cert
+    then navigate to https://mysite.com:8000/
+    
+    NOTE: you don't need to follow the steps above if you already own a domain name.
+"""
+
+# Register for facebook developer acct from https://developers.facebook.com/apps/ and get the details below
+
+SOCIAL_AUTH_FACEBOOK_KEY = '#'  # facebook App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = '#'  # facebook App secret
+
+# first create your API KEY from https://console.developers.google.com
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '#'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '#'

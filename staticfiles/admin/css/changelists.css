@@ -9,9 +9,7 @@
     width: 100%;
 }
 
-.change-list .hiddenfields {
-    display: none;
-}
+.change-list .hiddenfields { display:none; }
 
 .change-list .filtered table {
     border-right: none;
@@ -32,7 +30,7 @@
 }
 
 #changelist-form .results {
-    overflow-x: auto;
+  overflow-x: auto;
 }
 
 #changelist .toplinks {

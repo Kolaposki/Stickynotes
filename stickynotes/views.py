@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect, HttpResponseRedirect
-from .models import Note
+from .models import Note, Profile
 from .forms import *
 from django.http import JsonResponse
 from django.http import QueryDict
@@ -9,6 +9,7 @@ from django.utils import timezone
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
 from django_registration.backends.one_step.views import RegistrationView
+from django.contrib import messages
 
 HOMEPAGE = 'home.html'
 baseurl = 'https://stickyynotes.herokuapp.com'
@@ -131,11 +132,59 @@ def index(request):
                                               "search_term": search_term, "is_searching": is_searching,
                                               })
 
-
+# seriously ??
 # Registration View
-class UserRegistrationView(RegistrationView):
-    template_name = "register.html"
-    success_url = reverse_lazy("home")
+# class UserRegistrationView(RegistrationView):
+    # template_name = "register.html"
+    # success_url = reverse_lazy("home")
+
+
+# Customize the registration form so we could create profile for users
+def register(request):
+    if request.method == 'POST':
+        user_form = UserRegistrationForm(request.POST)
+        if user_form.is_valid():
+            # Create a new user object but avoid saving it yet
+            new_user = user_form.save(commit=False)
+            # Set the choosen password
+            new_user.set_password(
+                user_form.cleaned_data['password'])
+            # Save the User object
+            new_user.save()
+
+            # create the user profile
+            Profile.objects.create(user=new_user)
+            return render(request,
+                          'register_done.html',
+                          {'new_user': new_user})
+    else:
+        user_form = UserRegistrationForm()
+    return render(request, 'register.html',
+                  {'user_form': user_form})
+
+
+# now allow users to edit their profile
+@login_required
+def edit(request):
+    if request.method == 'POST':
+        user_form = UserEditForm(instance=request.user, data=request.POST)
+        profile_form = ProfileEditForm(instance=request.user.profile,
+                                       data=request.POST,
+                                       files=request.FILES)
+        if user_form.is_valid() and profile_form.is_valid():
+            user_form.save()
+            profile_form.save()
+            # display messages
+            messages.success(request, 'Profile updated successfully')
+        else:
+            messages.error(request, 'Error updating your profiles')
+    else:
+        user_form = UserEditForm(instance=request.user)
+        profile_form = ProfileEditForm(instance=request.user.profile)
+    return render(request,
+                  'edit.html',
+                  {'user_form': user_form,
+                   'profile_form': profile_form})
 
 
 # shared link handler

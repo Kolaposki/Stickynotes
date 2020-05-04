@@ -30,10 +30,21 @@
     <link type="text/css" href="{% static 'css/OverlayScrollbars.css' %}" rel="stylesheet"/>
     <link type="text/css" href="{% static 'css/alertify.css' %}" rel="stylesheet"/>
     <link type="text/css" href="{% static 'css/alert-bootstrap.css' %}" rel="stylesheet"/>
+    <link type="text/css" href="{% static "css/profile.css" %}" rel="stylesheet"/>
 
 </head>
 <body>
 
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li class="{{ message.tags }}">
+                {{ message|safe }}
+                <a href="{% url 'home' %}" class="close">x</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
 
 {% block content %}
     <!-- content -->

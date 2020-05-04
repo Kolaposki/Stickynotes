@@ -71,43 +71,43 @@ function findPosY(obj) {
 //-----------------------------------------------------------------------------
 // Date object extensions
 // ----------------------------------------------------------------------------
-(function () {
+(function() {
     'use strict';
-    Date.prototype.getTwelveHours = function () {
+    Date.prototype.getTwelveHours = function() {
         return this.getHours() % 12 || 12;
     };
 
-    Date.prototype.getTwoDigitMonth = function () {
+    Date.prototype.getTwoDigitMonth = function() {
         return (this.getMonth() < 9) ? '0' + (this.getMonth() + 1) : (this.getMonth() + 1);
     };
 
-    Date.prototype.getTwoDigitDate = function () {
+    Date.prototype.getTwoDigitDate = function() {
         return (this.getDate() < 10) ? '0' + this.getDate() : this.getDate();
     };
 
-    Date.prototype.getTwoDigitTwelveHour = function () {
+    Date.prototype.getTwoDigitTwelveHour = function() {
         return (this.getTwelveHours() < 10) ? '0' + this.getTwelveHours() : this.getTwelveHours();
     };
 
-    Date.prototype.getTwoDigitHour = function () {
+    Date.prototype.getTwoDigitHour = function() {
         return (this.getHours() < 10) ? '0' + this.getHours() : this.getHours();
     };
 
-    Date.prototype.getTwoDigitMinute = function () {
+    Date.prototype.getTwoDigitMinute = function() {
         return (this.getMinutes() < 10) ? '0' + this.getMinutes() : this.getMinutes();
     };
 
-    Date.prototype.getTwoDigitSecond = function () {
+    Date.prototype.getTwoDigitSecond = function() {
         return (this.getSeconds() < 10) ? '0' + this.getSeconds() : this.getSeconds();
     };
 
-    Date.prototype.getFullMonthName = function () {
+    Date.prototype.getFullMonthName = function() {
         return typeof window.CalendarNamespace === "undefined"
             ? this.getTwoDigitMonth()
             : window.CalendarNamespace.monthsOfYear[this.getMonth()];
     };
 
-    Date.prototype.strftime = function (format) {
+    Date.prototype.strftime = function(format) {
         var fields = {
             B: this.getFullMonthName(),
             c: this.toString(),
@@ -130,7 +130,8 @@ function findPosY(obj) {
             if (format.charAt(i) === '%') {
                 result = result + fields[format.charAt(i + 1)];
                 ++i;
-            } else {
+            }
+            else {
                 result = result + format.charAt(i);
             }
             ++i;
@@ -141,25 +142,25 @@ function findPosY(obj) {
     // ----------------------------------------------------------------------------
     // String object extensions
     // ----------------------------------------------------------------------------
-    String.prototype.strptime = function (format) {
+    String.prototype.strptime = function(format) {
         var split_format = format.split(/[.\-/]/);
         var date = this.split(/[.\-/]/);
         var i = 0;
         var day, month, year;
         while (i < split_format.length) {
             switch (split_format[i]) {
-                case "%d":
-                    day = date[i];
-                    break;
-                case "%m":
-                    month = date[i] - 1;
-                    break;
-                case "%Y":
-                    year = date[i];
-                    break;
-                case "%y":
-                    year = date[i];
-                    break;
+            case "%d":
+                day = date[i];
+                break;
+            case "%m":
+                month = date[i] - 1;
+                break;
+            case "%Y":
+                year = date[i];
+                break;
+            case "%y":
+                year = date[i];
+                break;
             }
             ++i;
         }

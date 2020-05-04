@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Note
+from .models import Note, Profile
 from django.contrib.auth.models import Group
 from django.contrib.auth.models import User
 from import_export.admin import ImportExportModelAdmin
@@ -17,3 +17,8 @@ class NoteAdmin(ImportExportModelAdmin, admin.ModelAdmin):
 
 admin.site.register(Note, NoteAdmin)
 # admin.site.unregister(Group)
+
+
+@admin.register(Profile)
+class ProfileAdmin(admin.ModelAdmin):
+    list_display = ['user', 'date_of_birth', 'photo']
