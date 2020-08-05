@@ -76,18 +76,17 @@
 
                                     <input id="new_title" name="title" type="text" class=""
                                            maxlength="20" placeholder="Type a title ..."
-                                           value="${noteTitle}">
+                                           value="${noteTitle}" readonly>
 
                                     <small>Last Updated:{% now 'D, dS M Y' %}</small>
                                     <hr>
-                                    <textarea id="desc" class=""
-                                              name="description"> ${noteDescription}</textarea>
+                                    <textarea id="desc" class="" readonly name="description"> ${noteDescription}</textarea>
 
                                     <p id="descPara" class="isDone d-none">${noteDescription}</p>
 
                                     <div class="meta">
-                                        <span class="d-none">
-                                            <button name="update" id="update_btn" class="mark btn btn-lg">
+                                        <span style="display: none;">
+                                            <button name="update" id="update_btn" class="mark btn btn-lg" type="button">
                                                 <i class="fas fa-check"></i>
                                             </button>
                                         </span>
@@ -98,7 +97,7 @@
                                         </span>
 
                                         <span>
-                                            <button id="delete_btn" type="submit" name="delete_btn"
+                                            <button id="delete_btn" type="button" name="delete_btn"
                                                     class="mark btn btn-lg">
                                                 <i class="far fa-trash-alt"></i>
                                             </button>
@@ -156,6 +155,45 @@
             // TODO : Notify.js should be used for notifications
         }
 
+    });
+
+
+    {# -------------------------------------------------------------------------------------------------------- #}
+
+
+    $(document).on("click", "#pencil", function () {
+        console.log("Pencil clciked")
+        //console.log(this)
+
+        let textArea = this.parentElement.previousElementSibling.previousElementSibling
+        let input = this.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling
+
+        //console.log("textArea", textArea)
+        //console.log("input", input)
+
+        textArea.removeAttribute('readonly')
+        input.removeAttribute('readonly')
+
+        $(this.previousElementSibling).show() // show update btn
+        $(this).hide() // hide pencil
+    });
+
+    $(document).on("click", "#update_btn", function (e) {
+        e.preventDefault()
+        console.log("update_btn clciked")
+        // console.log(this)
+
+        let textArea = this.parentElement.parentElement.previousElementSibling.previousElementSibling
+        let input = this.parentElement.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling
+
+        //console.log("textArea", textArea)
+        //console.log("input", input)
+
+        textArea.setAttribute('readonly', 'true')
+        input.setAttribute('readonly', 'true')
+
+        $(this.parentElement).hide() //hide update btn
+        $(this.parentElement.nextElementSibling).show() // show pencil
     });
 
 </script>
