@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/stickyNotes.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/stickyNotes.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/partials/_js_sticky.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_js_sticky.html" afterDir="false" />
     </list>
@@ -198,14 +199,7 @@
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
       <workItem from="1587632046275" duration="174764000" />
-      <workItem from="1596624225678" duration="5808000" />
-    </task>
-    <task id="LOCAL-00076" summary="Add template filter to shared template on date updated">
-      <created>1587803957532</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1587803957532</updated>
+      <workItem from="1596624225678" duration="10722000" />
     </task>
     <task id="LOCAL-00077" summary="Create view to get full base url so as to link with shared note url">
       <created>1587806176675</created>
@@ -543,7 +537,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596628775266</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary=":rocket: Implement changing of note background in an elegant manner">
+      <created>1596630297587</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1596630297587</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -564,7 +565,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Redesign login and registration page" />
     <MESSAGE value="Remove unnecessary codes in js file and delete stickyNotes.js" />
     <MESSAGE value="fix response is undefined in views.py" />
     <MESSAGE value="Remove delete cancelled toast, add db file to .gitignore" />
@@ -589,7 +589,8 @@
     <MESSAGE value="Update README" />
     <MESSAGE value=":tada: Resume designing bump django version" />
     <MESSAGE value=":zap: Remove django codes and begin version 2.0 implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value=":zap: Remove django codes and begin version 2.0 implementation" />
+    <MESSAGE value=":rocket: Implement changing of note background in an elegant manner" />
+    <option name="LAST_COMMIT_MESSAGE" value=":rocket: Implement changing of note background in an elegant manner" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

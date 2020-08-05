@@ -12,7 +12,7 @@
     }
 
     $(document).on("click", ".circle", function () {
-        console.log(this)
+        // console.log(this)
         selectedCircleRemoval()
         $(this).toggleClass('selected')
 
@@ -27,5 +27,18 @@
             $(allCircles[i]).removeClass('selected')
         }
     }
+
+    {# -------------------------------------------------------------------------------------------------------- #}
+
+    $('#createNote').submit(function (event) {
+        event.preventDefault();
+
+        let createTitleInput = $('#createTitleInput').val()
+        let createDescriptionInput = $('#createDescriptionInput').val()
+
+        console.log("createTitleInput: ", createTitleInput)
+        console.log("createDescriptionInput: ", createDescriptionInput)
+        console.log()
+    });
 
 </script>

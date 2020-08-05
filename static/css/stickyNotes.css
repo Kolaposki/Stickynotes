@@ -528,6 +528,7 @@ footer span i {
 
 
 .mark {
+    outline: 0 !important;
     background-color: transparent;
     padding: 0 !important;
     font-size: inherit;
