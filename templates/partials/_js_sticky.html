@@ -11,7 +11,7 @@
     {# -------------------------------------------------------------------------------------------------------- #}
 
     $(document).on("click", "#palette", function () {
-        console.log("Palette cc=lciked")
+        //console.log("Palette cc=lciked")
         let paletteDiv = this.parentElement.nextElementSibling
         $(paletteDiv).toggleClass('colors').toggleClass("colors openDivs");
     });
@@ -86,13 +86,13 @@
                                     <p id="descPara" class="isDone d-none">${noteDescription}</p>
 
                                     <div class="meta">
-                                        <span>
+                                        <span class="d-none">
                                             <button name="update" id="update_btn" class="mark btn btn-lg">
                                                 <i class="fas fa-check"></i>
                                             </button>
                                         </span>
 
-                                        <span id="pencil" class="d-none"><i class="fas fa-pencil-alt"></i></span>
+                                        <span id="pencil" ><i class="fas fa-pencil-alt"></i></span>
                                         <span id="palette" class="">
                                             <i class="fas fa-palette"></i>
                                         </span>
@@ -121,7 +121,7 @@
                                         </div>
                                         <div id="circle_green" class="circle green" data-color="green">
                                         </div>
-                                        <div id="circle_white" class="circle whiteCircle selected" data-color="white">
+                                        <div id="circle_white" class="circle whiteCircle" data-color="white">
                                         </div>
                                     </div>
                                     <div id="copied" class="copied"> Note link copied !</div>
@@ -130,7 +130,12 @@
                             `
 
         $('#all-notes').prepend(noteCard)
-        console.log("Appended")
+        let circle = $(noteCard).find('#circle_' + selectedColor)
+        //console.log(circle)
+        circle.toggleClass('selected')
+
+        // TODO : timeago.js should be used for real time update
+
     }
 
     $('#createNote').submit(function (event) {
@@ -142,12 +147,13 @@
         let selectedColor = $(this).find('.selected').attr('data-color')
         console.log("selectedColor: ", selectedColor)
         if (strip(createTitleInput).length > 1) {
-            appendNoteToDOM(createTitleInput, createDescriptionInput, selectedColor)
             resetNoteForm()
+            appendNoteToDOM(createTitleInput, createDescriptionInput, selectedColor)
             $("#notes").click()
         } else {
             console.log("You need to input a title")
             alert("You need to input a title")
+            // TODO : Notify.js should be used for notifications
         }
 
     });
