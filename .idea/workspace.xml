@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/js/stickyNotes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/js/stickyNotes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stickynotes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stickynotes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partials/_js_sticky.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_js_sticky.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -202,14 +198,7 @@
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
       <workItem from="1587632046275" duration="174764000" />
-      <workItem from="1596624225678" duration="4319000" />
-    </task>
-    <task id="LOCAL-00075" summary="Add last updated to shared template">
-      <created>1587803800753</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1587803800753</updated>
+      <workItem from="1596624225678" duration="5808000" />
     </task>
     <task id="LOCAL-00076" summary="Add template filter to shared template on date updated">
       <created>1587803957532</created>
@@ -547,7 +536,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596625474845</updated>
     </task>
-    <option name="localTasksCounter" value="124" />
+    <task id="LOCAL-00124" summary=":zap: Remove django codes and begin version 2.0 implementation">
+      <created>1596628775266</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1596628775266</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -568,7 +564,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Update base url to https://stickyynotes.herokuapp.com" />
     <MESSAGE value="Redesign login and registration page" />
     <MESSAGE value="Remove unnecessary codes in js file and delete stickyNotes.js" />
     <MESSAGE value="fix response is undefined in views.py" />
@@ -593,7 +588,8 @@
     <MESSAGE value="Migrated back to sqlite" />
     <MESSAGE value="Update README" />
     <MESSAGE value=":tada: Resume designing bump django version" />
-    <option name="LAST_COMMIT_MESSAGE" value=":tada: Resume designing bump django version" />
+    <MESSAGE value=":zap: Remove django codes and begin version 2.0 implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value=":zap: Remove django codes and begin version 2.0 implementation" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
