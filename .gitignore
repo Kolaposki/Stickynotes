@@ -4,8 +4,8 @@
 __pycache__/*
 __pycache__*
 __pycache__
-sticky/.idea
-workspace.xml
+sticky/.idea/
+sticky/.idea/workspace.xml
 
 # database stuffs
 stickynotes/migrations/

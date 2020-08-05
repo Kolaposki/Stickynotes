@@ -79,12 +79,6 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 
-        # 'ENGINE': 'django.db.backends.postgresql',
-        # 'NAME': 'stickynotes',
-        # 'USER': os.environ["STICKY_USERNAME"],
-        # 'PASSWORD': os.environ['STICKY_PASSWORD'],
-        # 'HOST': 'localhost',
-        # 'PORT': '8000',
     }
 }
 
