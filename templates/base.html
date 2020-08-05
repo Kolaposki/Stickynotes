@@ -52,18 +52,20 @@
 
 <!-- Javascript files -->
 <script src="{% static 'js/jquery.min.js' %}" charset="utf-8"></script>
-<script src="{% static 'js/main.js' %}" charset="utf-8"></script>
+{#<script src="{% static 'js/main.js' %}" charset="utf-8"></script>#}
 <script src="{% static 'js/darkmode.js' %}"></script>
 <script src="{% static 'js/OverlayScrollbars.js' %}" charset="utf-8"></script>
 <script src="{% static 'js/alertify.min.js' %}" charset="utf-8"></script>
 <script src="{% static 'js/clipboard.min.js' %}" charset="utf-8"></script>
 <script src="{% static 'js/easing.js' %}" charset="utf-8"></script>
-<script src="{% static 'js/SmoothScroll.min.js' %}" charset="utf-8"></script>
+{#<script src="{% static 'js/SmoothScroll.min.js' %}" charset="utf-8"></script>#}
 <script>
     new Darkmode().showWidget();
 </script>
+<script src="{% static 'js/stickyNotes.js' %}" charset="utf-8"></script>
 
-{% include 'partials/_js_utils.html' %}
+{#{% include 'partials/_js_utils.html' %}#}
+{% include 'partials/_js_sticky.html' %}
 
 </body>
 </html>

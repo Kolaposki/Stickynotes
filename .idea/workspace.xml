@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/static/js/stickyNotes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/js/stickyNotes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stickynotes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stickynotes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,20 +59,21 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/partials" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\KOLAPO\Desktop\sticky\static\js" />
+      <recent name="C:\Users\KOLAPO\Desktop\sticky\templates\registration" />
+      <recent name="C:\Users\KOLAPO\Desktop\sticky\templates" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\KOLAPO\Desktop\sticky\templates\partials" />
+      <recent name="C:\Users\KOLAPO\Desktop\sticky\staticfiles\js" />
       <recent name="C:\Users\KOLAPO\Desktop\sticky\static\js" />
       <recent name="C:\Users\KOLAPO\Desktop\sticky" />
-      <recent name="C:\Users\KOLAPO\Desktop\sticky\templates" />
-      <recent name="C:\Users\KOLAPO\Desktop\sticky\static\css" />
-      <recent name="C:\Users\KOLAPO\Desktop\sticky\templates\stickynotes" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\KOLAPO\Desktop\sticky\templates\registration" />
       <recent name="C:\Users\KOLAPO\Desktop\sticky\templates" />
     </key>
   </component>
@@ -195,21 +201,8 @@
       <workItem from="1585912019702" duration="1589000" />
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
-      <workItem from="1587632046275" duration="174729000" />
-    </task>
-    <task id="LOCAL-00073" summary="Modify view to render shared notes relative with the pk">
-      <created>1587803378269</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1587803378269</updated>
-    </task>
-    <task id="LOCAL-00074" summary="Modify shared template to check if the note is done or not">
-      <created>1587803657638</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1587803657638</updated>
+      <workItem from="1587632046275" duration="174764000" />
+      <workItem from="1596624225678" duration="4319000" />
     </task>
     <task id="LOCAL-00075" summary="Add last updated to shared template">
       <created>1587803800753</created>
@@ -540,7 +533,21 @@
       <option name="project" value="LOCAL" />
       <updated>1588173418529</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="Update README">
+      <created>1588200150246</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1588200150246</updated>
+    </task>
+    <task id="LOCAL-00123" summary=":tada: Resume designing bump django version">
+      <created>1596625474845</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1596625474845</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -561,8 +568,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Bump python version in runtime.txt from 3.7.2 to 3.8.0" />
-    <MESSAGE value="Change login page title and add registration link" />
     <MESSAGE value="Update base url to https://stickyynotes.herokuapp.com" />
     <MESSAGE value="Redesign login and registration page" />
     <MESSAGE value="Remove unnecessary codes in js file and delete stickyNotes.js" />
@@ -586,7 +591,9 @@
     <MESSAGE value="Add psycopg2 to requirements" />
     <MESSAGE value="Set password and username for db" />
     <MESSAGE value="Migrated back to sqlite" />
-    <option name="LAST_COMMIT_MESSAGE" value="Migrated back to sqlite" />
+    <MESSAGE value="Update README" />
+    <MESSAGE value=":tada: Resume designing bump django version" />
+    <option name="LAST_COMMIT_MESSAGE" value=":tada: Resume designing bump django version" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

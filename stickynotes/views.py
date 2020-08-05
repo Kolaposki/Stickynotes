@@ -132,10 +132,11 @@ def index(request):
                                               })
 
 
-# Registration View
-class UserRegistrationView(RegistrationView):
-    template_name = "register.html"
-    success_url = reverse_lazy("home")
+#
+# # Registration View
+# class UserRegistrationView(RegistrationView):
+#     template_name = "register.html"
+#     success_url = reverse_lazy("home")
 
 
 # shared link handler
@@ -148,3 +149,15 @@ def shared(request, link: str):
     # this design is done to make it harder for people to randomly guess a note shared url (:-
     note = get_object_or_404(Note, pk=pk, link=note_link)
     return render(request, 'shared.html', {'note': note})
+
+
+def home(request):
+    notes = None
+    form = NoteForm()
+    up_form = NoteForm2(request.POST)
+    search_term = ''
+    is_searching = False
+
+    return render(request, HOMEPAGE, context={'form': form, 'up_form': up_form, 'baseurl': baseurl,
+                                              "search_term": search_term, "is_searching": is_searching,
+                                              })
