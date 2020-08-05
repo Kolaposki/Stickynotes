@@ -16,6 +16,19 @@
         $(paletteDiv).toggleClass('colors').toggleClass("colors openDivs");
     });
 
+
+    function resetNoteForm() {
+        $('#createTitleInput').val('')
+        $('#createDescriptionInput').val('')
+        let note = $('#noteCreator').find('#bg')
+
+        $('#noteCreator').find('#allColor').removeClass('openDivs')
+        setNoteBackgroundColor(note, 'white')
+        selectedCircleRemoval()
+        $('#noteCreator').find('#allColor').find('#circle_white').toggleClass('selected')
+
+    }
+
     function setNoteBackgroundColor(element, color) {
         $(element).removeAttr('class').addClass("single-note add-note " + color);
     }
@@ -24,12 +37,16 @@
         // console.log(this)
         selectedCircleRemoval()
         $(this).toggleClass('selected')
-        console.log(this)
 
         let color = this.getAttribute('data-color')
         //console.log(this)
-        let parentDiv = this.parentElement.parentElement.parentElement
-        //console.log(parentDiv)
+        let parentDiv = null
+        if (this.parentElement.getAttribute('data-new-note')) {
+            parentDiv = this.parentElement.parentElement.parentElement
+        } else {
+            parentDiv = this.parentElement.parentElement
+        }
+
         setNoteBackgroundColor(parentDiv, color)
     });
 
@@ -43,11 +60,11 @@
 
     {# -------------------------------------------------------------------------------------------------------- #}
 
-    function appendNoteToDOM(noteTitle, noteDescription) {
+    function appendNoteToDOM(noteTitle, noteDescription, selectedColor) {
         let noteCard = document.createElement('div')
         noteCard.className = 'col-md-4 col-sm-6'
         noteCard.innerHTML = `   <form id="UpdateNoteForm">
-                                <div id="bg" class="single-note green">
+                                <div id="bg" class="single-note ${selectedColor}">
 
                                     <span class="notDone">
                                             <label class="my-checkbox">
@@ -116,23 +133,18 @@
         console.log("Appended")
     }
 
-    function clearInput() {
-        $('#createTitleInput').val('')
-        $('#createDescriptionInput').val('')
-    }
-
     $('#createNote').submit(function (event) {
         event.preventDefault();
 
         let createTitleInput = $('#createTitleInput').val()
         let createDescriptionInput = $('#createDescriptionInput').val()
 
-        console.log("createTitleInput: ", createTitleInput)
-        console.log("createDescriptionInput: ", createDescriptionInput)
-
+        let selectedColor = $(this).find('.selected').attr('data-color')
+        console.log("selectedColor: ", selectedColor)
         if (strip(createTitleInput).length > 1) {
-            appendNoteToDOM(createTitleInput, createDescriptionInput)
-            clearInput()
+            appendNoteToDOM(createTitleInput, createDescriptionInput, selectedColor)
+            resetNoteForm()
+            $("#notes").click()
         } else {
             console.log("You need to input a title")
             alert("You need to input a title")
