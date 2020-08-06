@@ -128,7 +128,9 @@
                             </form>
                             `
 
+        //$(noteCard).hide()
         $('#all-notes').prepend(noteCard)
+        //$(noteCard).fadeIn(700)
         let circle = $(noteCard).find('#circle_' + selectedColor)
         //console.log(circle)
         circle.toggleClass('selected')
@@ -202,6 +204,26 @@
         $(this.parentElement.nextElementSibling).show() // show pencil
     });
 
+    $(document).on("click", "#delete_btn", function (e) {
+        e.preventDefault()
+        console.log("delete_btn clciked")
+        // console.log(this)
+        let noteCard = this.parentElement.parentElement.parentElement.parentElement.parentElement
+        console.log("Deleting -", noteCard)
+
+        alertify.confirm('Confirm Delete', 'Are you sure you want to delete this Note', function () {
+
+            $(noteCard).fadeOut('600')
+            $(noteCard).remove()
+
+            {#alertify.success('Note deleted');#}
+            console.log("Note deleted")
+        }, function () {
+            console.log("Note cancelled ")
+        }).set('resizable', true).set('labels', {ok: 'Yes', cancel: 'Nah, cancel'});
+
+    });
+
 
     $(document).on("click", "#expand", function () {
         console.log("Expand clciked")
@@ -238,7 +260,6 @@
         $(paragraph).text(descriptionValue)
 
     });
-
 
 
 </script>

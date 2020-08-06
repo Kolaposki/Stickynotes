@@ -197,21 +197,7 @@
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
       <workItem from="1587632046275" duration="174764000" />
-      <workItem from="1596624225678" duration="34986000" />
-    </task>
-    <task id="LOCAL-00083" summary="Remove Overlay scrollbar function for textarea">
-      <created>1587837640254</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1587837640259</updated>
-    </task>
-    <task id="LOCAL-00084" summary="Remove Ajax search functionality">
-      <created>1587837907789</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1587837907792</updated>
+      <workItem from="1596624225678" duration="37986000" />
     </task>
     <task id="LOCAL-00085" summary="Changed search base url to a static url">
       <created>1587838393697</created>
@@ -542,7 +528,21 @@
       <option name="project" value="LOCAL" />
       <updated>1596666167347</updated>
     </task>
-    <option name="localTasksCounter" value="132" />
+    <task id="LOCAL-00132" summary=":rocket: Implement expansion of note when activated">
+      <created>1596722554567</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1596722554567</updated>
+    </task>
+    <task id="LOCAL-00133" summary=":rocket: Implement auto-changing of paragraph text to desc text">
+      <created>1596722681950</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1596722681950</updated>
+    </task>
+    <option name="localTasksCounter" value="134" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -563,8 +563,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Create .gitattributes file and updated .gitignore file" />
-    <MESSAGE value="Update .gitattributes and .gitignore file" />
     <MESSAGE value="Redesign registration logic using django-registration" />
     <MESSAGE value="Add django-registration to requirements.txt file" />
     <MESSAGE value="Update registration form error style" />
@@ -588,7 +586,9 @@
     <MESSAGE value=":sparkles: Update note Design" />
     <MESSAGE value="➕:heavy_plus_sign: Add timeago.js" />
     <MESSAGE value=":rocket: Implement enabling and disabling of note editing" />
-    <option name="LAST_COMMIT_MESSAGE" value=":rocket: Implement enabling and disabling of note editing" />
+    <MESSAGE value=":rocket: Implement expansion of note when activated" />
+    <MESSAGE value=":rocket: Implement auto-changing of paragraph text to desc text" />
+    <option name="LAST_COMMIT_MESSAGE" value=":rocket: Implement auto-changing of paragraph text to desc text" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
