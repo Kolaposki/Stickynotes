@@ -197,14 +197,7 @@
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
       <workItem from="1587632046275" duration="174764000" />
-      <workItem from="1596624225678" duration="29900000" />
-    </task>
-    <task id="LOCAL-00082" summary="Create ajax function for search">
-      <created>1587836091368</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1587836091368</updated>
+      <workItem from="1596624225678" duration="34986000" />
     </task>
     <task id="LOCAL-00083" summary="Remove Overlay scrollbar function for textarea">
       <created>1587837640254</created>
@@ -542,7 +535,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596662895221</updated>
     </task>
-    <option name="localTasksCounter" value="131" />
+    <task id="LOCAL-00131" summary=":rocket: Implement enabling and disabling of note editing">
+      <created>1596666167347</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1596666167347</updated>
+    </task>
+    <option name="localTasksCounter" value="132" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -563,7 +563,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Update screenshot url in README" />
     <MESSAGE value="Create .gitattributes file and updated .gitignore file" />
     <MESSAGE value="Update .gitattributes and .gitignore file" />
     <MESSAGE value="Redesign registration logic using django-registration" />
@@ -588,7 +587,8 @@
     <MESSAGE value=":sparkles: Design resetting of new notes" />
     <MESSAGE value=":sparkles: Update note Design" />
     <MESSAGE value="➕:heavy_plus_sign: Add timeago.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="➕:heavy_plus_sign: Add timeago.js" />
+    <MESSAGE value=":rocket: Implement enabling and disabling of note editing" />
+    <option name="LAST_COMMIT_MESSAGE" value=":rocket: Implement enabling and disabling of note editing" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

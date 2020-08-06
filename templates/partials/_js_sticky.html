@@ -80,9 +80,9 @@
 
                                     <small>Last Updated:{% now 'D, dS M Y' %}</small>
                                     <hr>
-                                    <textarea id="desc" class="" readonly name="description"> ${noteDescription}</textarea>
+                                    <textarea id="desc"  readonly name="description"> ${noteDescription}</textarea>
 
-                                    <p id="descPara" class="isDone d-none">${noteDescription}</p>
+                                    <p id="descPara" class="expand" style="display: none;">${noteDescription}</p>
 
                                     <div class="meta">
                                         <span style="display: none;">
@@ -165,11 +165,17 @@
         console.log("Pencil clciked")
         //console.log(this)
 
+        let paragraph = this.parentElement.previousElementSibling
         let textArea = this.parentElement.previousElementSibling.previousElementSibling
         let input = this.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling
 
         //console.log("textArea", textArea)
         //console.log("input", input)
+
+        if ($(textArea).is(":hidden")) {
+            $(paragraph).hide()
+            $(textArea).show()
+        }
 
         textArea.removeAttribute('readonly')
         input.removeAttribute('readonly')
@@ -194,6 +200,29 @@
 
         $(this.parentElement).hide() //hide update btn
         $(this.parentElement.nextElementSibling).show() // show pencil
+    });
+
+
+    $(document).on("click", "#expand", function () {
+        console.log("Expand clciked")
+        //console.log(this)
+
+        let paragraph = this.parentElement.previousElementSibling
+        let textArea = this.parentElement.previousElementSibling.previousElementSibling
+
+        //console.log("paragraph: ",paragraph)
+        //console.log("textArea: ",textArea)
+
+        if ($(paragraph).is(":hidden")) {
+            //console.log("para is hidden so will show now")
+            $(paragraph).show()
+            $(textArea).hide()
+        } else {
+            //console.log("para is shown so will hidden now")
+            $(paragraph).hide()
+            $(textArea).show()
+        }
+
     });
 
 </script>
