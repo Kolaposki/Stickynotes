@@ -149,8 +149,10 @@
         console.log("selectedColor: ", selectedColor)
         if (strip(createTitleInput).length > 1) {
             resetNoteForm()
+            getLatestID()
             appendNoteToDOM(createTitleInput, createDescriptionInput, selectedColor)
-            $("#notes").click()
+            addNoteToLocalStorage(createTitleInput, createDescriptionInput, selectedColor)
+            //$("#notes").click()
         } else {
             console.log("You need to input a title")
             alert("You need to input a title")
@@ -159,6 +161,45 @@
 
     });
 
+    function getLatestID() {
+
+    }
+
+
+    function addNoteToLocalStorage(title, description, color) {
+        let noteObject = {
+            id: 1,
+            title: title,
+            description: description,
+            checked: true,
+            date: 'Jan 01 2020',
+            color: color
+        }
+
+        let notes = getAllNotesFromLocalStorage();
+        notes.push(noteObject);
+        localStorage.setItem("stickynotes", JSON.stringify(notes));
+        console.log("Saved to localstorage");
+    }
+
+    function getAllNotesFromLocalStorage() {
+        let note;
+        if (localStorage.getItem("stickynotes") === null) {
+            note = [];
+        } else {
+            note = JSON.parse(localStorage.getItem("stickynotes"));
+        }
+        console.log("Get notes from localstorage");
+        return note;
+    }
+
+    function getNoteFromLocalStorage(id) {
+
+    }
+
+    function deleteNoteFromLocalStorage(id) {
+
+    }
 
     {# -------------------------------------------------------------------------------------------------------- #}
 
@@ -224,7 +265,6 @@
 
     });
 
-
     $(document).on("click", "#expand", function () {
         console.log("Expand clciked")
         //console.log(this)
@@ -260,7 +300,6 @@
         $(paragraph).text(descriptionValue)
 
     });
-
 
     $(document).on("click", "#id_is_done", function (event) {
         //console.log("Chekcer")
