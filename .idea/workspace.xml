@@ -197,14 +197,7 @@
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
       <workItem from="1587632046275" duration="174764000" />
-      <workItem from="1596624225678" duration="42952000" />
-    </task>
-    <task id="LOCAL-00087" summary="Implemented long view for notes using javascript">
-      <created>1587854542029</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1587854542031</updated>
+      <workItem from="1596624225678" duration="45957000" />
     </task>
     <task id="LOCAL-00088" summary="Increased box shadow of notes when hovered">
       <created>1587854976119</created>
@@ -542,7 +535,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596727379543</updated>
     </task>
-    <option name="localTasksCounter" value="136" />
+    <task id="LOCAL-00136" summary=":rocket: Implement modifying localstorage">
+      <created>1596731480438</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1596731480438</updated>
+    </task>
+    <option name="localTasksCounter" value="137" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -563,7 +563,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Update registration form error style" />
     <MESSAGE value="Add darkmode using js library" />
     <MESSAGE value="Create algorithm to generate random strings for note link" />
     <MESSAGE value="Rewrote shared link method to grab the note pk and link" />
@@ -588,7 +587,8 @@
     <MESSAGE value=":rocket: Implement auto-changing of paragraph text to desc text" />
     <MESSAGE value=":rocket: Implement deletion of notes" />
     <MESSAGE value=":rocket: Implement marking and unmarking of notes" />
-    <option name="LAST_COMMIT_MESSAGE" value=":rocket: Implement marking and unmarking of notes" />
+    <MESSAGE value=":rocket: Implement modifying localstorage" />
+    <option name="LAST_COMMIT_MESSAGE" value=":rocket: Implement modifying localstorage" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

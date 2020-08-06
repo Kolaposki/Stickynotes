@@ -60,9 +60,10 @@
 
     {# -------------------------------------------------------------------------------------------------------- #}
 
-    function appendNoteToDOM(noteTitle, noteDescription, selectedColor) {
+    function appendNoteToDOM(noteID, noteTitle, noteDescription, selectedColor) {
         let noteCard = document.createElement('div')
         noteCard.className = 'col-md-4 col-sm-6'
+        noteCard.id = 'note-' + noteID
         noteCard.innerHTML = `   <form id="UpdateNoteForm">
                                 <div id="bg" class="single-note ${selectedColor}">
 
@@ -149,10 +150,10 @@
         console.log("selectedColor: ", selectedColor)
         if (strip(createTitleInput).length > 1) {
             resetNoteForm()
-            getLatestID()
-            appendNoteToDOM(createTitleInput, createDescriptionInput, selectedColor)
-            addNoteToLocalStorage(createTitleInput, createDescriptionInput, selectedColor)
-            //$("#notes").click()
+            let noteID = getLatestID()
+            appendNoteToDOM(noteID, createTitleInput, createDescriptionInput, selectedColor)
+            addNoteToLocalStorage(noteID, createTitleInput, createDescriptionInput, selectedColor)
+
         } else {
             console.log("You need to input a title")
             alert("You need to input a title")
@@ -162,13 +163,43 @@
     });
 
     function getLatestID() {
+        // fetches the last id in localstorage and add 1
+        let allNotes = JSON.parse(localStorage.getItem("stickynotes"))
+        //console.log(allNotes)
+        if (allNotes !== null) {
 
+            let ids = []
+            allNotes.forEach(function (note, index) {
+                //console.log(note)
+                //console.log(note.id)
+                ids.push(note.id)
+
+            });
+
+            //console.log(ids)
+            var largest = ids[0];
+
+            for (var i = 0; i < ids.length; i++) {
+                if (largest < ids[i]) {
+                    largest = ids[i];
+                }
+            }
+
+            //console.log("Largest is", largest)
+            largest += 1
+            //console.log("Largest after adding 1", largest)
+            //console.log(allNotes)
+            return largest
+        } else {
+            //console.log("NO previus id")
+            return 0
+        }
     }
 
 
-    function addNoteToLocalStorage(title, description, color) {
+    function addNoteToLocalStorage(id, title, description, color) {
         let noteObject = {
-            id: 1,
+            id: id,
             title: title,
             description: description,
             checked: true,
@@ -189,7 +220,7 @@
         } else {
             note = JSON.parse(localStorage.getItem("stickynotes"));
         }
-        console.log("Get notes from localstorage");
+        //console.log("Get notes from localstorage");
         return note;
     }
 
