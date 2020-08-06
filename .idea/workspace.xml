@@ -197,14 +197,7 @@
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
       <workItem from="1587632046275" duration="174764000" />
-      <workItem from="1596624225678" duration="37986000" />
-    </task>
-    <task id="LOCAL-00085" summary="Changed search base url to a static url">
-      <created>1587838393697</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1587838393697</updated>
+      <workItem from="1596624225678" duration="39493000" />
     </task>
     <task id="LOCAL-00086" summary="Add SmoothScroll and easing js libraries">
       <created>1587841128511</created>
@@ -542,7 +535,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596722681950</updated>
     </task>
-    <option name="localTasksCounter" value="134" />
+    <task id="LOCAL-00134" summary=":rocket: Implement deletion of notes">
+      <created>1596725796658</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1596725796658</updated>
+    </task>
+    <option name="localTasksCounter" value="135" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -563,7 +563,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Redesign registration logic using django-registration" />
     <MESSAGE value="Add django-registration to requirements.txt file" />
     <MESSAGE value="Update registration form error style" />
     <MESSAGE value="Add darkmode using js library" />
@@ -588,7 +587,8 @@
     <MESSAGE value=":rocket: Implement enabling and disabling of note editing" />
     <MESSAGE value=":rocket: Implement expansion of note when activated" />
     <MESSAGE value=":rocket: Implement auto-changing of paragraph text to desc text" />
-    <option name="LAST_COMMIT_MESSAGE" value=":rocket: Implement auto-changing of paragraph text to desc text" />
+    <MESSAGE value=":rocket: Implement deletion of notes" />
+    <option name="LAST_COMMIT_MESSAGE" value=":rocket: Implement deletion of notes" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

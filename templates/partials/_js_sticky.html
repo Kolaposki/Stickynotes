@@ -262,4 +262,27 @@
     });
 
 
+    $(document).on("click", "#id_is_done", function (event) {
+        //console.log("Chekcer")
+        //console.log(this)
+        let input = this.parentElement.parentElement.nextElementSibling
+        let description = this.parentElement.parentElement.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling
+        let paragraph = this.parentElement.parentElement.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling
+
+        if ($(this).prop('checked')) {
+            console.log("Checked")
+            $(input).addClass('isDone')
+            $(description).addClass('isDone')
+            $(paragraph).addClass('isDone')
+
+        } else {
+            console.log("Unchceked")
+            $(input).removeClass('isDone')
+            $(description).removeClass('isDone')
+            $(paragraph).removeClass('isDone')
+
+        }
+
+    });
+
 </script>
