@@ -225,4 +225,20 @@
 
     });
 
+
+    {# -------------------------------------------------------------------------------------------------------- #}
+
+    $(document).on("keyup", "#desc", function () {
+        // Automatically sets the paragraph text to the description text when a key is clicked
+        // console.log(this.value)
+        let descriptionValue = this.value
+
+        let paragraph = this.nextElementSibling
+        //console.log(paragraph)
+        $(paragraph).text(descriptionValue)
+
+    });
+
+
+
 </script>
