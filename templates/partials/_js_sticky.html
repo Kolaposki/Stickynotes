@@ -59,7 +59,7 @@
 
     {# -------------------------------------------------------------------------------------------------------- #}
 
-    function appendNoteToDOM(noteID, noteTitle, noteDescription, selectedColor) {
+    function appendNoteToDOM(noteID, noteTitle, noteDescription, selectedColor, date) {
         let noteCard = document.createElement('div')
         noteCard.className = 'col-md-4 col-sm-6'
         noteCard.id = 'note-' + noteID
@@ -78,7 +78,7 @@
                                            maxlength="20" placeholder="Type a title ..."
                                            value="${noteTitle}" readonly>
 
-                                    <small>Last Updated:{% now 'D, dS M Y' %}</small>
+                                    <small id="timeUpdated">Last Updated: ${date}</small>
                                     <hr>
                                     <textarea id="desc"  readonly name="description"> ${noteDescription}</textarea>
 
@@ -142,6 +142,7 @@
     $('#createNote').submit(function (event) {
         event.preventDefault();
 
+        // todo : jump to textarea when enter key is pressed
         let createTitleInput = $('#createTitleInput').val()
         let createDescriptionInput = $('#createDescriptionInput').val()
 
@@ -150,8 +151,9 @@
         if (strip(createTitleInput).length > 1) {
             resetNoteForm()
             let noteID = getLatestID()
-            appendNoteToDOM(noteID, createTitleInput, createDescriptionInput, selectedColor)
-            addNoteToLocalStorage(noteID, createTitleInput, createDescriptionInput, selectedColor)
+            let date = "{% now 'D, dS M Y' %}"
+            appendNoteToDOM(noteID, createTitleInput, createDescriptionInput, selectedColor, date)
+            addNoteToLocalStorage(noteID, createTitleInput, createDescriptionInput, selectedColor, date)
 
         } else {
             console.log("You need to input a title")
@@ -196,14 +198,15 @@
         }
     }
 
+    {# -------------------------------------------------------------------------------------------------------- #}
 
-    function addNoteToLocalStorage(id, title, description, color) {
+    function addNoteToLocalStorage(id, title, description, color, date) {
         let noteObject = {
             id: id,
             title: title,
             description: description,
             checked: false,
-            date: 'Jan 01 2020',
+            date: date,
             color: color
         }
 
@@ -231,14 +234,20 @@
         if (allNotes !== null) {
             console.log("Note Rendered")
             allNotes.forEach(function (note, index) {
-                //console.log(note.id)
-                appendNoteToDOM(note.id, note.title, note.description, note.color)
-                console.log("note rendered - ", note.id, "with title - ", note.title)
+                appendNoteToDOM(note.id, note.title, note.description, note.color, note.date)
+                //console.log("note rendered - ", note.id, "with title - ", note.title)
 
             });
 
         } else {
             console.log("Empty. No Note Rendered")
+            const div = `<div class="container text-center"
+                             style="display: flex; justify-content: center; margin-bottom: 50px;">
+                            <div class="col-md-3 col-sm-5">
+                                <h2><small>No notes</small></h2>
+                            </div>
+                        </div>`
+            // todo : create a div informing user that there are no notes for now
 
         }
 
@@ -246,10 +255,47 @@
 
     function getNoteFromLocalStorage(id) {
 
+        // Handles getting a specific note from localstorage and returns it as an object
+
+        const allNotes = getAllNotesFromLocalStorage()
+
+        if (allNotes !== null) {
+            allNotes.forEach(function (note, index) {
+                if (note.id === id) {
+                    console.log("Note is present with: ", note.id, note.title)
+                    console.log(note)
+                    return note
+                }
+            });
+        }
+
     }
 
     function deleteNoteFromLocalStorage(id) {
     }
+
+    function LocalStorageSetter(noteObjects) {
+        // Ubdates all the notes in localstorage to tnoteObjects
+        localStorage.setItem("stickynotes", JSON.stringify(noteObjects));
+    }
+
+    function updateNoteFromLocalStorage(id, title, description, color, checked, date) {
+        const allNotes = getAllNotesFromLocalStorage()
+
+        allNotes.forEach(function (note, index) {
+            if ("" + note.id === id) {
+                console.log("Note is present with: ", note.id, note.title)
+                note.title = title
+                note.description = description
+                note.color = color
+                note.date = date
+                note.checked = checked
+            }
+        });
+        LocalStorageSetter(allNotes)
+
+    }
+
 
     {# -------------------------------------------------------------------------------------------------------- #}
 
@@ -285,14 +331,21 @@
         let textArea = this.parentElement.parentElement.previousElementSibling.previousElementSibling
         let input = this.parentElement.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling
 
-        //console.log("textArea", textArea)
-        //console.log("input", input)
-
         textArea.setAttribute('readonly', 'true')
         input.setAttribute('readonly', 'true')
 
+        let parentDiv = textArea.parentElement.parentElement.parentElement.id
+        let noteID = parentDiv.replace(/[^0-9]/g, '') // strips out anything that aint a digit. So it returns the id only
+
         $(this.parentElement).hide() //hide update btn
         $(this.parentElement.nextElementSibling).show() // show pencil
+        let noteTitle = $(input).val()
+        let noteDescription = $(textArea).val()
+        let color = strip(textArea.parentElement.className.replace('single-note', ''))
+        let checked = input.previousElementSibling.children[0].children[0].classList.contains('isDone')
+        let date = $(input.nextElementSibling).text()
+
+        updateNoteFromLocalStorage(noteID, noteTitle, noteDescription, color, checked, date)
     });
 
     $(document).on("click", "#delete_btn", function (e) {
@@ -359,16 +412,18 @@
         let paragraph = this.parentElement.parentElement.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling
 
         if ($(this).prop('checked')) {
-            console.log("Checked")
+            //console.log("Checked")
             $(input).addClass('isDone')
             $(description).addClass('isDone')
             $(paragraph).addClass('isDone')
+            $(this).addClass("isDone")
 
         } else {
-            console.log("Unchceked")
+            //console.log("Unchceked")
             $(input).removeClass('isDone')
             $(description).removeClass('isDone')
             $(paragraph).removeClass('isDone')
+            $(this).removeClass("isDone")
 
         }
 
