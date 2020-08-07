@@ -1,5 +1,5 @@
 <script>
-
+    document.addEventListener("DOMContentLoaded", renderNotes());
 
     function strip(str) {
         // strips out leading and trailing spaces
@@ -15,7 +15,6 @@
         let paletteDiv = this.parentElement.nextElementSibling
         $(paletteDiv).toggleClass('colors').toggleClass("colors openDivs");
     });
-
 
     function resetNoteForm() {
         $('#createTitleInput').val('')
@@ -163,8 +162,8 @@
     });
 
     function getLatestID() {
-        // fetches the last id in localstorage and add 1
-        let allNotes = JSON.parse(localStorage.getItem("stickynotes"))
+        // fetches the last id in localstorage and add 1 else returns 0
+        let allNotes = getAllNotesFromLocalStorage()
         //console.log(allNotes)
         if (allNotes !== null) {
 
@@ -191,6 +190,7 @@
             //console.log(allNotes)
             return largest
         } else {
+            // No notes found
             //console.log("NO previus id")
             return 0
         }
@@ -202,7 +202,7 @@
             id: id,
             title: title,
             description: description,
-            checked: true,
+            checked: false,
             date: 'Jan 01 2020',
             color: color
         }
@@ -224,12 +224,31 @@
         return note;
     }
 
+    function renderNotes() {
+        // render all notes to dom
+        const allNotes = getAllNotesFromLocalStorage()
+
+        if (allNotes !== null) {
+            console.log("Note Rendered")
+            allNotes.forEach(function (note, index) {
+                //console.log(note.id)
+                appendNoteToDOM(note.id, note.title, note.description, note.color)
+                console.log("note rendered - ", note.id, "with title - ", note.title)
+
+            });
+
+        } else {
+            console.log("Empty. No Note Rendered")
+
+        }
+
+    }
+
     function getNoteFromLocalStorage(id) {
 
     }
 
     function deleteNoteFromLocalStorage(id) {
-
     }
 
     {# -------------------------------------------------------------------------------------------------------- #}

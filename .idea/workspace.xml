@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/partials/_js_sticky.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_js_sticky.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -197,14 +198,8 @@
       <workItem from="1585916110389" duration="19901000" />
       <workItem from="1586607169608" duration="210641000" />
       <workItem from="1587632046275" duration="174764000" />
-      <workItem from="1596624225678" duration="45957000" />
-    </task>
-    <task id="LOCAL-00088" summary="Increased box shadow of notes when hovered">
-      <created>1587854976119</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1587854976119</updated>
+      <workItem from="1596624225678" duration="47135000" />
+      <workItem from="1596805302595" duration="1198000" />
     </task>
     <task id="LOCAL-00089" summary="Create function to check if scroll bar is present in textarea using js">
       <created>1587899115990</created>
@@ -542,7 +537,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596731480438</updated>
     </task>
-    <option name="localTasksCounter" value="137" />
+    <task id="LOCAL-00137" summary=":rocket: Implement checking localstorage">
+      <created>1596735195052</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1596735195084</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -563,7 +565,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Add darkmode using js library" />
     <MESSAGE value="Create algorithm to generate random strings for note link" />
     <MESSAGE value="Rewrote shared link method to grab the note pk and link" />
     <MESSAGE value="Add filters and search fields to admin page" />
@@ -588,7 +589,8 @@
     <MESSAGE value=":rocket: Implement deletion of notes" />
     <MESSAGE value=":rocket: Implement marking and unmarking of notes" />
     <MESSAGE value=":rocket: Implement modifying localstorage" />
-    <option name="LAST_COMMIT_MESSAGE" value=":rocket: Implement modifying localstorage" />
+    <MESSAGE value=":rocket: Implement checking localstorage" />
+    <option name="LAST_COMMIT_MESSAGE" value=":rocket: Implement checking localstorage" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
