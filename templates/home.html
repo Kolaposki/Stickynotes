@@ -41,7 +41,7 @@
                         {% csrf_token %}
                         <input id="createTitleInput" name="title" type="text" maxlength="20" autofocus
                                placeholder="Type a title ...">
-                        <small>Today: {% now "jS F, Y" %}</small>
+                        <small id="creatorDate"></small>
                         <hr>
                         <textarea id="createDescriptionInput" name="description"
                                   placeholder="Type a description ..."></textarea>

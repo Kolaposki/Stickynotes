@@ -1,6 +1,7 @@
 <script>
     document.addEventListener("DOMContentLoaded", renderNotes());
 
+    $('#creatorDate').text(`Today: ${dateGetter()}`)
     function strip(str) {
         // strips out leading and trailing spaces
         return str.replace(/^\s+|\s+$/gm, '');
@@ -247,8 +248,8 @@
     }
 
     function dateGetter() {
+        // returns the current day formatted ::: Sat, 08th Aug 2020
         var today = new Date();
-        // Sat, 08th Aug 2020
         var day = today.toString().split(' ')[0];
         let month = today.toString().split(' ')[1];
         let dayInt = ordinal(today.toString().split(' ')[2]);
@@ -256,8 +257,6 @@
 
         return day + ', ' + dayInt + ' ' + month + ' ' + year
     }
-
-    dateGetter()
 
     function getLatestID() {
         // fetches the last id in localstorage and add 1 else returns 0
@@ -453,7 +452,7 @@
         let noteDescription = $(textArea).val()
         let color = strip(textArea.parentElement.className.replace('single-note', ''))
         let checked = input.previousElementSibling.children[0].children[0].classList.contains('isDone')
-        let date = $(input.nextElementSibling).text().replace('Last Updated: ', '')
+        let date = dateGetter()
 
         updateNoteFromLocalStorage(noteID, noteTitle, noteDescription, color, checked, date)
     });
@@ -543,7 +542,7 @@
         let color = strip(title.parentElement.className.replace('single-note', ''))
         let noteDescription = $(description).val()
         let checked = this.classList.contains('isDone')
-        let date = $(title.nextElementSibling).text().replace('Last Updated: ', '')
+        let date = dateGetter()
         //console.log(noteID, noteTitle, noteDescription, "color: ", color, "checked: ", checked, date)
 
         updateNoteFromLocalStorage(noteID, noteTitle, noteDescription, color, checked, date)
