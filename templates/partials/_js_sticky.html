@@ -144,15 +144,15 @@
                                             </label>
                                     </span>
 
-                                    <input id="new_title" name="title" type="text" class=""
+                                    <input id="new_title" name="title" type="text" class="note-title"
                                            maxlength="20" placeholder="Type a title ..."
                                            value="${noteTitle}" readonly>
 
                                     <small id="timeUpdated">Last Updated: ${date}</small>
                                     <hr>
-                                    <textarea id="desc"  readonly name="description"> ${noteDescription}</textarea>
+                                    <textarea id="desc" class="note-description"  readonly name="description"> ${noteDescription}</textarea>
 
-                                    <p id="descPara" class="expand" style="display: none;">${noteDescription}</p>
+                                    <p id="descPara" class="expand note-description" style="display: none;">${noteDescription}</p>
 
                                     <div class="meta">
                                         <span style="display: none;">
@@ -525,6 +525,7 @@
 
     {# -------------------------------------------------------------------------------------------------------- #}
 
+
     document.getElementById("searchNotesInput").addEventListener("keyup", function () {
         // Search notes
         let searchNotesInput = strip(this.value.toLowerCase())
@@ -532,15 +533,17 @@
         var all = document.querySelectorAll("#new_title")
         if (all !== null) {
             for (let note of all) {
-                let item = note.value.toLowerCase();
+                let title = note.value.toLowerCase();
+                //console.log(item)
                 let parent = note.parentElement.parentElement.parentElement
+                let description = note.nextElementSibling.nextElementSibling.nextElementSibling.value.toLowerCase();
 
-                if (item.indexOf(searchNotesInput) == -1) {
-                    $(parent).hide()
+                if (title.indexOf(searchNotesInput) != -1 || description.indexOf(searchNotesInput) != -1) {
+                    $(parent).show()
                 } else if (searchNotesInput === '' || searchNotesInput === null) {
                     $(parent).show()
                 } else {
-                    $(parent).show()
+                    $(parent).hide()
                 }
             }
         } else {
@@ -566,5 +569,6 @@
     $('#searchForm').submit(function (event) {
         event.preventDefault();
     });
+
 
 </script>
