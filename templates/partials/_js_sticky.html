@@ -342,10 +342,24 @@
     }
 
     function deleteNoteFromLocalStorage(id) {
+        console.log("Deleting from local storage : - ", id)
+
+        const allNotes = getAllNotesFromLocalStorage()
+
+        allNotes.forEach(function (note, index) {
+            if ("" + note.id === id) {
+                console.log("Note is present and will be deleted: ", note.id, note.title)
+                allNotes.splice(index, 1); // remove the element from the array
+            }
+        });
+
+        LocalStorageSetter(allNotes)
+
     }
 
+
     function LocalStorageSetter(noteObjects) {
-        // Ubdates all the notes in localstorage to tnoteObjects
+        // Ubdates all the notes in localstorage to noteObjects
         localStorage.setItem("stickynotes", JSON.stringify(noteObjects));
     }
 
@@ -423,12 +437,14 @@
         console.log("delete_btn clciked")
         // console.log(this)
         let noteCard = this.parentElement.parentElement.parentElement.parentElement.parentElement
-        console.log("Deleting -", noteCard)
+        let noteID = noteCard.id.replace(/[^0-9]/g, '') // strips out anything that aint a digit. So it returns the id only
+        console.log("Deleting -", noteID)
 
         alertify.confirm('Confirm Delete', 'Are you sure you want to delete this Note', function () {
 
             $(noteCard).fadeOut('600')
             $(noteCard).remove()
+            deleteNoteFromLocalStorage(noteID)
 
             {#alertify.success('Note deleted');#}
             console.log("Note deleted")
@@ -534,8 +550,8 @@
 
     });
 
-
     $('#searchNotesInput').on('input', function (e) {
+        // X icon shows on some browsers
         // event fired when the X icon is clicked in search-box
         // returns all notes to their previous states (hidden ==> show)
         if ('' == this.value) {
