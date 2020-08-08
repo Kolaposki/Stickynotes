@@ -24,7 +24,8 @@
             <div class="searchBar">
                 <form action="" id="searchForm">
                     <div class="col-xs-11 nopadding">
-                        <input type="text" placeholder="Search Note" name="search_term" value="{{ search_term }}">
+                        <input type="text" id="searchNotesInput" placeholder="Search Note" name="search_term"
+                               value="{{ search_term }}">
                     </div>
                     <div class="col-xs-1 nopadding">
                         <button type="submit" id="searchBtn"><i class="fas fa-search"></i></button>
@@ -64,17 +65,11 @@
 
                     <div id="bg" class="single-note add-note white">
                         <form name="createNote" id="createNote">
-                            <input type="hidden" class="d-none" name="new_dummy" id="id_new_dummy">
                             <input class="d-none" type="checkbox" value="False" name="is_done" id="id_is_done">
-
                             {% csrf_token %}
-                            <input id="createTitleInput" name="title" type="text" maxlength="20"
+                            <input id="createTitleInput" name="title" type="text" maxlength="20" autofocus
                                    placeholder="Type a title ...">
                             <small>Today: {% now "jS F, Y" %}</small>
-
-                            <input class="d-none" name="background_color" value="white"
-                                   id="id_background_color">
-
                             <hr>
                             <textarea id="createDescriptionInput" name="description"
                                       placeholder="Type a description ..."></textarea>
@@ -87,9 +82,7 @@
                                         <i class="fas fa-check"></i>
                                     </button>
                                 </span>
-
                             </div>
-
 
                             <div id="allColor" class="colors" data-new-note="true">
                                 <div id="circle_blue" class="circle blue" data-color="blue">

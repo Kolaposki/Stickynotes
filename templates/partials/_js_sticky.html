@@ -61,7 +61,7 @@
 
     function appendNoteToDOM(noteID, noteTitle, noteDescription, selectedColor, date, checked) {
         let noteCard = document.createElement('div')
-        noteCard.className = 'col-md-4 col-sm-6'
+        noteCard.className = 'col-md-4 col-sm-6 note-box'
         noteCard.id = 'note-' + noteID
         if (checked) {
             noteCard.innerHTML = `   <form id="UpdateNoteForm">
@@ -313,9 +313,10 @@
             const div = `<div class="container text-center"
                              style="display: flex; justify-content: center; margin-bottom: 50px;">
                             <div class="col-md-3 col-sm-5">
-                                <h2><small>No notes</small></h2>
+                                <h2><small>No notes for now <br>Start by creating one</small></h2>
                             </div>
                         </div>`
+
             // todo : create a div informing user that there are no notes for now
 
         }
@@ -505,6 +506,50 @@
 
         updateNoteFromLocalStorage(noteID, noteTitle, noteDescription, color, checked, date)
 
+    });
+
+    {# -------------------------------------------------------------------------------------------------------- #}
+
+    document.getElementById("searchNotesInput").addEventListener("keyup", function () {
+        // Search notes
+        let searchNotesInput = strip(this.value.toLowerCase())
+
+        var all = document.querySelectorAll("#new_title")
+        if (all !== null) {
+            for (let note of all) {
+                let item = note.value.toLowerCase();
+                let parent = note.parentElement.parentElement.parentElement
+
+                if (item.indexOf(searchNotesInput) == -1) {
+                    $(parent).hide()
+                } else if (searchNotesInput === '' || searchNotesInput === null) {
+                    $(parent).show()
+                } else {
+                    $(parent).show()
+                }
+            }
+        } else {
+            console.log("No notes")
+        }
+
+    });
+
+
+    $('#searchNotesInput').on('input', function (e) {
+        // event fired when the X icon is clicked in search-box
+        // returns all notes to their previous states (hidden ==> show)
+        if ('' == this.value) {
+            var all = document.querySelectorAll(".note-box")
+
+            for (let noteBox of all) {
+                $(noteBox).show()
+            }
+
+        }
+    });
+
+    $('#searchForm').submit(function (event) {
+        event.preventDefault();
     });
 
 </script>

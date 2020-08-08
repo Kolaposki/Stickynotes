@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/partials/_js_sticky.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_js_sticky.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -199,14 +200,7 @@
       <workItem from="1587632046275" duration="174764000" />
       <workItem from="1596624225678" duration="47135000" />
       <workItem from="1596805302595" duration="14872000" />
-      <workItem from="1596869613620" duration="2910000" />
-    </task>
-    <task id="LOCAL-00092" summary="Reduce fade in and fade out time in link copied">
-      <created>1587910670219</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1587910670219</updated>
+      <workItem from="1596869613620" duration="4200000" />
     </task>
     <task id="LOCAL-00093" summary="Ammend codes to get ready for deployment">
       <created>1587915209697</created>
@@ -544,7 +538,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596838282791</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <task id="LOCAL-00141" summary=":rocket: Implement saving and retrieving checked notes from localstorage">
+      <created>1596872894117</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1596872894117</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -565,7 +566,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Add django-import-export library" />
     <MESSAGE value="Add import and export feature to admin page" />
     <MESSAGE value="Upgraded to Postgres database" />
     <MESSAGE value="Add psycopg2 to requirements" />
@@ -590,7 +590,8 @@
     <MESSAGE value=":rocket: Implement rendering notes from localstorage" />
     <MESSAGE value=":rocket: Implement updating of notes to localstorage" />
     <MESSAGE value=":rocket: Implement rendering of checked notes from localstorage" />
-    <option name="LAST_COMMIT_MESSAGE" value=":rocket: Implement rendering of checked notes from localstorage" />
+    <MESSAGE value=":rocket: Implement saving and retrieving checked notes from localstorage" />
+    <option name="LAST_COMMIT_MESSAGE" value=":rocket: Implement saving and retrieving checked notes from localstorage" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
