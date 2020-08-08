@@ -36,8 +36,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'stickynotes.apps.StickynotesConfig',
-    'crispy_forms',
-    'import_export',
 ]
 
 MIDDLEWARE = [
@@ -123,9 +121,3 @@ STATICFILES_DIRS = (
 )
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-LOGIN_REDIRECT_URL = "home"
-LOGOUT_REDIRECT_URL = "home"
-LOGIN_URL = 'login'
-
-CRISPY_TEMPLATE_PACK = 'bootstrap4'

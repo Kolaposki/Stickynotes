@@ -4,19 +4,10 @@ from .forms import *
 from django.http import JsonResponse
 from django.http import QueryDict
 from django.db.models import Q
-from django.contrib.auth.models import User
 from django.utils import timezone
-from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
-from django_registration.backends.one_step.views import RegistrationView
 
-HOMEPAGE = 'home.html'
-baseurl = 'https://stickyynotes.herokuapp.com'
-
-
-# baseurl = 'http://127.0.0.1:9000'
-
-
+"""
 # https://stickyynotes.herokuapp.com/
 # ALL CRUD FUNCTIONALITIES FOR NOTE
 @login_required
@@ -137,6 +128,8 @@ def index(request):
 # class UserRegistrationView(RegistrationView):
 #     template_name = "register.html"
 #     success_url = reverse_lazy("home")
+
+"""
 
 
 # shared link handler
