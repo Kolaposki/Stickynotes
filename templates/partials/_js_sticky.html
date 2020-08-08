@@ -220,23 +220,41 @@
         if (strip(createTitleInput).length > 1) {
             resetNoteForm()
             let noteID = getLatestID()
-            let date = "{% now 'D, dS M Y' %}"
+            let date = dateGetter()
             appendNoteToDOM(noteID, createTitleInput, createDescriptionInput, selectedColor, date, false)
             addNoteToLocalStorage(noteID, createTitleInput, createDescriptionInput, selectedColor, date)
 
-        } else {
-            console.log("You need to input a title")
-            alert("You need to input a title")
-            // TODO : Notify.js should be used for notifications
         }
-
     });
+
+    function ordinal(number) {
+        // checks for ordinality in date number
+        number = Number(number)
+        if (!number || (Math.round(number) !== number)) {
+            return number
+        }
+        var signal = (number < 20) ? number : Number(('' + number).slice(-1))
+        switch (signal) {
+            case 1:
+                return number + 'st'
+            case 2:
+                return number + 'nd'
+            case 3:
+                return number + 'rd'
+            default:
+                return number + 'th'
+        }
+    }
 
     function dateGetter() {
         var today = new Date();
-        var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate() + '-' + today.getDay()
-        console.log(date)
+        // Sat, 08th Aug 2020
+        var day = today.toString().split(' ')[0];
+        let month = today.toString().split(' ')[1];
+        let dayInt = ordinal(today.toString().split(' ')[2]);
+        let year = today.toString().split(' ')[3];
 
+        return day + ', ' + dayInt + ' ' + month + ' ' + year
     }
 
     dateGetter()

@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stickynotes/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stickynotes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stickynotes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stickynotes/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stickynotes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/partials/_js_sticky.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_js_sticky.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -208,14 +205,7 @@
       <workItem from="1587632046275" duration="174764000" />
       <workItem from="1596624225678" duration="47135000" />
       <workItem from="1596805302595" duration="14872000" />
-      <workItem from="1596869613620" duration="21832000" />
-    </task>
-    <task id="LOCAL-00098" summary="Change login page title and add registration link">
-      <created>1587918719798</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1587918719798</updated>
+      <workItem from="1596869613620" duration="25480000" />
     </task>
     <task id="LOCAL-00099" summary="Update base url to https://stickyynotes.herokuapp.com">
       <created>1587922035291</created>
@@ -553,7 +543,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596909783409</updated>
     </task>
-    <option name="localTasksCounter" value="147" />
+    <task id="LOCAL-00147" summary=":zap: Remove useless codes and files">
+      <created>1596921416036</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1596921416036</updated>
+    </task>
+    <option name="localTasksCounter" value="148" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
