@@ -45,10 +45,12 @@
     <div class="container">
         <span>Made With <i class="fas fa-heart">
             </i> by <a href="https://twitter.com/KolapoOshodi" target="_blank">Kolaposki</a>
+            <br>
+            <a href="https://github.com/Kolaposki/" style="margin-left: -10px" target="_blank"><i
+                    style="color: black; left: 10px;" class="fab fa-github"> </i></a>
         </span>
     </div>
 </footer>
-
 
 <!-- Javascript files -->
 <script src="{% static 'js/jquery.min.js' %}" charset="utf-8"></script>
@@ -61,7 +63,10 @@
 <script src="{% static 'js/easing.js' %}" charset="utf-8"></script>
 {#<script src="{% static 'js/SmoothScroll.min.js' %}" charset="utf-8"></script>#}
 <script>
-    new Darkmode().showWidget();
+    const options = {
+        backgroundColor: '#EFEFEF',  // default: '#fff'
+    }
+    new Darkmode(options).showWidget();
 </script>
 <script src="{% static 'js/stickyNotes.js' %}" charset="utf-8"></script>
 

@@ -357,7 +357,6 @@
 
     }
 
-
     function LocalStorageSetter(noteObjects) {
         // Ubdates all the notes in localstorage to noteObjects
         localStorage.setItem("stickynotes", JSON.stringify(noteObjects));
@@ -438,7 +437,7 @@
         // console.log(this)
         let noteCard = this.parentElement.parentElement.parentElement.parentElement.parentElement
         let noteID = noteCard.id.replace(/[^0-9]/g, '') // strips out anything that aint a digit. So it returns the id only
-        console.log("Deleting -", noteID)
+        //console.log("Deleting -", noteID)
 
         alertify.confirm('Confirm Delete', 'Are you sure you want to delete this Note', function () {
 

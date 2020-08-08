@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/partials/_js_sticky.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_js_sticky.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -199,14 +200,7 @@
       <workItem from="1587632046275" duration="174764000" />
       <workItem from="1596624225678" duration="47135000" />
       <workItem from="1596805302595" duration="14872000" />
-      <workItem from="1596869613620" duration="6226000" />
-    </task>
-    <task id="LOCAL-00094" summary="Create requirements.txt and Procfile, also collectstatic">
-      <created>1587916009752</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1587916009752</updated>
+      <workItem from="1596869613620" duration="10216000" />
     </task>
     <task id="LOCAL-00095" summary="Add whitenoise middleware to settings">
       <created>1587916194194</created>
@@ -544,7 +538,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596874336513</updated>
     </task>
-    <option name="localTasksCounter" value="143" />
+    <task id="LOCAL-00143" summary=":rocket: Implement deletion of notes from localstorage and dom">
+      <created>1596876531435</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1596876531435</updated>
+    </task>
+    <option name="localTasksCounter" value="144" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -565,7 +566,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Upgraded to Postgres database" />
     <MESSAGE value="Add psycopg2 to requirements" />
     <MESSAGE value="Set password and username for db" />
     <MESSAGE value="Migrated back to sqlite" />
@@ -590,7 +590,8 @@
     <MESSAGE value=":rocket: Implement rendering of checked notes from localstorage" />
     <MESSAGE value=":rocket: Implement saving and retrieving checked notes from localstorage" />
     <MESSAGE value=":rocket: Implement searching of notes title" />
-    <option name="LAST_COMMIT_MESSAGE" value=":rocket: Implement searching of notes title" />
+    <MESSAGE value=":rocket: Implement deletion of notes from localstorage and dom" />
+    <option name="LAST_COMMIT_MESSAGE" value=":rocket: Implement deletion of notes from localstorage and dom" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
