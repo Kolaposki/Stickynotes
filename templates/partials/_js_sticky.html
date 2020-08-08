@@ -368,7 +368,6 @@
 
     {# -------------------------------------------------------------------------------------------------------- #}
 
-
     $(document).on("click", "#pencil", function () {
         console.log("Pencil clciked")
         //console.log(this)
@@ -408,11 +407,12 @@
 
         $(this.parentElement).hide() //hide update btn
         $(this.parentElement.nextElementSibling).show() // show pencil
+
         let noteTitle = $(input).val()
         let noteDescription = $(textArea).val()
         let color = strip(textArea.parentElement.className.replace('single-note', ''))
         let checked = input.previousElementSibling.children[0].children[0].classList.contains('isDone')
-        let date = $(input.nextElementSibling).text()
+        let date = $(input.nextElementSibling).text().replace('Last Updated: ', '')
 
         updateNoteFromLocalStorage(noteID, noteTitle, noteDescription, color, checked, date)
     });
@@ -459,7 +459,6 @@
 
     });
 
-
     {# -------------------------------------------------------------------------------------------------------- #}
 
     $(document).on("keyup", "#desc", function () {
@@ -476,25 +475,35 @@
     $(document).on("click", "#id_is_done", function (event) {
         //console.log("Chekcer")
         //console.log(this)
-        let input = this.parentElement.parentElement.nextElementSibling
+        let title = this.parentElement.parentElement.nextElementSibling
         let description = this.parentElement.parentElement.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling
         let paragraph = this.parentElement.parentElement.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling
+        let parentDiv = this.parentElement.parentElement.parentElement.parentElement.parentElement.id
 
         if ($(this).prop('checked')) {
             //console.log("Checked")
-            $(input).addClass('isDone')
+            $(title).addClass('isDone')
             $(description).addClass('isDone')
             $(paragraph).addClass('isDone')
             $(this).addClass("isDone")
 
         } else {
             //console.log("Unchceked")
-            $(input).removeClass('isDone')
+            $(title).removeClass('isDone')
             $(description).removeClass('isDone')
             $(paragraph).removeClass('isDone')
             $(this).removeClass("isDone")
-
         }
+
+        let noteID = parentDiv.replace(/[^0-9]/g, '') // strips out anything that aint a digit. So it returns the id only
+        let noteTitle = $(title).val()
+        let color = strip(title.parentElement.className.replace('single-note', ''))
+        let noteDescription = $(description).val()
+        let checked = this.classList.contains('isDone')
+        let date = $(title.nextElementSibling).text().replace('Last Updated: ', '')
+        //console.log(noteID, noteTitle, noteDescription, "color: ", color, "checked: ", checked, date)
+
+        updateNoteFromLocalStorage(noteID, noteTitle, noteDescription, color, checked, date)
 
     });
 
