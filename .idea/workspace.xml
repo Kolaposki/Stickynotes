@@ -4,22 +4,11 @@
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/alert-bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sticky/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stickynotes/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stickynotes/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stickynotes/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stickynotes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stickynotes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/partials/_all_notes.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/partials/_js_utils.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/logout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partials/_js_sticky.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_js_sticky.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -219,14 +208,7 @@
       <workItem from="1587632046275" duration="174764000" />
       <workItem from="1596624225678" duration="47135000" />
       <workItem from="1596805302595" duration="14872000" />
-      <workItem from="1596869613620" duration="19096000" />
-    </task>
-    <task id="LOCAL-00097" summary="Bump python version in runtime.txt from 3.7.2 to 3.8.0">
-      <created>1587918176962</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1587918176962</updated>
+      <workItem from="1596869613620" duration="21832000" />
     </task>
     <task id="LOCAL-00098" summary="Change login page title and add registration link">
       <created>1587918719798</created>
@@ -564,7 +546,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596907303409</updated>
     </task>
-    <option name="localTasksCounter" value="146" />
+    <task id="LOCAL-00146" summary=":zap: Remove useless codes and files">
+      <created>1596909783409</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1596909783409</updated>
+    </task>
+    <option name="localTasksCounter" value="147" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -585,7 +574,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Migrated back to sqlite" />
     <MESSAGE value="Update README" />
     <MESSAGE value=":tada: Resume designing bump django version" />
     <MESSAGE value=":zap: Remove django codes and begin version 2.0 implementation" />
@@ -610,7 +598,8 @@
     <MESSAGE value=":rocket: Implement deletion of notes from localstorage and dom" />
     <MESSAGE value=":sparkles: Update app footer" />
     <MESSAGE value=":rocket: Implement searching of notes title with description" />
-    <option name="LAST_COMMIT_MESSAGE" value=":rocket: Implement searching of notes title with description" />
+    <MESSAGE value=":zap: Remove useless codes and files" />
+    <option name="LAST_COMMIT_MESSAGE" value=":zap: Remove useless codes and files" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

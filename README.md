@@ -12,15 +12,19 @@ An easy on eye, colorful and alluring note taking app for all
 * View personal Notes
 * Search Notes
 * Mark notes as completed
-* Share notes with friends and many more
-* Dark mode added   
+* Share notes with friends
+* Dark mode included   
 ## Tools & Libraries
 
 * Django web framework
 * Bootstrap
 * Jquery
 
-## Authors
+## Update
+This project no longer utilizes the Django web framework.
+Here's the [version](https://github.com/Kolaposki/Stickynotes/releases/tag/v1.0) that supports Django.
+
+## Author
 
 * **Oshodi Kolapo**
 

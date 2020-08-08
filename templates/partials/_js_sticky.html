@@ -232,6 +232,15 @@
 
     });
 
+    function dateGetter() {
+        var today = new Date();
+        var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate() + '-' + today.getDay()
+        console.log(date)
+
+    }
+
+    dateGetter()
+
     function getLatestID() {
         // fetches the last id in localstorage and add 1 else returns 0
         let allNotes = getAllNotesFromLocalStorage()
