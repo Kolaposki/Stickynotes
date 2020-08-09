@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/partials/_js_sticky.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_js_sticky.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -204,14 +204,7 @@
       <workItem from="1587632046275" duration="174764000" />
       <workItem from="1596624225678" duration="47135000" />
       <workItem from="1596805302595" duration="14872000" />
-      <workItem from="1596869613620" duration="25972000" />
-    </task>
-    <task id="LOCAL-00100" summary="Redesign login and registration page">
-      <created>1587930329970</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1587930329971</updated>
+      <workItem from="1596869613620" duration="29684000" />
     </task>
     <task id="LOCAL-00101" summary="Remove unnecessary codes in js file and delete stickyNotes.js">
       <created>1587932518889</created>
@@ -549,7 +542,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596930595036</updated>
     </task>
-    <option name="localTasksCounter" value="149" />
+    <task id="LOCAL-00149" summary=":rocket: Implement updating of note dates when updated or checked">
+      <created>1596931173785</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1596931173785</updated>
+    </task>
+    <option name="localTasksCounter" value="150" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -570,7 +570,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value=":tada: Resume designing bump django version" />
     <MESSAGE value=":zap: Remove django codes and begin version 2.0 implementation" />
     <MESSAGE value=":rocket: Implement changing of note background in an elegant manner" />
     <MESSAGE value=":rocket: Design notes" />
@@ -595,7 +594,8 @@
     <MESSAGE value=":rocket: Implement searching of notes title with description" />
     <MESSAGE value=":zap: Remove useless codes and files" />
     <MESSAGE value=":rocket: Implement getting real time dates" />
-    <option name="LAST_COMMIT_MESSAGE" value=":rocket: Implement getting real time dates" />
+    <MESSAGE value=":rocket: Implement updating of note dates when updated or checked" />
+    <option name="LAST_COMMIT_MESSAGE" value=":rocket: Implement updating of note dates when updated or checked" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

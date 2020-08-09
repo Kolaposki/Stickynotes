@@ -2,6 +2,7 @@
     document.addEventListener("DOMContentLoaded", renderNotes());
 
     $('#creatorDate').text(`Today: ${dateGetter()}`)
+
     function strip(str) {
         // strips out leading and trailing spaces
         return str.replace(/^\s+|\s+$/gm, '');
@@ -106,7 +107,7 @@
                                         </span>
 
                                         <span id="expand"><i class="fas fa-expand"></i></span>
-                                        <span id="link" data-clipboard-text="">
+                                        <span id="link" data-clipboard-text="${noteTitle}">
                                             <i class="fas fa-link"></i>
                                         </span>
                                     </div>
@@ -175,7 +176,7 @@
                                         </span>
 
                                         <span id="expand"><i class="fas fa-expand"></i></span>
-                                        <span id="link" data-clipboard-text="">
+                                        <span id="link" data-clipboard-text="${noteTitle}">
                                             <i class="fas fa-link"></i>
                                         </span>
                                     </div>
@@ -498,6 +499,23 @@
             $(paragraph).hide()
             $(textArea).show()
         }
+
+    });
+
+    $(document).on("click", "#link", function () {
+        //console.log("copied clciked")
+        //console.log(this)
+
+        let div = this.parentElement.nextElementSibling.nextElementSibling
+
+        $(div).toggleClass('openDivs')
+
+        $(div).attr('class', 'copied openDivs');
+        $(div).fadeOut(800, function () {
+            $(div).fadeIn(300);
+            $(div).attr('class', 'copied');
+
+        });
 
     });
 
