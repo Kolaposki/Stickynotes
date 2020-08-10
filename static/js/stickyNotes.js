@@ -1,6 +1,8 @@
 console.log = function () {
 } //disables logging
+
 $('.darkmode-toggle').text('🌓')
+
 document.addEventListener("DOMContentLoaded", renderNotes());
 
 $('#creatorDate').text(`Today: ${dateGetter()}`) //sets the current date to the note creator card
