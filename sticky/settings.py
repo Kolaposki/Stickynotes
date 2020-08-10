@@ -22,9 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '0tb@d806ik5ebuk3!2g&@f(i(rw^&mn(mpp0$0bleg*-#1-37t'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com', 'stickyynotes.herokuapp.com/']
 
 # Application definition
 

@@ -1,0 +1,606 @@
+/*
+  [ General Information ]
+
+  Project:        Sticky To-Do Note
+  Version:        1.0
+  Author:    Oshodi Kolapo
+
+  [ Important Classes ]
+
+  .openDivs => opens the color palette & copied sign by changing it's 'scale' value
+  .expand => unlock the height and remove the scroll-Bar to give the user full experience to read the note
+
+  [ Colors Classes ]
+
+  - We defined Colors as classes to dynamically switch between them
+  { blue, red, yellow, purple, green, white }
+
+  [ Main Structure ]
+
+  + #notes
+    + .add-note
+    + .single-note.(color)
+      + .notDone "Checkbox for To-Do Process"
+      + input "Edit Title"
+      + h2 "Print the title"
+      + small "Print the date"
+      + textarea "Edit Description"
+      + p "Print the description"
+      + .meta
+        + some "SPANSs" to control
+      + .colors
+      + .copied
+
+  [ Fonts Used ]
+
+  - Poppin
+    + Light
+    + Medium
+    + Regular
+    + SemiBold
+
+  */
+
+/* Embadded Fonts */
+@font-face {
+    font-family: 'poppin-light';
+    src: url(../fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+    font-family: 'poppin-reg';
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'poppin-med';
+    src: url(../fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'poppin-sbold';
+    src: url(../fonts/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'toriom-med';
+    src: url(../fonts/toriom-medium.ttf);
+}
+
+@font-face {
+    font-family: 'toriom-light';
+    src: url(../fonts/toriom-light.ttf);
+}
+
+
+/*
+-------------------
+  Const
+-------------------
+*/
+body {
+    background-color: #EFEFEF;
+    direction: ltr;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/*
+-------------------
+  Header
+-------------------
+*/
+.header {
+    width: 100%;
+    height: 200px;
+    background-color: #8A7CC5;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.29);
+}
+
+.header h2, .header h2 a {
+    color: #fff;
+    font-family: 'poppin-sbold';
+    margin-top: 84px;
+}
+
+.hold-img {
+    height: 200px;
+    position: relative;
+}
+
+.header img {
+    position: absolute;
+    bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: auto !important;
+    }
+}
+
+@media (max-width: 450px) {
+    .header h2 {
+        margin-top: 29px !important;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .header form {
+        display: table;
+        margin: 37px auto 0;
+        width: 85%;
+    }
+
+    .header form button {
+        width: 100%;
+    }
+
+    .hold-img {
+        height: 138px !important;
+    }
+
+    .header img {
+        height: 108px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/*
+-------------------
+  Notes
+-------------------
+*/
+.notes {
+    margin: 7px 0 0;
+}
+
+/*-----Add Note-----*/
+.notes .single-note input {
+    width: 100%;
+    border: none;
+    background-color: unset;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.notes .single-note textarea::placeholder {
+    color: rgba(0, 0, 0, 0.35);
+}
+
+.notes .single-note textarea {
+    width: 100%;
+    margin-bottom: -10px !important;
+    background-color: unset;
+    resize: none;
+    border: none;
+    margin-top: -1px;
+    white-space: pre-wrap;
+}
+
+.notes .single-note input::placeholder {
+    color: rgba(0, 0, 0, 0.17);
+}
+
+.notes .single-note textarea::-webkit-scrollbar {
+    width: 7px;
+}
+
+.notes .single-note textarea::-webkit-scrollbar-thumb {
+    background-color: #7c7c7c;
+}
+
+.notes .single-note textarea::-webkit-scrollbar-track {
+    background-color: #cfcfcf;
+}
+
+/*-----Single Note-----*/
+.notes .single-note {
+    padding: 33px 33px 20px;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.11);
+    transition: all 0.3s;
+    margin-bottom: 35px;
+    cursor: initial;
+}
+
+.notes .single-note:hover {
+    box-shadow: 4px 9px 12px rgba(0, 0, 0, 0.11);
+}
+
+.notes .single-note.add-note {
+    cursor: initial !important;
+}
+
+.notes .single-note .notDone {
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    top: 20px;
+    color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.notes .single-note h2,
+.notes .single-note input {
+    font-family: 'poppin-sbold', 'toriom-med';
+    font-size: 23px;
+    transition: all 0.3s;
+    margin-top: 0;
+}
+
+.notes .single-note .isDone {
+    color: rgba(0, 0, 0, 0.3607843137254902) !important;
+    text-decoration: line-through !important;
+}
+
+.notes .single-note small {
+    font-family: 'poppin-light';
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.55);
+}
+
+.notes .single-note hr {
+    border-top: 1px solid rgba(0, 0, 0, 0.17);
+    margin: 12px 0;
+}
+
+
+.notes .single-note p {
+    font-family: 'poppin-reg', 'toriom-light';
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.69);
+    margin-bottom: 28px;
+    word-wrap: break-word;
+    height: 85px;
+    transition: all 0.3s ease-in-out;
+    overflow: auto;
+    line-height: 28px;
+    white-space: pre-wrap;
+}
+
+
+.notes .single-note textarea {
+    font-family: 'poppin-reg', 'toriom-light';
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.69);
+    /*margin-bottom: 28px !important;*/
+    word-wrap: break-word;
+    height: 97px !important;
+    min-height: 85px !important;
+    transition: all 0.3s ease-in-out;
+    overflow: auto;
+    line-height: 28px;
+    white-space: pre-wrap;
+}
+
+
+.expand {
+    height: auto !important;
+    overflow: unset !important;
+    min-height: 85px !important;
+}
+
+.notes .single-note p::-webkit-scrollbar {
+    width: 7px;
+}
+
+.notes .single-note p::-webkit-scrollbar-thumb {
+    background-color: #7c7c7c;
+}
+
+.notes .single-note p::-webkit-scrollbar-track {
+    background-color: #cfcfcf;
+}
+
+.notes .single-note .meta {
+    margin: 25px auto 0;
+    display: table;
+}
+
+.notes .single-note .meta span {
+    margin: 0 12px;
+    font-size: 23px;
+    transition: all 0.2s;
+    color: hsla(0, 0%, 0%, 0.2);
+    cursor: pointer;
+}
+
+.notes .single-note .meta span:hover {
+    color: rgb(0, 0, 0, 0.4)
+}
+
+/*------Colors------*/
+.openDivs {
+    transform: translateX(-50%) scale(1) !important;
+}
+
+.colors,
+.copied {
+    display: -webkit-inline-box;
+    padding: 15px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 60px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.31);
+    left: 50%;
+    bottom: 60px;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%) scale(0);
+}
+
+.copied {
+    padding: 6px 15px;
+    color: #fff;
+    background-color: #3e3e3e;
+    border-radius: 60px;
+    font-family: 'poppin-light';
+    left: 50%;
+}
+
+.colors .circle {
+    width: 30px;
+    height: 30px;
+    margin: 0 4px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.colors .circle.selected {
+    border: 2px dashed #777;
+}
+
+.yellow {
+    background-color: #FFEDA5 !important;
+}
+
+.blue {
+    background-color: #BCE0FF !important;
+}
+
+.red {
+    background-color: #FFB2B2 !important;
+}
+
+.purple {
+    background-color: #B0A4E6 !important;
+}
+
+.white {
+    background-color: #fff !important;
+}
+
+.green {
+    background-color: #8bfbb2 !important;
+}
+
+.whiteCircle {
+    background-color: #fff !important;
+    border: 1px solid #ccc;
+}
+
+
+textarea, p {
+    white-space: pre-wrap;
+    min-height: 85px !important;
+}
+
+/*
+  =====================
+  Shared Note
+  =====================
+*/
+.shared-note {
+    background-color: #2fa9d8;
+}
+
+.header.shared-note img {
+    position: absolute;
+    right: 20px;
+    width: 41%;
+    top: 14px;
+}
+
+.notes .single-note.shared p {
+    height: auto !important;
+    overflow: unset !important;
+}
+
+/*
+  =====================
+  #hash Notes
+  =====================
+*/
+.hash {
+    background-color: #607D8B;
+}
+
+.hash img {
+    position: absolute;
+    right: 20px;
+    width: 28%;
+    top: 24px;
+}
+
+/*
+  =====================
+  Search Bar
+  =====================
+*/
+.searchBar form {
+    display: table;
+    margin: 24px auto;
+    width: 79%;
+}
+
+.searchBar form input {
+    width: 100%;
+    padding: 6px 14px;
+    border-radius: 22px;
+    border: none;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.05);
+    font-family: 'poppin-med';
+    font-size: 13px;
+    color: #7c7c7c;
+}
+
+.searchBar form button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 28px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-left: 8px;
+}
+
+.searchBar form button:focus {
+    outline: none;
+}
+
+/*
+-----------------
+  Footer
+-----------------
+*/
+footer {
+    margin: 0 0 40px;
+}
+
+footer span {
+    display: block;
+    text-align: center;
+    font-family: 'poppin-med';
+    color: #777;
+    margin-top: 30px;
+}
+
+footer span i {
+    color: tomato;
+}
+
+/* Transitions */
+.card {
+    transition: all 0.5s;
+}
+
+.card-enter-active,
+.card-leave-active {
+    transition: all 0.3s;
+}
+
+.card-enter,
+.card-leave-to {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.card-enter-to {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.card-move {
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+/*
+-----------------
+  Manually
+-----------------
+*/
+
+
+.mark {
+    outline: 0 !important;
+    background-color: transparent;
+    padding: 0 !important;
+    font-size: inherit;
+    margin-top: -7px;
+}
+
+
+.no-display {
+    display: none !important;
+}
+
+.mark:hover, .marker:hover {
+    color: hsla(0, 0%, 0%, 0.3);
+}
+
+.marker {
+    background-color: transparent;
+    padding: 0 !important;
+    /*margin: -7px 12px 0;*/
+    font-size: 27px;
+    transition: all 0.2s;
+    color: hsla(0, 0%, 0%, 0.2);
+    cursor: pointer;
+}
+
+.my-checkbox input[type="checkbox"], .my-checkbox .checked {
+    display: none;
+}
+
+.my-checkbox input[type="checkbox"]:checked ~ .checked {
+    display: inline-block;
+}
+
+.my-checkbox input[type="checkbox"]:checked ~ .unchecked {
+    display: none;
+}
+
+
+/*for registration error*/
+p.invalid-feedback {
+    margin: 0 !important;
+    color: tomato;
+}
+
+#error_1_id_username {
+    margin: 0 !important;
+    color: tomato;
+}
+
+.invalid-feedback {
+    margin: 0 !important;
+    color: tomato;
+}
+
+/*Darkmode settings*/
+
+.darkmode-toggle {
+    content: '🌓';
+    background: #100f2c;
+    width: 3rem;
+    height: 3rem;
+    position: fixed;
+    border-radius: 50%;
+    right: 58px;
+    bottom: 12px;
+    left: unset;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+button .darkmode-toggle {
+    content: '🌓' !important;
+}
