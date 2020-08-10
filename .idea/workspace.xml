@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stickynotes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stickynotes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/partials/_js_sticky.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_js_sticky.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/shared.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shared.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -207,14 +204,7 @@
       <workItem from="1596624225678" duration="47135000" />
       <workItem from="1596805302595" duration="14872000" />
       <workItem from="1596869613620" duration="32048000" />
-      <workItem from="1597066784934" duration="4202000" />
-    </task>
-    <task id="LOCAL-00103" summary="Remove delete cancelled toast, add db file to .gitignore">
-      <created>1587936500593</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1587936500594</updated>
+      <workItem from="1597066784934" duration="5087000" />
     </task>
     <task id="LOCAL-00104" summary="Add screenshot of project home to base">
       <created>1587937039353</created>
@@ -552,7 +542,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597067228111</updated>
     </task>
-    <option name="localTasksCounter" value="152" />
+    <task id="LOCAL-00152" summary=":rocket: Implement sharing of notes">
+      <created>1597075084648</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1597075084648</updated>
+    </task>
+    <option name="localTasksCounter" value="153" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -573,7 +570,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value=":rocket: Design notes" />
     <MESSAGE value=":rocket: Implement auto add note to dom" />
     <MESSAGE value=":sparkles: Design resetting of new notes" />
     <MESSAGE value=":sparkles: Update note Design" />
@@ -598,7 +594,8 @@
     <MESSAGE value=":rocket: Implement updating of note dates when updated or checked" />
     <MESSAGE value=":rocket: Implement copying to clipboard" />
     <MESSAGE value=":sparkles: Update sharing technique" />
-    <option name="LAST_COMMIT_MESSAGE" value=":sparkles: Update sharing technique" />
+    <MESSAGE value=":rocket: Implement sharing of notes" />
+    <option name="LAST_COMMIT_MESSAGE" value=":rocket: Implement sharing of notes" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

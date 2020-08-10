@@ -1,7 +1,7 @@
 <script>
     document.addEventListener("DOMContentLoaded", renderNotes());
 
-    $('#creatorDate').text(`Today: ${dateGetter()}`)
+    $('#creatorDate').text(`Today: ${dateGetter()}`) //sets the current date to the note creator card
 
     function strip(str) {
         // strips out leading and trailing spaces
@@ -213,6 +213,7 @@
     }
 
     $('#createNote').submit(function (event) {
+        // Handles creation of note
         event.preventDefault();
 
         // todo : jump to textarea when enter key is pressed
@@ -451,11 +452,14 @@
         $(this.parentElement).hide() //hide update btn
         $(this.parentElement.nextElementSibling).show() // show pencil
 
+
         let noteTitle = $(input).val()
         let noteDescription = $(textArea).val()
         let color = strip(textArea.parentElement.className.replace('single-note', ''))
         let checked = input.previousElementSibling.children[0].children[0].classList.contains('isDone')
         let date = dateGetter()
+
+        let dateElement = $(input.nextElementSibling).text(`Last Updated: ${date}`)
 
         updateNoteFromLocalStorage(noteID, noteTitle, noteDescription, color, checked, date)
     });
