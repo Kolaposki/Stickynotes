@@ -11,9 +11,15 @@ def shared(request):
     description = request.GET.get('description' or "")
     color = request.GET.get('color' or "")
     date = request.GET.get('date' or "")
-    checked = request.GET.get('checked' or "")
+    checked = str(request.GET.get('checked' or ""))
+
+    if checked == 'false':
+        checked = False
+    elif checked == 'true':
+        checked = True
 
     print(request.GET)
+    print(checked, "checked")
     context = {'id': note_id, "title": title,
                "description": description,
                "color": color,

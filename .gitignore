@@ -1,12 +1,8 @@
 # JetBrains PyCharm settings
+.idea/*
 .idea/
-.idea
 __pycache__/*
-__pycache__*
-__pycache__
-sticky/.idea/
-sticky/.idea/workspace.xml
-
+__pycache__/
 # database stuffs
 stickynotes/migrations/
 # db.sqlite3
