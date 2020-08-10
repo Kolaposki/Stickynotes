@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stickynotes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stickynotes/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/partials/_js_sticky.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_js_sticky.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -204,14 +204,8 @@
       <workItem from="1587632046275" duration="174764000" />
       <workItem from="1596624225678" duration="47135000" />
       <workItem from="1596805302595" duration="14872000" />
-      <workItem from="1596869613620" duration="29684000" />
-    </task>
-    <task id="LOCAL-00101" summary="Remove unnecessary codes in js file and delete stickyNotes.js">
-      <created>1587932518889</created>
-      <option name="number" value="00101" />
-      <option name="presentableId" value="LOCAL-00101" />
-      <option name="project" value="LOCAL" />
-      <updated>1587932518890</updated>
+      <workItem from="1596869613620" duration="32048000" />
+      <workItem from="1597066784934" duration="338000" />
     </task>
     <task id="LOCAL-00102" summary="fix response is undefined in views.py">
       <created>1587933291192</created>
@@ -549,7 +543,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596931173785</updated>
     </task>
-    <option name="localTasksCounter" value="150" />
+    <task id="LOCAL-00150" summary=":rocket: Implement copying to clipboard">
+      <created>1596964252814</created>
+      <option name="number" value="00150" />
+      <option name="presentableId" value="LOCAL-00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1596964252815</updated>
+    </task>
+    <option name="localTasksCounter" value="151" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -570,7 +571,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value=":zap: Remove django codes and begin version 2.0 implementation" />
     <MESSAGE value=":rocket: Implement changing of note background in an elegant manner" />
     <MESSAGE value=":rocket: Design notes" />
     <MESSAGE value=":rocket: Implement auto add note to dom" />
@@ -595,7 +595,8 @@
     <MESSAGE value=":zap: Remove useless codes and files" />
     <MESSAGE value=":rocket: Implement getting real time dates" />
     <MESSAGE value=":rocket: Implement updating of note dates when updated or checked" />
-    <option name="LAST_COMMIT_MESSAGE" value=":rocket: Implement updating of note dates when updated or checked" />
+    <MESSAGE value=":rocket: Implement copying to clipboard" />
+    <option name="LAST_COMMIT_MESSAGE" value=":rocket: Implement copying to clipboard" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
