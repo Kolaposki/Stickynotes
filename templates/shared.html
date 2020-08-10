@@ -18,17 +18,17 @@
     <div id="notes" class="notes">
         <div class="container">
             <div class="col-md-offset-4 col-sm-offset-2 col-md-4 col-sm-8">
-                <div class="single-note shared {{ note.background_color }}">
-                    {% if note.is_done %}
-                        <h2 class="isDone">{{ note.title }}</h2>
-                        <small>Last Updated: {{ note.date_updated|date:"D, dS M Y" }} </small>
+                <div class="single-note shared {{ color }}">
+                    {% if checked %}
+                        <h2 class="isDone">{{ title }}</h2>
+                        <small>Last Updated: {{ date }} </small>
                         <hr>
-                        <p class="isDone">{{ note.description }}</p>
+                        <p class="isDone">{{ description }}</p>
                     {% else %}
-                        <h2>{{ note.title }}</h2>
-                        <small>Last Updated: {{ note.date_updated|date:"D, dS M Y" }} </small>
+                        <h2>{{ title }}</h2>
+                        <small>Last Updated: {{ date }} </small>
                         <hr>
-                        <p>{{ note.description }}</p>
+                        <p>{{ description }}</p>
                     {% endif %}
                 </div>
             </div>

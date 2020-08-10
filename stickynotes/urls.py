@@ -3,5 +3,5 @@ from . import views
 
 urlpatterns = [
     path('', views.home, name='home'),
-    path('shared/<str:link>/', views.shared, name='shared'),
+    path('shared/', views.shared, name='shared'),
 ]

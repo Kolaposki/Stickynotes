@@ -65,6 +65,8 @@
         let noteCard = document.createElement('div')
         noteCard.className = 'col-md-4 col-sm-6 note-box'
         noteCard.id = 'note-' + noteID
+        let origin = window.location.origin
+        let sharedLink = `${origin}/shared/?note=${noteID}&title=${noteTitle}&description=${noteDescription}&color=${selectedColor}&date=${date}&checked=${checked}`
         if (checked) {
             noteCard.innerHTML = `   <form id="UpdateNoteForm">
                                 <div id="bg" class="single-note ${selectedColor}">
@@ -107,7 +109,7 @@
                                         </span>
 
                                         <span id="expand"><i class="fas fa-expand"></i></span>
-                                        <span id="link" data-clipboard-text="${noteTitle}">
+                                        <span id="link" data-clipboard-text="${sharedLink}">
                                             <i class="fas fa-link"></i>
                                         </span>
                                     </div>
@@ -176,7 +178,7 @@
                                         </span>
 
                                         <span id="expand"><i class="fas fa-expand"></i></span>
-                                        <span id="link" data-clipboard-text="${noteTitle}">
+                                        <span id="link" data-clipboard-text="${sharedLink}">
                                             <i class="fas fa-link"></i>
                                         </span>
                                     </div>
