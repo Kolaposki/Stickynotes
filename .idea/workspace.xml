@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sticky/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sticky/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="753740e2-5fa8-4b5b-9fab-d8f5b076f832" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,14 +201,7 @@
       <workItem from="1596624225678" duration="47135000" />
       <workItem from="1596805302595" duration="14872000" />
       <workItem from="1596869613620" duration="32048000" />
-      <workItem from="1597066784934" duration="13328000" />
-    </task>
-    <task id="LOCAL-00108" summary="Update .gitattributes and .gitignore file">
-      <created>1588072150122</created>
-      <option name="number" value="00108" />
-      <option name="presentableId" value="LOCAL-00108" />
-      <option name="project" value="LOCAL" />
-      <updated>1588072150123</updated>
+      <workItem from="1597066784934" duration="13669000" />
     </task>
     <task id="LOCAL-00109" summary="Redesign registration logic using django-registration">
       <created>1588084882283</created>
@@ -549,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597084184063</updated>
     </task>
-    <option name="localTasksCounter" value="157" />
+    <task id="LOCAL-00157" summary=":sparkles: collect staticfiles">
+      <created>1597085824583</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1597085824583</updated>
+    </task>
+    <option name="localTasksCounter" value="158" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -570,7 +567,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value=":rocket: Implement enabling and disabling of note editing" />
     <MESSAGE value=":rocket: Implement expansion of note when activated" />
     <MESSAGE value=":rocket: Implement auto-changing of paragraph text to desc text" />
     <MESSAGE value=":rocket: Implement deletion of notes" />
@@ -595,7 +591,8 @@
     <MESSAGE value=":zap: Replace external libraries with their respective cdn" />
     <MESSAGE value=":zap: Remove useless files and codes" />
     <MESSAGE value=":zap: Remove staticfiles" />
-    <option name="LAST_COMMIT_MESSAGE" value=":zap: Remove staticfiles" />
+    <MESSAGE value=":sparkles: collect staticfiles" />
+    <option name="LAST_COMMIT_MESSAGE" value=":sparkles: collect staticfiles" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
