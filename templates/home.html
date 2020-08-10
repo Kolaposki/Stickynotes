@@ -37,8 +37,6 @@
 
                 <div id="bg" class="single-note add-note white">
                     <form name="createNote" id="createNote">
-                        <input class="d-none" type="checkbox" value="False" name="is_done" id="id_is_done">
-                        {% csrf_token %}
                         <input id="createTitleInput" name="title" type="text" maxlength="20" autofocus
                                placeholder="Type a title ...">
                         <small id="creatorDate"></small>

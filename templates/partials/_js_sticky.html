@@ -478,7 +478,7 @@
             $(noteCard).remove()
             deleteNoteFromLocalStorage(noteID)
 
-            {#alertify.success('Note deleted');#}
+            alertify.success('Note deleted');
             console.log("Note deleted")
         }, function () {
             console.log("Note cancelled ")
