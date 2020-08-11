@@ -1,5 +1,5 @@
-// console.log = function () {
-// } //disables logging
+console.log = function () {
+} //disables logging
 
 $('.darkmode-toggle').text('🌓')
 
@@ -268,7 +268,7 @@ function getLatestID() {
 
     let allNotes = getAllNotesFromLocalStorage()
     console.log("allNotes: ", allNotes)
-    if (allNotes !== null) {
+    if (allNotes.length > 0 || allNotes !== null) {
 
         let ids = []
         allNotes.forEach(function (note, index) {
@@ -280,6 +280,10 @@ function getLatestID() {
 
         console.log("ids: ", ids)
         var largest = ids[0];
+        if (largest === undefined || largest === null || typeof largest === undefined) {
+            console.log("Largest is undefned so return 0")
+            return 0
+        }
 
         for (var i = 0; i < ids.length; i++) {
             if (largest < ids[i]) {
