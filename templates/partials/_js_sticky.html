@@ -1,4 +1,10 @@
 <script>
+
+    // console.log = function () {
+    // } //disables logging
+
+    $('.darkmode-toggle').text('🌓')
+
     document.addEventListener("DOMContentLoaded", renderNotes());
 
     $('#creatorDate').text(`Today: ${dateGetter()}`) //sets the current date to the note creator card
@@ -10,7 +16,7 @@
 
     $("body").overlayScrollbars({});
 
-    {# -------------------------------------------------------------------------------------------------------- #}
+    // ------------------------------------------------------------------------------------------------------
 
     $(document).on("click", "#palette", function () {
         //console.log("Palette cc=lciked")
@@ -59,7 +65,7 @@
         }
     }
 
-    {# -------------------------------------------------------------------------------------------------------- #}
+    // ------------------------------------------------------------------------------------------------------
 
     function appendNoteToDOM(noteID, noteTitle, noteDescription, selectedColor, date, checked) {
         let noteCard = document.createElement('div')
@@ -208,15 +214,12 @@
         let circle = $(noteCard).find('#circle_' + selectedColor)
         circle.toggleClass('selected')
 
-        // TODO : timeago.js should be used for real time update
-
     }
 
     $('#createNote').submit(function (event) {
         // Handles creation of note
         event.preventDefault();
 
-        // todo : jump to textarea when enter key is pressed
         let createTitleInput = $('#createTitleInput').val()
         let createDescriptionInput = $('#createDescriptionInput').val()
 
@@ -264,9 +267,10 @@
 
     function getLatestID() {
         // fetches the last id in localstorage and add 1 else returns 0
+
         let allNotes = getAllNotesFromLocalStorage()
-        //console.log(allNotes)
-        if (allNotes !== null) {
+        console.log("allNotes: ", allNotes)
+        if (allNotes.length > 0 || allNotes !== null) {
 
             let ids = []
             allNotes.forEach(function (note, index) {
@@ -276,8 +280,12 @@
 
             });
 
-            //console.log(ids)
+            console.log("ids: ", ids)
             var largest = ids[0];
+            if (largest === undefined || largest === null || typeof largest === undefined) {
+                console.log("Largest is undefned so return 0")
+                return 0
+            }
 
             for (var i = 0; i < ids.length; i++) {
                 if (largest < ids[i]) {
@@ -285,10 +293,9 @@
                 }
             }
 
-            //console.log("Largest is", largest)
+            console.log("Largest is", largest)
             largest += 1
-            //console.log("Largest after adding 1", largest)
-            //console.log(allNotes)
+            console.log("Largest after adding 1", largest)
             return largest
         } else {
             // No notes found
@@ -297,7 +304,7 @@
         }
     }
 
-    {# -------------------------------------------------------------------------------------------------------- #}
+    // ------------------------------------------------------------------------------------------------------
 
     function addNoteToLocalStorage(id, title, description, color, date) {
         let noteObject = {
@@ -347,26 +354,6 @@
                             </div>
                         </div>`
 
-            // todo : create a div informing user that there are no notes for now
-
-        }
-
-    }
-
-    function getNoteFromLocalStorage(id) {
-
-        // Handles getting a specific note from localstorage and returns it as an object
-
-        const allNotes = getAllNotesFromLocalStorage()
-
-        if (allNotes !== null) {
-            allNotes.forEach(function (note, index) {
-                if (note.id === id) {
-                    console.log("Note is present with: ", note.id, note.title)
-                    console.log(note)
-                    return note
-                }
-            });
         }
 
     }
@@ -409,8 +396,8 @@
 
     }
 
+    // ------------------------------------------------------------------------------------------------------
 
-    {# -------------------------------------------------------------------------------------------------------- #}
 
     $(document).on("click", "#pencil", function () {
         console.log("Pencil clciked")
@@ -524,7 +511,8 @@
     });
 
 
-    {# -------------------------------------------------------------------------------------------------------- #}
+    // ------------------------------------------------------------------------------------------------------
+
 
     $(document).on("keyup", "#desc", function () {
         // Automatically sets the paragraph text to the description text when a key is clicked
@@ -571,8 +559,7 @@
         updateNoteFromLocalStorage(noteID, noteTitle, noteDescription, color, checked, date)
 
     });
-
-    {# -------------------------------------------------------------------------------------------------------- #}
+    // ------------------------------------------------------------------------------------------------------
 
 
     document.getElementById("searchNotesInput").addEventListener("keyup", function () {
@@ -618,6 +605,5 @@
     $('#searchForm').submit(function (event) {
         event.preventDefault();
     });
-
 
 </script>

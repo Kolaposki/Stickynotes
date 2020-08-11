@@ -1,5 +1,5 @@
-console.log = function () {
-} //disables logging
+// console.log = function () {
+// } //disables logging
 
 $('.darkmode-toggle').text('🌓')
 
@@ -265,8 +265,9 @@ function dateGetter() {
 
 function getLatestID() {
     // fetches the last id in localstorage and add 1 else returns 0
+
     let allNotes = getAllNotesFromLocalStorage()
-    //console.log(allNotes)
+    console.log("allNotes: ", allNotes)
     if (allNotes !== null) {
 
         let ids = []
@@ -277,7 +278,7 @@ function getLatestID() {
 
         });
 
-        //console.log(ids)
+        console.log("ids: ", ids)
         var largest = ids[0];
 
         for (var i = 0; i < ids.length; i++) {
@@ -286,10 +287,9 @@ function getLatestID() {
             }
         }
 
-        //console.log("Largest is", largest)
+        console.log("Largest is", largest)
         largest += 1
-        //console.log("Largest after adding 1", largest)
-        //console.log(allNotes)
+        console.log("Largest after adding 1", largest)
         return largest
     } else {
         // No notes found
