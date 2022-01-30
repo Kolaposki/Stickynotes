@@ -28,6 +28,7 @@ Here's the [version](https://github.com/Kolaposki/Stickynotes/releases/tag/v1.0)
 
 * **Oshodi Kolapo**
 
+[![Made in Nigeria](https://img.shields.io/badge/made%20in-nigeria-008751.svg?style=flat-square)](https://github.com/acekyd/made-in-nigeria)
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
